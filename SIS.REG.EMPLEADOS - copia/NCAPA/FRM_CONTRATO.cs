@@ -25,8 +25,7 @@ namespace NCAPA
             LISTAR_CONTRATOS();
             //Evita que no esta seleccionado por defecto//
             DataGriContratos.ClearSelection();
-            //PARA QUE NO APAREZCA EL ID//
-            DataGriContratos.Columns[0].Visible = false;
+            
             //PARA EL TAMAÑO DE LAS FILAS DEL DATA GRID//
             DataGriContratos.Columns[1].Width = 145;
             DataGriContratos.Columns[2].Width = 170;
