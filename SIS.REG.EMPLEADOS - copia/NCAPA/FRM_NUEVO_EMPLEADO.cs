@@ -7,11 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CAPA_ENTIDAD;
+using CAPA_NEGOCIO;
 
 namespace NCAPA
 {
     public partial class FRM_NUEVO_EMPLEADO : Form
     {
+        CN_EMPLEADOS cN_EMPLEADOS = new CN_EMPLEADOS();
+        CE_MEMPLEADOS mEMPLEADOS = new CE_MEMPLEADOS();
+
         public FRM_NUEVO_EMPLEADO()
         {
             InitializeComponent();
@@ -30,6 +35,33 @@ namespace NCAPA
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+
+
+        private void GUARDARempleado()
+        {
+            mEMPLEADOS.Nombres = txtNombre_emple.Text.Trim();
+            mEMPLEADOS.Apellidos = txtapellido_Emple.Text.Trim();
+            mEMPLEADOS.Telefono = txttelefono_Emple.Text.Trim();
+            mEMPLEADOS.Fecha_nacimiento = Convert.ToDateTime(dtp_FechaN.Value);
+            mEMPLEADOS.Direccion = txtdireccion_Emple.Text.Trim(); 
+            mEMPLEADOS.Email = txtgmail_Emple.Text.Trim();
+            mEMPLEADOS.Fecha_ingreso = Convert.ToDateTime(dtp_FechaIng.Value);
+            mEMPLEADOS.Id_departamento = Convert.ToInt32(txt_iddepa.Text);
+            mEMPLEADOS.Id_puesto = Convert.ToInt32(txt_Puesto.Text);
+
+
+
+            /*MDEPARTAMENTOS.FechaINGRESO = Convert.ToDateTime(dptFecha.Value);*/
+
+
+            cN_EMPLEADOS.InsertarEmpleados(mEMPLEADOS);
+        }
+
+        private void btnNuevoEmpleado_Click(object sender, EventArgs e)
+        {
+            GUARDARempleado();
         }
     }
 }

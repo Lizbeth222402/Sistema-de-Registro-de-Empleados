@@ -42,9 +42,13 @@
             this.txtgmail_Emple = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dtp_FechaN = new System.Windows.Forms.DateTimePicker();
+            this.dtp_FechaIng = new System.Windows.Forms.DateTimePicker();
             this.btnNuevoEmpleado = new System.Windows.Forms.Button();
+            this.txt_iddepa = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txt_Puesto = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -56,7 +60,7 @@
             this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(583, 542);
+            this.button1.Location = new System.Drawing.Point(497, 576);
             this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(138, 40);
@@ -81,7 +85,7 @@
             this.txtNombre_emple.BackColor = System.Drawing.Color.Silver;
             this.txtNombre_emple.Location = new System.Drawing.Point(156, 60);
             this.txtNombre_emple.Name = "txtNombre_emple";
-            this.txtNombre_emple.Size = new System.Drawing.Size(290, 26);
+            this.txtNombre_emple.Size = new System.Drawing.Size(173, 26);
             this.txtNombre_emple.TabIndex = 9;
             // 
             // label2
@@ -99,7 +103,7 @@
             this.txtapellido_Emple.BackColor = System.Drawing.Color.Silver;
             this.txtapellido_Emple.Location = new System.Drawing.Point(156, 132);
             this.txtapellido_Emple.Name = "txtapellido_Emple";
-            this.txtapellido_Emple.Size = new System.Drawing.Size(290, 26);
+            this.txtapellido_Emple.Size = new System.Drawing.Size(173, 26);
             this.txtapellido_Emple.TabIndex = 12;
             // 
             // label3
@@ -117,7 +121,7 @@
             this.txtdireccion_Emple.BackColor = System.Drawing.Color.Silver;
             this.txtdireccion_Emple.Location = new System.Drawing.Point(156, 359);
             this.txtdireccion_Emple.Name = "txtdireccion_Emple";
-            this.txtdireccion_Emple.Size = new System.Drawing.Size(290, 26);
+            this.txtdireccion_Emple.Size = new System.Drawing.Size(317, 26);
             this.txtdireccion_Emple.TabIndex = 14;
             // 
             // label4
@@ -135,7 +139,7 @@
             this.txttelefono_Emple.BackColor = System.Drawing.Color.Silver;
             this.txttelefono_Emple.Location = new System.Drawing.Point(156, 209);
             this.txttelefono_Emple.Name = "txttelefono_Emple";
-            this.txttelefono_Emple.Size = new System.Drawing.Size(290, 26);
+            this.txttelefono_Emple.Size = new System.Drawing.Size(173, 26);
             this.txttelefono_Emple.TabIndex = 20;
             // 
             // label5
@@ -153,7 +157,7 @@
             this.txtgmail_Emple.BackColor = System.Drawing.Color.Silver;
             this.txtgmail_Emple.Location = new System.Drawing.Point(156, 426);
             this.txtgmail_Emple.Name = "txtgmail_Emple";
-            this.txtgmail_Emple.Size = new System.Drawing.Size(290, 26);
+            this.txtgmail_Emple.Size = new System.Drawing.Size(253, 26);
             this.txtgmail_Emple.TabIndex = 18;
             // 
             // label6
@@ -176,19 +180,19 @@
             this.label7.TabIndex = 21;
             this.label7.Text = "FECHA INGRESO";
             // 
-            // dateTimePicker1
+            // dtp_FechaN
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(243, 284);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(261, 26);
-            this.dateTimePicker1.TabIndex = 23;
+            this.dtp_FechaN.Location = new System.Drawing.Point(215, 278);
+            this.dtp_FechaN.Name = "dtp_FechaN";
+            this.dtp_FechaN.Size = new System.Drawing.Size(290, 26);
+            this.dtp_FechaN.TabIndex = 23;
             // 
-            // dateTimePicker2
+            // dtp_FechaIng
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(215, 500);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(231, 26);
-            this.dateTimePicker2.TabIndex = 24;
+            this.dtp_FechaIng.Location = new System.Drawing.Point(215, 494);
+            this.dtp_FechaIng.Name = "dtp_FechaIng";
+            this.dtp_FechaIng.Size = new System.Drawing.Size(290, 26);
+            this.dtp_FechaIng.TabIndex = 24;
             // 
             // btnNuevoEmpleado
             // 
@@ -198,7 +202,7 @@
             this.btnNuevoEmpleado.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevoEmpleado.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevoEmpleado.Image")));
             this.btnNuevoEmpleado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuevoEmpleado.Location = new System.Drawing.Point(583, 417);
+            this.btnNuevoEmpleado.Location = new System.Drawing.Point(513, 412);
             this.btnNuevoEmpleado.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnNuevoEmpleado.Name = "btnNuevoEmpleado";
             this.btnNuevoEmpleado.Size = new System.Drawing.Size(150, 40);
@@ -206,16 +210,57 @@
             this.btnNuevoEmpleado.Text = "GUARDAR";
             this.btnNuevoEmpleado.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnNuevoEmpleado.UseVisualStyleBackColor = false;
+            this.btnNuevoEmpleado.Click += new System.EventHandler(this.btnNuevoEmpleado_Click);
+            // 
+            // txt_iddepa
+            // 
+            this.txt_iddepa.BackColor = System.Drawing.Color.Silver;
+            this.txt_iddepa.Location = new System.Drawing.Point(178, 554);
+            this.txt_iddepa.Name = "txt_iddepa";
+            this.txt_iddepa.Size = new System.Drawing.Size(62, 26);
+            this.txt_iddepa.TabIndex = 27;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label8.Location = new System.Drawing.Point(31, 557);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(130, 20);
+            this.label8.TabIndex = 26;
+            this.label8.Text = "Id Departamento";
+            // 
+            // txt_Puesto
+            // 
+            this.txt_Puesto.BackColor = System.Drawing.Color.Silver;
+            this.txt_Puesto.Location = new System.Drawing.Point(178, 599);
+            this.txt_Puesto.Name = "txt_Puesto";
+            this.txt_Puesto.Size = new System.Drawing.Size(62, 26);
+            this.txt_Puesto.TabIndex = 29;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label9.Location = new System.Drawing.Point(31, 602);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(77, 20);
+            this.label9.TabIndex = 28;
+            this.label9.Text = "Id Puesto";
             // 
             // FRM_NUEVO_EMPLEADO
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Teal;
-            this.ClientSize = new System.Drawing.Size(762, 633);
+            this.ClientSize = new System.Drawing.Size(676, 667);
+            this.Controls.Add(this.txt_Puesto);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.txt_iddepa);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.btnNuevoEmpleado);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtp_FechaIng);
+            this.Controls.Add(this.dtp_FechaN);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txttelefono_Emple);
             this.Controls.Add(this.label5);
@@ -255,8 +300,12 @@
         public System.Windows.Forms.TextBox txtgmail_Emple;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
         public System.Windows.Forms.Button btnNuevoEmpleado;
+        public System.Windows.Forms.DateTimePicker dtp_FechaN;
+        public System.Windows.Forms.DateTimePicker dtp_FechaIng;
+        public System.Windows.Forms.TextBox txt_iddepa;
+        private System.Windows.Forms.Label label8;
+        public System.Windows.Forms.TextBox txt_Puesto;
+        public System.Windows.Forms.Label label9;
     }
 }

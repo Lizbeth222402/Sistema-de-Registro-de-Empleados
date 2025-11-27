@@ -26,8 +26,6 @@ namespace NCAPA
             LISTAR_EMPLEADOS();
             //Evita que no esta seleccionado por defecto//
             DataGriEmpleados.ClearSelection();
-            //PARA QUE NO APAREZCA EL ID//
-            DataGriEmpleados.Columns[0].Visible = false;
             //PARA EL TAMAÑO DE LAS FILAS DEL DATA GRID//
             DataGriEmpleados.Columns[1].Width = 130;
             DataGriEmpleados.Columns[2].Width = 130;
@@ -36,6 +34,8 @@ namespace NCAPA
             DataGriEmpleados.Columns[5].Width = 130;
             DataGriEmpleados.Columns[6].Width = 130;
             DataGriEmpleados.Columns[7].Width = 130;
+            DataGriEmpleados.Columns[8].Width = 130;
+            DataGriEmpleados.Columns[9].Width = 130;
 
 
 

@@ -79,6 +79,8 @@ namespace CAPA_DATO
                     cmd.Parameters.Add(new SqlParameter("@Telefono", cE_MEMPLEADOS.Telefono));
                     cmd.Parameters.Add(new SqlParameter("@Email", cE_MEMPLEADOS.Email));
                     cmd.Parameters.Add(new SqlParameter("@Fecha_ingreso", cE_MEMPLEADOS.Fecha_ingreso));
+                    cmd.Parameters.Add(new SqlParameter("@Id_departamento", cE_MEMPLEADOS.Id_departamento));
+                    cmd.Parameters.Add(new SqlParameter("@Id_puesto", cE_MEMPLEADOS.Id_puesto));
 
                     cmd.ExecuteNonQuery();
                     
