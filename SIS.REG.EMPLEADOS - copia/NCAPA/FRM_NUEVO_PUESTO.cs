@@ -70,8 +70,7 @@ namespace NCAPA
 
             MPUESTOS.Nombre_puesto = txtNombre_Puesto.Text.Trim();
             MPUESTOS.Descripcion = txt_des_puesto.Text.Trim();
-
-            /*MPUESTOS.Salario_base = Convert.ToDecimal(txt_des_puesto.Text.Trim());/*
+            MPUESTOS.Salario_base = Convert.ToDecimal(txt_Salar_base.Text);
 
             /*MDEPARTAMENTOS.FechaINGRESO = Convert.ToDateTime(dptFecha.Value);*/
 
