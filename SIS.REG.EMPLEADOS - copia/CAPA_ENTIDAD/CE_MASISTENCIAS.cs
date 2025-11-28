@@ -12,12 +12,10 @@ namespace CAPA_ENTIDAD
         public int Id_asistencia {  get; set; }
         public int Id_empleado { get; set; }
         public DateTime Fecha { get; set; }
+        public TimeSpan Hora_entrada { get; set; }
+        public TimeSpan Hora_salida { get; set; }
+        public string Estado { get; set; }
 
-        public DateTime Hora_entrada { get; set; }
-
-        public DateTime Hora_salida { get; set; }
-
-        public string Estado {  get; set; }
 
     }
 }

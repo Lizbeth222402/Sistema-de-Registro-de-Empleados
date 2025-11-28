@@ -22,32 +22,60 @@ namespace NCAPA
         public FRM_NUEVO_ASISTENCIA()
         {
             InitializeComponent();
+            this.Load += FRM_NUEVO_ASISTENCIA_Load;
         }
+
+
+
 
         private void FRM_NUEVO_ASISTENCIA_Load(object sender, EventArgs e)
         {
+            // Fecha normal
+            dtp_FechaAsis.Format = DateTimePickerFormat.Short;
 
+            // Hora entrada
+            dtp_HoraEntrada.Format = DateTimePickerFormat.Custom;
+            dtp_HoraEntrada.CustomFormat = "HH:mm:ss";
+            dtp_HoraEntrada.ShowUpDown = true;
+
+            // Hora salida
+            dtp_HoraSalida.Format = DateTimePickerFormat.Custom;
+            dtp_HoraSalida.CustomFormat = "HH:mm:ss";
+            dtp_HoraSalida.ShowUpDown = true;
         }
+        
 
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+
+
+
         private void btnGuardarAsistencia_Click(object sender, EventArgs e)
         {
             GUARDARAISTENCIAS();
         }
 
+       
         public void GUARDARAISTENCIAS()
         {
+            // Fecha correcta (solo la fecha sin hora)
+            Masistencias.Fecha = dtp_FechaAsis.Value.Date;
 
-            Masistencias.Fecha = Convert.ToDateTime(dtp_FechaAsis.Text);
-            Masistencias.Hora_entrada = Convert.ToDateTime(dtp_HoraEntrada.Text);
-            Masistencias.Hora_salida = Convert.ToDateTime(dtp_HoraSalida.Text);
+            // Hora entrada (solo time)
+            Masistencias.Hora_entrada = dtp_HoraEntrada.Value.TimeOfDay;
+
+            // Hora salida (solo time)
+            Masistencias.Hora_salida = dtp_HoraSalida.Value.TimeOfDay;
+
+            // Estado (texto)
             Masistencias.Estado = txtEstado.Text.Trim();
 
-
+            // Guardar
+            cN_ASISTENCIAS.InsertarAsistencia(Masistencias);
         }
+
     }
 }

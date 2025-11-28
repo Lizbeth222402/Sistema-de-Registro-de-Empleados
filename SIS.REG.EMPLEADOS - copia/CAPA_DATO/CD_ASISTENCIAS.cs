@@ -35,8 +35,8 @@ namespace CAPA_DATO
                             Id_asistencia = Convert.ToInt32(dr["Id_asistencia"]),
                             Id_empleado = Convert.ToInt32(dr["Id_empleado"]),
                             Fecha = Convert.ToDateTime(dr["Fecha"]),
-                            Hora_entrada = Convert.ToDateTime(dr["Hora_entrada"]),
-                            Hora_salida = Convert.ToDateTime(dr["Hora_salida"]),
+                            Hora_entrada = (TimeSpan)dr["Hora_entrada"],
+                            Hora_salida = (TimeSpan)dr["Hora_salida"],
                             Estado = dr["Estado"].ToString(),
 
                         });
@@ -55,25 +55,20 @@ namespace CAPA_DATO
 
         public void InsertarAsistencia(CE_MASISTENCIAS cE_MASISTENCIAS)
         {
-
             try
             {
-
                 using (SqlCommand cmd = new SqlCommand("SP_INSERTAR_ASISTENCIAS", Con.Abrir()))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
 
-                    cmd.Parameters.Add(new SqlParameter("@Id_empleado ", cE_MASISTENCIAS.Id_empleado));
-                    cmd.Parameters.Add(new SqlParameter("@Fecha", cE_MASISTENCIAS.Fecha));
-                    cmd.Parameters.Add(new SqlParameter("@Hora_entrada ", cE_MASISTENCIAS.Hora_entrada));
-                    cmd.Parameters.Add(new SqlParameter("@Hora_salida ", cE_MASISTENCIAS.Hora_salida));
-                    cmd.Parameters.Add(new SqlParameter("@Estado", cE_MASISTENCIAS.Estado));
+                    cmd.Parameters.Add(new SqlParameter("@Id_empleado", SqlDbType.Int) { Value = cE_MASISTENCIAS.Id_empleado });
+                    cmd.Parameters.Add(new SqlParameter("@Fecha", SqlDbType.Date) { Value = cE_MASISTENCIAS.Fecha });
+                    cmd.Parameters.Add(new SqlParameter("@Hora_entrada", SqlDbType.Time) { Value = cE_MASISTENCIAS.Hora_entrada }); // TimeSpan
+                    cmd.Parameters.Add(new SqlParameter("@Hora_salida", SqlDbType.Time) { Value = cE_MASISTENCIAS.Hora_salida });   // TimeSpan
+                    cmd.Parameters.Add(new SqlParameter("@Estado", SqlDbType.VarChar, 50) { Value = cE_MASISTENCIAS.Estado });
 
                     cmd.ExecuteNonQuery();
-
-
                 }
-
             }
             catch (Exception ex)
             {
@@ -84,6 +79,7 @@ namespace CAPA_DATO
                 Con.Cerrar();
             }
         }
+
 
         #endregion INSERTAR ASISTENCIA
 
