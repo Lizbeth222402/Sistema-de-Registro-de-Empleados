@@ -44,7 +44,7 @@ namespace NCAPA
             Mcontratos.Salario = Convert.ToDecimal(txt_sALARIO.Text);
 
 
-
+            cN_CONTRATOS.InsertarContrato(Mcontratos);
         }
     }
 }
