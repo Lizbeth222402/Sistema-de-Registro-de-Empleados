@@ -29,32 +29,34 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_NUEVO_ASISTENCIA));
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtp_FechaAsis = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
+            this.dtp_HoraEntrada = new System.Windows.Forms.DateTimePicker();
+            this.dtp_HoraSalida = new System.Windows.Forms.DateTimePicker();
             this.txtEstado = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.btnGuardarAsistencia = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // dateTimePicker1
+            // dtp_FechaAsis
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(231, 65);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(261, 26);
-            this.dateTimePicker1.TabIndex = 28;
+            this.dtp_FechaAsis.Location = new System.Drawing.Point(154, 42);
+            this.dtp_FechaAsis.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtp_FechaAsis.Name = "dtp_FechaAsis";
+            this.dtp_FechaAsis.Size = new System.Drawing.Size(175, 20);
+            this.dtp_FechaAsis.TabIndex = 28;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(82, 209);
+            this.label5.Location = new System.Drawing.Point(55, 136);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(119, 20);
+            this.label5.Size = new System.Drawing.Size(79, 13);
             this.label5.TabIndex = 27;
             this.label5.Text = "HORA SALIDA";
             // 
@@ -62,9 +64,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(82, 290);
+            this.label3.Location = new System.Drawing.Point(55, 188);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(75, 20);
+            this.label3.Size = new System.Drawing.Size(51, 13);
             this.label3.TabIndex = 26;
             this.label3.Text = "ESTADO";
             // 
@@ -72,9 +75,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(82, 137);
+            this.label2.Location = new System.Drawing.Point(55, 89);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(137, 20);
+            this.label2.Size = new System.Drawing.Size(93, 13);
             this.label2.TabIndex = 25;
             this.label2.Text = "HORA ENTRADA";
             // 
@@ -82,32 +86,36 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(82, 70);
+            this.label1.Location = new System.Drawing.Point(55, 46);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 20);
+            this.label1.Size = new System.Drawing.Size(42, 13);
             this.label1.TabIndex = 24;
             this.label1.Text = "FECHA";
             // 
-            // dateTimePicker2
+            // dtp_HoraEntrada
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(231, 131);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(261, 26);
-            this.dateTimePicker2.TabIndex = 29;
+            this.dtp_HoraEntrada.Location = new System.Drawing.Point(154, 85);
+            this.dtp_HoraEntrada.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtp_HoraEntrada.Name = "dtp_HoraEntrada";
+            this.dtp_HoraEntrada.Size = new System.Drawing.Size(175, 20);
+            this.dtp_HoraEntrada.TabIndex = 29;
             // 
-            // dateTimePicker3
+            // dtp_HoraSalida
             // 
-            this.dateTimePicker3.Location = new System.Drawing.Point(231, 204);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(261, 26);
-            this.dateTimePicker3.TabIndex = 30;
+            this.dtp_HoraSalida.Location = new System.Drawing.Point(154, 133);
+            this.dtp_HoraSalida.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtp_HoraSalida.Name = "dtp_HoraSalida";
+            this.dtp_HoraSalida.Size = new System.Drawing.Size(175, 20);
+            this.dtp_HoraSalida.TabIndex = 30;
             // 
             // txtEstado
             // 
             this.txtEstado.BackColor = System.Drawing.Color.Silver;
-            this.txtEstado.Location = new System.Drawing.Point(231, 290);
+            this.txtEstado.Location = new System.Drawing.Point(154, 188);
+            this.txtEstado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtEstado.Name = "txtEstado";
-            this.txtEstado.Size = new System.Drawing.Size(141, 26);
+            this.txtEstado.Size = new System.Drawing.Size(95, 20);
             this.txtEstado.TabIndex = 31;
             // 
             // button1
@@ -120,10 +128,9 @@
             this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(424, 383);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button1.Location = new System.Drawing.Point(283, 249);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(145, 40);
+            this.button1.Size = new System.Drawing.Size(97, 26);
             this.button1.TabIndex = 33;
             this.button1.Text = "CERRAR";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -139,32 +146,33 @@
             this.btnGuardarAsistencia.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardarAsistencia.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardarAsistencia.Image")));
             this.btnGuardarAsistencia.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardarAsistencia.Location = new System.Drawing.Point(116, 380);
-            this.btnGuardarAsistencia.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnGuardarAsistencia.Location = new System.Drawing.Point(77, 247);
             this.btnGuardarAsistencia.Name = "btnGuardarAsistencia";
-            this.btnGuardarAsistencia.Size = new System.Drawing.Size(141, 43);
+            this.btnGuardarAsistencia.Size = new System.Drawing.Size(94, 28);
             this.btnGuardarAsistencia.TabIndex = 32;
             this.btnGuardarAsistencia.Text = "GUARDAR";
             this.btnGuardarAsistencia.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGuardarAsistencia.UseVisualStyleBackColor = false;
+            this.btnGuardarAsistencia.Click += new System.EventHandler(this.btnGuardarAsistencia_Click);
             // 
             // FRM_NUEVO_ASISTENCIA
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.OliveDrab;
-            this.ClientSize = new System.Drawing.Size(637, 459);
+            this.ClientSize = new System.Drawing.Size(425, 298);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnGuardarAsistencia);
             this.Controls.Add(this.txtEstado);
-            this.Controls.Add(this.dateTimePicker3);
-            this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtp_HoraSalida);
+            this.Controls.Add(this.dtp_HoraEntrada);
+            this.Controls.Add(this.dtp_FechaAsis);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FRM_NUEVO_ASISTENCIA";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FRM_NUEVO_ASISTENCIA";
@@ -175,16 +183,15 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
         public System.Windows.Forms.TextBox txtEstado;
         public System.Windows.Forms.Button button1;
         public System.Windows.Forms.Button btnGuardarAsistencia;
+        public System.Windows.Forms.DateTimePicker dtp_FechaAsis;
+        public System.Windows.Forms.DateTimePicker dtp_HoraEntrada;
+        public System.Windows.Forms.DateTimePicker dtp_HoraSalida;
     }
 }
