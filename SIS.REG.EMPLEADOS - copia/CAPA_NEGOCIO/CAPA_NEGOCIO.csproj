@@ -153,6 +153,7 @@
     <Compile Include="CN_EMPLEADOS.cs" />
     <Compile Include="CN_PROCEDIMIENTOS.cs" />
     <Compile Include="CN_PUESTO.cs" />
+    <Compile Include="CN_USUARIOS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
