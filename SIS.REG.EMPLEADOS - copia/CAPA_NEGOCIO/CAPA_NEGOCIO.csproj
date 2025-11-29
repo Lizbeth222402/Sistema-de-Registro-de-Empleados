@@ -154,6 +154,7 @@
     <Compile Include="CN_CONTRATOS.cs" />
     <Compile Include="CN_DEPARTAMENTO.cs" />
     <Compile Include="CN_EMPLEADOS.cs" />
+    <Compile Include="CN_NOMINAS.cs" />
     <Compile Include="CN_PROCEDIMIENTOS.cs" />
     <Compile Include="CN_PUESTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
