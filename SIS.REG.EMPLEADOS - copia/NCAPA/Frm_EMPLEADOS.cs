@@ -64,5 +64,11 @@ namespace NCAPA
             FRM_NUEVO_EMPLEADO AbrirVentanaNuevoempleado = new FRM_NUEVO_EMPLEADO();
             AbrirVentanaNuevoempleado.ShowDialog();
         }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            FRM_EDITAR_EMPLEADOS eDITAR_EMPLEADOS = new FRM_EDITAR_EMPLEADOS();
+            eDITAR_EMPLEADOS.ShowDialog();
+        }
     }
 }

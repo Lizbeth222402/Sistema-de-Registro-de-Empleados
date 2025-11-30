@@ -215,6 +215,30 @@
     <Compile Include="FRM_EDITAR_DEPA.Designer.cs">
       <DependentUpon>FRM_EDITAR_DEPA.cs</DependentUpon>
     </Compile>
+    <Compile Include="FRM_EDITAR_EMPLEADOS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_EDITAR_EMPLEADOS.Designer.cs">
+      <DependentUpon>FRM_EDITAR_EMPLEADOS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_EDITAR_NOMINAS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_EDITAR_NOMINAS.Designer.cs">
+      <DependentUpon>FRM_EDITAR_NOMINAS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_EDITAR_PUESTO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_EDITAR_PUESTO.Designer.cs">
+      <DependentUpon>FRM_EDITAR_PUESTO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_EDITAR_USUARIO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_EDITAR_USUARIO.Designer.cs">
+      <DependentUpon>FRM_EDITAR_USUARIO.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_EMPLEADOS.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -324,6 +348,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FRM_EDITAR_DEPA.resx">
       <DependentUpon>FRM_EDITAR_DEPA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_EDITAR_EMPLEADOS.resx">
+      <DependentUpon>FRM_EDITAR_EMPLEADOS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_EDITAR_NOMINAS.resx">
+      <DependentUpon>FRM_EDITAR_NOMINAS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_EDITAR_PUESTO.resx">
+      <DependentUpon>FRM_EDITAR_PUESTO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_EDITAR_USUARIO.resx">
+      <DependentUpon>FRM_EDITAR_USUARIO.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_EMPLEADOS.resx">
       <DependentUpon>Frm_EMPLEADOS.cs</DependentUpon>

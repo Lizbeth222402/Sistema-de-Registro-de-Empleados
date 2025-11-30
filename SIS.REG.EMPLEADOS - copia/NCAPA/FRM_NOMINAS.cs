@@ -60,5 +60,11 @@ namespace NCAPA
             FRM_NUEVO_NOMINAS AbrirNuevaNominas = new FRM_NUEVO_NOMINAS();
             AbrirNuevaNominas.ShowDialog();
         }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            FRM_EDITAR_NOMINAS eDITAR_NOMINAS = new FRM_EDITAR_NOMINAS();
+            eDITAR_NOMINAS.ShowDialog();
+        }
     }
 }

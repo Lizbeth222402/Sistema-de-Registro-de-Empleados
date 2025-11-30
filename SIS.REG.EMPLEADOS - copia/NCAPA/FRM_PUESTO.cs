@@ -59,5 +59,11 @@ namespace NCAPA
             FRM_NUEVO_PUESTO AbrirNuevopuesto = new FRM_NUEVO_PUESTO();
             AbrirNuevopuesto.ShowDialog();
         }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            FRM_EDITAR_PUESTO eDITAR_PUESTO = new FRM_EDITAR_PUESTO();
+            eDITAR_PUESTO.ShowDialog(); 
+        }
     }
 }

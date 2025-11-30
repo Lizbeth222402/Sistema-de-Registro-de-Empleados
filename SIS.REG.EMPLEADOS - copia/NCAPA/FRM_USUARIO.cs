@@ -50,6 +50,9 @@ namespace NCAPA
 
         private void btnEditar_Usuario_Click(object sender, EventArgs e)
         {
+            FRM_EDITAR_USUARIO eDITAR_USUARIO = new FRM_EDITAR_USUARIO();
+            eDITAR_USUARIO.ShowDialog();
+            
             /*CargarDatos();*/
         }
 
