@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace CAPA_DATO
 {
@@ -13,6 +14,8 @@ namespace CAPA_DATO
     {
 
         CD_CONEXION Con = new CD_CONEXION();
+
+        #region LISTAR USUARIOS
 
         public List<CE_MUSUARIOS> ListarUsuarios()
         {
@@ -45,8 +48,38 @@ namespace CAPA_DATO
 
         }
 
+        #endregion LISTAR USUARIO
 
+        #region INSERTAR USUARIOS
 
+        public void InsertarUsuario(CE_MUSUARIOS cE_MUSUARIOS)
+        {
+            try
+            {
+                using (SqlCommand cmd = new SqlCommand("SP_INSERTAR_USUARIO", Con.Abrir()))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.Parameters.Add(new SqlParameter("@NOMBRE_USUARIO", cE_MUSUARIOS.NOMBRE_USUARIO));
+                    cmd.Parameters.Add(new SqlParameter("@CONTRASEÑA", cE_MUSUARIOS.CONTRASEÑA));
+                    cmd.Parameters.Add(new SqlParameter("@ACTIVO", cE_MUSUARIOS.ACTIVO));
+                   
+                    cmd.ExecuteNonQuery();
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ups no se Ingreso por el error: {ex.Message}", "Error al Ingresar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                Con.Cerrar();
+            }
+        }
+
+        #endregion INSERTAR USUARIOS
 
     }
 }
