@@ -7,11 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CAPA_ENTIDAD;
+using CAPA_NEGOCIO;
 
 namespace NCAPA
 {
     public partial class FRM_NEW_USUARIO : Form
     {
+        CE_MUSUARIOS Musuarios = new CE_MUSUARIOS();
+        CN_USUARIOS cN_USUARIOS = new CN_USUARIOS();
+
         public FRM_NEW_USUARIO()
         {
             InitializeComponent();
@@ -20,11 +25,6 @@ namespace NCAPA
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void btnNuevoEmpleado_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
