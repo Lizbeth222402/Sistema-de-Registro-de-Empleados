@@ -89,6 +89,43 @@ namespace CAPA_DATO
 
         #endregion INSERTAR NOMINAS
 
+        #region EDITAR NOMINAS
+
+        public void EditarNominas(CE_MNOMINAS cE_MNOMINAS)
+        {
+
+            try
+            {
+
+                using (SqlCommand cmd = new SqlCommand("SP_EDITAR_NOMINAS", Con.Abrir()))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+
+                    cmd.Parameters.Add(new SqlParameter("@Id_nomina", cE_MNOMINAS.Id_nomina));
+                    cmd.Parameters.Add(new SqlParameter("@Id_empleado", cE_MNOMINAS.Id_empleado));
+                    cmd.Parameters.Add(new SqlParameter("@Fecha_pago", cE_MNOMINAS.Fecha_pago));
+                    cmd.Parameters.Add(new SqlParameter("@Salario_bruto", cE_MNOMINAS.Salario_bruto));
+                    cmd.Parameters.Add(new SqlParameter("@Deducciones", cE_MNOMINAS.Deducciones));
+                    cmd.Parameters.Add(new SqlParameter("@Salario_neto", cE_MNOMINAS.Salario_neto));
+
+                    cmd.ExecuteNonQuery();
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ups no se Ingreso por el error: {ex.Message}", "Error al Ingresar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                Con.Cerrar();
+            }
+        }
+
+        #endregion EDITAR NOMINAS
+
     }
 }
 

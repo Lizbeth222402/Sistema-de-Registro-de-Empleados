@@ -81,7 +81,39 @@ namespace CAPA_DATO
 
         #endregion INSERTAR DEPARTAMENTOS
 
+        #region EDITAR DEPARTAMENTOS
 
+        public void EditarDepartamento(CE_MDEPARTAMENTOS cE_MDEPARTAMENTOS)
+        {
+
+            try
+            {
+
+                using (SqlCommand cmd = new SqlCommand("Sp_EditarDepartamentos", Con.Abrir()))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.Parameters.Add(new SqlParameter("@Id_departamento", cE_MDEPARTAMENTOS.Id_departamento));
+                    cmd.Parameters.Add(new SqlParameter("@Nombre", cE_MDEPARTAMENTOS.Nombre));
+                    cmd.Parameters.Add(new SqlParameter("@Descripcion", cE_MDEPARTAMENTOS.Descripcion));
+
+                    cmd.ExecuteNonQuery();
+
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ups no se Ingreso por el error: {ex.Message}", "Error al Ingresar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                Con.Cerrar();
+            }
+        }
+
+        #endregion EDITAR DEPARTAMENTOS
 
     }
 }

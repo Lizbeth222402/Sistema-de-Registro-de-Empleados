@@ -83,6 +83,42 @@ namespace CAPA_DATO
 
         #endregion INSERTAR PUESTO
 
+        #region EDITAR PUESTO
+
+        public void EditarPuesto(CE_MPUESTOS cE_MPUESTOS)
+        {
+
+            try
+            {
+
+                using (SqlCommand cmd = new SqlCommand("Sp_EditarPuestos", Con.Abrir()))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+
+                    cmd.Parameters.Add(new SqlParameter("@Id_puesto", cE_MPUESTOS.Id_puesto));
+                    cmd.Parameters.Add(new SqlParameter("@Nombre_puesto", cE_MPUESTOS.Nombre_puesto));
+                    cmd.Parameters.Add(new SqlParameter("@Descripcion", cE_MPUESTOS.Descripcion));
+                    cmd.Parameters.Add(new SqlParameter("@Salario_base", cE_MPUESTOS.Salario_base));
+
+                    cmd.ExecuteNonQuery();
+
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ups no se Ingreso por el error: {ex.Message}", "Error al Ingresar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                Con.Cerrar();
+            }
+        }
+
+        #endregion EDITAR PUESTO
+
 
     }
 }

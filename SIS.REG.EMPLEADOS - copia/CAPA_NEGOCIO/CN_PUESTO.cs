@@ -2,9 +2,13 @@
 using CAPA_ENTIDAD;
 using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace CAPA_NEGOCIO
 {
@@ -28,5 +32,14 @@ namespace CAPA_NEGOCIO
             CD_puesto.InsertarPuesto(cE_MPUESTOS);
 
         }
+
+       
+        public void EditarPuesto(CE_MPUESTOS cE_MPUESTOS)
+        {
+
+            CD_puesto.EditarPuesto(cE_MPUESTOS);
+        }
+
+       
     }
 }

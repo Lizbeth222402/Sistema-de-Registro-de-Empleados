@@ -8,6 +8,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace CAPA_NEGOCIO
 {
@@ -31,5 +32,15 @@ namespace CAPA_NEGOCIO
 
         }
 
+
+        #region EDITAR DEPARTAMENTOS
+
+        public void EditarDepartamento(CE_MDEPARTAMENTOS cE_MDEPARTAMENTOS)
+        {
+
+           CD_departamento.EditarDepartamento(cE_MDEPARTAMENTOS)
+        }
+
+        #endregion EDITAR DEPARTAMENTOS
     }
 }

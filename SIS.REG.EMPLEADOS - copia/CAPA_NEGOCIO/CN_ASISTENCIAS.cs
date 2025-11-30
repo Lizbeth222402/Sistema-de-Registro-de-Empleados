@@ -1,10 +1,14 @@
-﻿using System;
+﻿using CAPA_DATO;
+using CAPA_ENTIDAD;
+using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using CAPA_DATO;
-using CAPA_ENTIDAD;
+using System.Windows.Forms;
 
 namespace CAPA_NEGOCIO
 {
@@ -27,5 +31,13 @@ namespace CAPA_NEGOCIO
 
         }
 
+
+        //metodo editar//
+
+        
+        public void EditarAsistencia(CE_MASISTENCIAS cE_MASISTENCIAS)
+        {
+            cD_ASISTENCIAS.EditarAsistencia(cE_MASISTENCIAS);
+        }
     }
 }

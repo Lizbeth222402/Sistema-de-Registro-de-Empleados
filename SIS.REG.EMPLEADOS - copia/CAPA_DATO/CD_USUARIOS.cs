@@ -81,5 +81,37 @@ namespace CAPA_DATO
 
         #endregion INSERTAR USUARIOS
 
+
+        #region EDITAR USUARIOS
+
+        public void EditarUsuario(CE_MUSUARIOS cE_MUSUARIOS)
+        {
+            try
+            {
+                using (SqlCommand cmd = new SqlCommand("SP_EDITAR_USUARIO", Con.Abrir()))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.Parameters.Add(new SqlParameter("@ID_USUARIO", cE_MUSUARIOS.ID_USUARIO));
+                    cmd.Parameters.Add(new SqlParameter("@NOMBRE_USUARIO", cE_MUSUARIOS.NOMBRE_USUARIO));
+                    cmd.Parameters.Add(new SqlParameter("@CONTRASEÑA", cE_MUSUARIOS.CONTRASEÑA));
+                    cmd.Parameters.Add(new SqlParameter("@ACTIVO", cE_MUSUARIOS.ACTIVO));
+
+                    cmd.ExecuteNonQuery();
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ups no se Ingreso por el error: {ex.Message}", "Error al Ingresar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                Con.Cerrar();
+            }
+        }
+
+        #endregion EDITAR USUARIOS
     }
 }

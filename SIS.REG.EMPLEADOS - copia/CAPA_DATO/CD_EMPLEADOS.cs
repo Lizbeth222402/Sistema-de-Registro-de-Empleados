@@ -100,5 +100,47 @@ namespace CAPA_DATO
 
         #endregion INSERTAR EMPLEADOS
 
+
+        #region EDITAR EMPLEADOS
+
+        public void EditarEmpleados(CE_MEMPLEADOS cE_MEMPLEADOS)
+        {
+
+            try
+            {
+
+                using (SqlCommand cmd = new SqlCommand("Sp_EditarEmpleados", Con.Abrir()))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.Parameters.Add(new SqlParameter("@Id_empleado", cE_MEMPLEADOS.Id_empleado));
+                    cmd.Parameters.Add(new SqlParameter("@Nombres", cE_MEMPLEADOS.Nombres));
+                    cmd.Parameters.Add(new SqlParameter("@Apellidos", cE_MEMPLEADOS.Apellidos));
+                    cmd.Parameters.Add(new SqlParameter("@Fecha_nacimiento", cE_MEMPLEADOS.Fecha_nacimiento));
+                    cmd.Parameters.Add(new SqlParameter("@Direccion", cE_MEMPLEADOS.Direccion));
+                    cmd.Parameters.Add(new SqlParameter("@Telefono", cE_MEMPLEADOS.Telefono));
+                    cmd.Parameters.Add(new SqlParameter("@Email", cE_MEMPLEADOS.Email));
+                    cmd.Parameters.Add(new SqlParameter("@Fecha_ingreso", cE_MEMPLEADOS.Fecha_ingreso));
+                    cmd.Parameters.Add(new SqlParameter("@Id_departamento", cE_MEMPLEADOS.Id_departamento));
+                    cmd.Parameters.Add(new SqlParameter("@Id_puesto", cE_MEMPLEADOS.Id_puesto));
+
+                    cmd.ExecuteNonQuery();
+
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ups no se Ingreso por el error: {ex.Message}", "Error al Ingresar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                Con.Cerrar();
+            }
+        }
+
+        #endregion EDITAR EMPLEADOS
+
     }
 }

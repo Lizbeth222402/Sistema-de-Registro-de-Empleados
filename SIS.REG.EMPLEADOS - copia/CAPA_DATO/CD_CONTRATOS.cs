@@ -91,5 +91,42 @@ namespace CAPA_DATO
         #endregion INSERTAR CONTRATOS
 
 
+        #region EDITAR CONTRATOS
+
+        public void EditarContrato(CE_MCONTRATOS cE_Mcontratos)
+        {
+
+            try
+            {
+
+                using (SqlCommand cmd = new SqlCommand("Sp_EditarContratos", Con.Abrir()))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.Parameters.Add(new SqlParameter("@Id_contrato", cE_Mcontratos.Id_contrato));
+                    cmd.Parameters.Add(new SqlParameter("@Id_empleado", cE_Mcontratos.Id_empleado));
+                    cmd.Parameters.Add(new SqlParameter("@Tipo_contrato", cE_Mcontratos.Tipo_contrato));
+                    cmd.Parameters.Add(new SqlParameter("@Fecha_inicio", cE_Mcontratos.Fecha_inicio));
+                    cmd.Parameters.Add(new SqlParameter("@Fecha_fin", cE_Mcontratos.Fecha_fin));
+                    cmd.Parameters.Add(new SqlParameter("@Salario", cE_Mcontratos.Salario));
+
+                    cmd.ExecuteNonQuery();
+
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ups no se Ingreso por el error: {ex.Message}", "Error al Ingresar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                Con.Cerrar();
+            }
+        }
+
+        #endregion EDITAR CONTRATOS
+
     }
 }
