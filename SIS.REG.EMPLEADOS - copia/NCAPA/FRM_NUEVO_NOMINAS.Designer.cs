@@ -67,6 +67,7 @@
             this.txt_Salario_Bru.Name = "txt_Salario_Bru";
             this.txt_Salario_Bru.Size = new System.Drawing.Size(277, 26);
             this.txt_Salario_Bru.TabIndex = 42;
+            this.txt_Salario_Bru.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumbers);
             // 
             // label1
             // 
@@ -85,6 +86,7 @@
             this.txt_Deducc.Name = "txt_Deducc";
             this.txt_Deducc.Size = new System.Drawing.Size(277, 26);
             this.txt_Deducc.TabIndex = 44;
+            this.txt_Deducc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumbers);
             // 
             // label3
             // 
@@ -104,6 +106,7 @@
             this.txt_Salari_Neto.Size = new System.Drawing.Size(277, 26);
             this.txt_Salari_Neto.TabIndex = 46;
             this.txt_Salari_Neto.TextChanged += new System.EventHandler(this.txt_Salari_Neto_TextChanged);
+            this.txt_Salari_Neto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumbers);
             // 
             // label4
             // 
@@ -162,6 +165,7 @@
             this.txt_IdemplNominas.Name = "txt_IdemplNominas";
             this.txt_IdemplNominas.Size = new System.Drawing.Size(277, 26);
             this.txt_IdemplNominas.TabIndex = 50;
+            this.txt_IdemplNominas.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumbers);
             // 
             // label5
             // 

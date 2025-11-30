@@ -57,5 +57,21 @@ namespace NCAPA
             cN_NOMINAS.InsertarNominas(Mnominas);
 
         }
+
+        private void OnlyNumbers(object sender, KeyPressEventArgs e)
+        {
+            if(!char.IsDigit(e.KeyChar) && e.KeyChar != (char)Keys.Back && e.KeyChar != '.')
+    {
+                e.Handled = true;
+                return;
+            }
+
+            TextBox txt = sender as TextBox;
+            if (e.KeyChar == '.' && txt.Text.Contains("."))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }
+
