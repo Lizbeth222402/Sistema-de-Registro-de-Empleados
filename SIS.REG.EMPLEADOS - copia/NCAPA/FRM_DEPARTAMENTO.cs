@@ -29,7 +29,31 @@ namespace NCAPA
             //PARA EL TAMAÑO DE LAS FILAS DEL DATA GRID//
             DataGridDepartamento.Columns[1].Width = 170;
             DataGridDepartamento.Columns[2].Width = 400;
-           
+
+
+            // Cabecera
+            DataGridDepartamento.EnableHeadersVisualStyles = false;
+            DataGridDepartamento.ColumnHeadersDefaultCellStyle.BackColor = Color.SteelBlue;
+            DataGridDepartamento.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            DataGridDepartamento.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+
+            // Color de fondo de la tabla
+            DataGridDepartamento.BackgroundColor = Color.White;
+
+            // Filas alternadas
+            DataGridDepartamento.AlternatingRowsDefaultCellStyle.BackColor = Color.LightBlue;
+
+            // Color selección de fila
+            DataGridDepartamento.DefaultCellStyle.SelectionBackColor = Color.DodgerBlue;
+            DataGridDepartamento.DefaultCellStyle.SelectionForeColor = Color.White;
+
+            // Fuente general
+            DataGridDepartamento.DefaultCellStyle.Font = new Font("Segoe UI", 10);
+
+            // Borde
+            DataGridDepartamento.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            DataGridDepartamento.GridColor = Color.LightGray;
+
 
         }
 
@@ -59,6 +83,11 @@ namespace NCAPA
         {
             FRM_EDITAR_DEPA eDITAR_DEPA = new FRM_EDITAR_DEPA();
             eDITAR_DEPA.ShowDialog();
+        }
+
+        private void DataGridDepartamento_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

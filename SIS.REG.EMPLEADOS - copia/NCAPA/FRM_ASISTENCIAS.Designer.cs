@@ -35,6 +35,8 @@
             this.DataGridAsistencia = new System.Windows.Forms.DataGridView();
             this.BtncerrarD = new System.Windows.Forms.Button();
             this.textboxASISTENCIA = new System.Windows.Forms.TextBox();
+            this.txtBusqueda = new System.Windows.Forms.TextBox();
+            this.cboBuscar = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.DataGridAsistencia)).BeginInit();
             this.SuspendLayout();
             // 
@@ -140,11 +142,38 @@
             this.textboxASISTENCIA.TabIndex = 30;
             this.textboxASISTENCIA.Text = "GESTION DE ASISTENCIA";
             // 
+            // txtBusqueda
+            // 
+            this.txtBusqueda.BackColor = System.Drawing.Color.White;
+            this.txtBusqueda.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBusqueda.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txtBusqueda.Location = new System.Drawing.Point(789, 69);
+            this.txtBusqueda.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtBusqueda.Multiline = true;
+            this.txtBusqueda.Name = "txtBusqueda";
+            this.txtBusqueda.Size = new System.Drawing.Size(355, 29);
+            this.txtBusqueda.TabIndex = 32;
+            // 
+            // cboBuscar
+            // 
+            this.cboBuscar.BackColor = System.Drawing.Color.White;
+            this.cboBuscar.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboBuscar.FormattingEnabled = true;
+            this.cboBuscar.Items.AddRange(new object[] {
+            "Departamento"});
+            this.cboBuscar.Location = new System.Drawing.Point(570, 69);
+            this.cboBuscar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cboBuscar.Name = "cboBuscar";
+            this.cboBuscar.Size = new System.Drawing.Size(200, 39);
+            this.cboBuscar.TabIndex = 31;
+            // 
             // FRM_ASISTENCIAS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1180, 652);
+            this.Controls.Add(this.txtBusqueda);
+            this.Controls.Add(this.cboBuscar);
             this.Controls.Add(this.textboxASISTENCIA);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnEliminar);
@@ -162,6 +191,8 @@
             this.Controls.SetChildIndex(this.btnEliminar, 0);
             this.Controls.SetChildIndex(this.btnEditar, 0);
             this.Controls.SetChildIndex(this.textboxASISTENCIA, 0);
+            this.Controls.SetChildIndex(this.cboBuscar, 0);
+            this.Controls.SetChildIndex(this.txtBusqueda, 0);
             ((System.ComponentModel.ISupportInitialize)(this.DataGridAsistencia)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -176,5 +207,7 @@
         private System.Windows.Forms.DataGridView DataGridAsistencia;
         public System.Windows.Forms.Button BtncerrarD;
         private System.Windows.Forms.TextBox textboxASISTENCIA;
+        public System.Windows.Forms.TextBox txtBusqueda;
+        private System.Windows.Forms.ComboBox cboBuscar;
     }
 }

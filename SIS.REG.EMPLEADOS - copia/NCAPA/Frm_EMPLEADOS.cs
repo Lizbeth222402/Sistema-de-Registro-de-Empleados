@@ -39,6 +39,30 @@ namespace NCAPA
 
 
 
+            // Cabecera
+            DataGriEmpleados.EnableHeadersVisualStyles = false;
+            DataGriEmpleados.ColumnHeadersDefaultCellStyle.BackColor = Color.SteelBlue;
+            DataGriEmpleados.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            DataGriEmpleados.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+
+            // Color de fondo de la tabla
+            DataGriEmpleados.BackgroundColor = Color.White;
+
+            // Filas alternadas
+            DataGriEmpleados.AlternatingRowsDefaultCellStyle.BackColor = Color.LightBlue;
+
+            // Color selección de fila
+            DataGriEmpleados.DefaultCellStyle.SelectionBackColor = Color.DodgerBlue;
+            DataGriEmpleados.DefaultCellStyle.SelectionForeColor = Color.White;
+
+            // Fuente general
+            DataGriEmpleados.DefaultCellStyle.Font = new Font("Segoe UI", 10);
+
+            // Borde
+            DataGriEmpleados.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            DataGriEmpleados.GridColor = Color.LightGray;
+
+
         }
 
         //metodo para alistar//

@@ -34,6 +34,31 @@ namespace NCAPA
             DataGridPuesto.Columns[2].Width = 130;
             DataGridPuesto.Columns[3].Width = 130;
 
+
+
+            // Cabecera
+            DataGridPuesto.EnableHeadersVisualStyles = false;
+            DataGridPuesto.ColumnHeadersDefaultCellStyle.BackColor = Color.SteelBlue;
+            DataGridPuesto.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            DataGridPuesto.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+
+            // Color de fondo de la tabla
+            DataGridPuesto.BackgroundColor = Color.White;
+
+            // Filas alternadas
+            DataGridPuesto.AlternatingRowsDefaultCellStyle.BackColor = Color.LightBlue;
+
+            // Color selección de fila
+            DataGridPuesto.DefaultCellStyle.SelectionBackColor = Color.DodgerBlue;
+            DataGridPuesto.DefaultCellStyle.SelectionForeColor = Color.White;
+
+            // Fuente general
+            DataGridPuesto.DefaultCellStyle.Font = new Font("Segoe UI", 10);
+
+            // Borde
+            DataGridPuesto.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            DataGridPuesto.GridColor = Color.LightGray;
+
         }
 
 

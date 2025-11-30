@@ -128,6 +128,7 @@
             this.DataGriContratos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DataGriContratos.Size = new System.Drawing.Size(1144, 355);
             this.DataGriContratos.TabIndex = 34;
+            this.DataGriContratos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGriContratos_CellContentClick);
             // 
             // textboxCONTRATO
             // 

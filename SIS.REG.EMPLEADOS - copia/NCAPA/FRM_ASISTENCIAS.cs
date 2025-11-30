@@ -32,7 +32,34 @@ namespace NCAPA
             DataGridAsistencia.Columns[2].Width = 200;
             DataGridAsistencia.Columns[3].Width = 200;
             DataGridAsistencia.Columns[4].Width = 205;
-            
+
+
+
+               // Cabecera
+            DataGridAsistencia.EnableHeadersVisualStyles = false;
+            DataGridAsistencia.ColumnHeadersDefaultCellStyle.BackColor = Color.SteelBlue;
+            DataGridAsistencia.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            DataGridAsistencia.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+                
+            // Color de fondo de la tabla
+            DataGridAsistencia.BackgroundColor = Color.White;
+
+            // Filas alternadas
+            DataGridAsistencia.AlternatingRowsDefaultCellStyle.BackColor = Color.LightBlue;
+                
+            // Color selección de fila
+            DataGridAsistencia.DefaultCellStyle.SelectionBackColor = Color.DodgerBlue;
+            DataGridAsistencia.DefaultCellStyle.SelectionForeColor = Color.White;
+
+            // Fuente general
+            DataGridAsistencia.DefaultCellStyle.Font = new Font("Segoe UI", 10);
+
+            // Borde
+            DataGridAsistencia.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            DataGridAsistencia.GridColor = Color.LightGray;
+
+
+
         }
 
 

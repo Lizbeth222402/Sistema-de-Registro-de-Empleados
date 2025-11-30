@@ -30,7 +30,31 @@ namespace NCAPA
             //PARA EL TAMAÑO DE LAS FILAS DEL DATA GRID//
             dataGridUsuaios.Columns[1].Width = 150;
             dataGridUsuaios.Columns[2].Width = 150;
-            
+
+
+            // Cabecera
+            dataGridUsuaios.EnableHeadersVisualStyles = false;
+            dataGridUsuaios.ColumnHeadersDefaultCellStyle.BackColor = Color.SteelBlue;
+            dataGridUsuaios.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dataGridUsuaios.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+
+            // Color de fondo de la tabla
+            dataGridUsuaios.BackgroundColor = Color.White;
+
+            // Filas alternadas
+            dataGridUsuaios.AlternatingRowsDefaultCellStyle.BackColor = Color.LightBlue;
+
+            // Color selección de fila
+            dataGridUsuaios.DefaultCellStyle.SelectionBackColor = Color.DodgerBlue;
+            dataGridUsuaios.DefaultCellStyle.SelectionForeColor = Color.White;
+
+            // Fuente general
+            dataGridUsuaios.DefaultCellStyle.Font = new Font("Segoe UI", 10);
+
+            // Borde
+            dataGridUsuaios.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            dataGridUsuaios.GridColor = Color.LightGray;
+
         }
 
 
@@ -60,6 +84,11 @@ namespace NCAPA
         {
             FRM_NEW_USUARIO AbrirNewUsuario = new FRM_NEW_USUARIO();
             AbrirNewUsuario.ShowDialog();
+        }
+
+        private void dataGridUsuaios_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
 
         /*

@@ -77,6 +77,7 @@
             this.DataGridDepartamento.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DataGridDepartamento.Size = new System.Drawing.Size(1138, 361);
             this.DataGridDepartamento.TabIndex = 16;
+            this.DataGridDepartamento.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridDepartamento_CellContentClick);
             // 
             // txtBusqueda
             // 

@@ -35,6 +35,30 @@ namespace NCAPA
             DataGridAusencias.Columns[4].Width = 130;
 
 
+            // Cabecera
+            DataGridAusencias.EnableHeadersVisualStyles = false;
+            DataGridAusencias.ColumnHeadersDefaultCellStyle.BackColor = Color.SteelBlue;
+            DataGridAusencias.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            DataGridAusencias.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+
+            // Color de fondo de la tabla
+            DataGridAusencias.BackgroundColor = Color.White;
+
+            // Filas alternadas
+            DataGridAusencias.AlternatingRowsDefaultCellStyle.BackColor = Color.LightBlue;
+
+            // Color selección de fila
+            DataGridAusencias.DefaultCellStyle.SelectionBackColor = Color.DodgerBlue;
+            DataGridAusencias.DefaultCellStyle.SelectionForeColor = Color.White;
+
+            // Fuente general
+            DataGridAusencias.DefaultCellStyle.Font = new Font("Segoe UI", 10);
+
+            // Borde
+            DataGridAusencias.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            DataGridAusencias.GridColor = Color.LightGray;
+
+
         }
 
 
@@ -65,6 +89,11 @@ namespace NCAPA
         {
             FRM_EDITAR_NOMINAS eDITAR_NOMINAS = new FRM_EDITAR_NOMINAS();
             eDITAR_NOMINAS.ShowDialog();
+        }
+
+        private void DataGridAusencias_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

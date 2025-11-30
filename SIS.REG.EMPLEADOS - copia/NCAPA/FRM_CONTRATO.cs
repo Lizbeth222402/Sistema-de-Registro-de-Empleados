@@ -32,6 +32,30 @@ namespace NCAPA
             DataGriContratos.Columns[3].Width = 170;
             DataGriContratos.Columns[4].Width = 170;
 
+
+            // Cabecera
+            DataGriContratos.EnableHeadersVisualStyles = false;
+            DataGriContratos.ColumnHeadersDefaultCellStyle.BackColor = Color.SteelBlue;
+            DataGriContratos.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            DataGriContratos.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+
+            // Color de fondo de la tabla
+            DataGriContratos.BackgroundColor = Color.White;
+
+            // Filas alternadas
+            DataGriContratos.AlternatingRowsDefaultCellStyle.BackColor = Color.LightBlue;
+
+            // Color selección de fila
+            DataGriContratos.DefaultCellStyle.SelectionBackColor = Color.DodgerBlue;
+            DataGriContratos.DefaultCellStyle.SelectionForeColor = Color.White;
+
+            // Fuente general
+            DataGriContratos.DefaultCellStyle.Font = new Font("Segoe UI", 10);
+
+            // Borde
+            DataGriContratos.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            DataGriContratos.GridColor = Color.LightGray;
+
         }
 
 
@@ -58,6 +82,11 @@ namespace NCAPA
         {
             FRM_EDITAR_CONTRATO eDITAR_CONTRATO = new FRM_EDITAR_CONTRATO();
             eDITAR_CONTRATO.ShowDialog();
+        }
+
+        private void DataGriContratos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
