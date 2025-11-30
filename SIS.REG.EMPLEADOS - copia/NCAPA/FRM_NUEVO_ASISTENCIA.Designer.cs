@@ -37,26 +37,24 @@
             this.dtp_HoraEntrada = new System.Windows.Forms.DateTimePicker();
             this.dtp_HoraSalida = new System.Windows.Forms.DateTimePicker();
             this.txtEstado = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnGuardarAsistencia = new System.Windows.Forms.Button();
+            this.txx_cerrar = new System.Windows.Forms.Button();
+            this.btnGuardarAsis = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // dtp_FechaAsis
             // 
-            this.dtp_FechaAsis.Location = new System.Drawing.Point(154, 42);
-            this.dtp_FechaAsis.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtp_FechaAsis.Location = new System.Drawing.Point(231, 65);
             this.dtp_FechaAsis.Name = "dtp_FechaAsis";
-            this.dtp_FechaAsis.Size = new System.Drawing.Size(175, 20);
+            this.dtp_FechaAsis.Size = new System.Drawing.Size(260, 26);
             this.dtp_FechaAsis.TabIndex = 28;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(55, 136);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(82, 209);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(79, 13);
+            this.label5.Size = new System.Drawing.Size(119, 20);
             this.label5.TabIndex = 27;
             this.label5.Text = "HORA SALIDA";
             // 
@@ -64,10 +62,9 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(55, 188);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(82, 289);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 13);
+            this.label3.Size = new System.Drawing.Size(75, 20);
             this.label3.TabIndex = 26;
             this.label3.Text = "ESTADO";
             // 
@@ -75,10 +72,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(55, 89);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(82, 137);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(93, 13);
+            this.label2.Size = new System.Drawing.Size(137, 20);
             this.label2.TabIndex = 25;
             this.label2.Text = "HORA ENTRADA";
             // 
@@ -86,83 +82,81 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(55, 46);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(82, 71);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(42, 13);
+            this.label1.Size = new System.Drawing.Size(64, 20);
             this.label1.TabIndex = 24;
             this.label1.Text = "FECHA";
             // 
             // dtp_HoraEntrada
             // 
-            this.dtp_HoraEntrada.Location = new System.Drawing.Point(154, 85);
-            this.dtp_HoraEntrada.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtp_HoraEntrada.Location = new System.Drawing.Point(231, 131);
             this.dtp_HoraEntrada.Name = "dtp_HoraEntrada";
-            this.dtp_HoraEntrada.Size = new System.Drawing.Size(175, 20);
+            this.dtp_HoraEntrada.Size = new System.Drawing.Size(260, 26);
             this.dtp_HoraEntrada.TabIndex = 29;
             // 
             // dtp_HoraSalida
             // 
-            this.dtp_HoraSalida.Location = new System.Drawing.Point(154, 133);
-            this.dtp_HoraSalida.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtp_HoraSalida.Location = new System.Drawing.Point(231, 205);
             this.dtp_HoraSalida.Name = "dtp_HoraSalida";
-            this.dtp_HoraSalida.Size = new System.Drawing.Size(175, 20);
+            this.dtp_HoraSalida.Size = new System.Drawing.Size(260, 26);
             this.dtp_HoraSalida.TabIndex = 30;
             // 
             // txtEstado
             // 
             this.txtEstado.BackColor = System.Drawing.Color.Silver;
-            this.txtEstado.Location = new System.Drawing.Point(154, 188);
-            this.txtEstado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtEstado.Location = new System.Drawing.Point(231, 289);
             this.txtEstado.Name = "txtEstado";
-            this.txtEstado.Size = new System.Drawing.Size(95, 20);
+            this.txtEstado.Size = new System.Drawing.Size(140, 26);
             this.txtEstado.TabIndex = 31;
             // 
-            // button1
+            // txx_cerrar
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.Color.LightBlue;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(283, 249);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(97, 26);
-            this.button1.TabIndex = 33;
-            this.button1.Text = "CERRAR";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.txx_cerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.txx_cerrar.BackColor = System.Drawing.Color.LightBlue;
+            this.txx_cerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.txx_cerrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.txx_cerrar.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txx_cerrar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txx_cerrar.Image = ((System.Drawing.Image)(resources.GetObject("txx_cerrar.Image")));
+            this.txx_cerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.txx_cerrar.Location = new System.Drawing.Point(424, 383);
+            this.txx_cerrar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txx_cerrar.Name = "txx_cerrar";
+            this.txx_cerrar.Size = new System.Drawing.Size(146, 40);
+            this.txx_cerrar.TabIndex = 33;
+            this.txx_cerrar.Text = "CERRAR";
+            this.txx_cerrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.txx_cerrar.UseVisualStyleBackColor = false;
+            this.txx_cerrar.Click += new System.EventHandler(this.button1_Click);
             // 
-            // btnGuardarAsistencia
+            // btnGuardarAsis
             // 
-            this.btnGuardarAsistencia.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnGuardarAsistencia.BackColor = System.Drawing.Color.LightBlue;
-            this.btnGuardarAsistencia.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGuardarAsistencia.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnGuardarAsistencia.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardarAsistencia.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardarAsistencia.Image")));
-            this.btnGuardarAsistencia.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardarAsistencia.Location = new System.Drawing.Point(77, 247);
-            this.btnGuardarAsistencia.Name = "btnGuardarAsistencia";
-            this.btnGuardarAsistencia.Size = new System.Drawing.Size(94, 28);
-            this.btnGuardarAsistencia.TabIndex = 32;
-            this.btnGuardarAsistencia.Text = "GUARDAR";
-            this.btnGuardarAsistencia.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnGuardarAsistencia.UseVisualStyleBackColor = false;
-            this.btnGuardarAsistencia.Click += new System.EventHandler(this.btnGuardarAsistencia_Click);
+            this.btnGuardarAsis.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnGuardarAsis.BackColor = System.Drawing.Color.LightBlue;
+            this.btnGuardarAsis.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnGuardarAsis.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnGuardarAsis.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardarAsis.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardarAsis.Image")));
+            this.btnGuardarAsis.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGuardarAsis.Location = new System.Drawing.Point(86, 380);
+            this.btnGuardarAsis.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnGuardarAsis.Name = "btnGuardarAsis";
+            this.btnGuardarAsis.Size = new System.Drawing.Size(141, 43);
+            this.btnGuardarAsis.TabIndex = 32;
+            this.btnGuardarAsis.Text = "GUARDAR";
+            this.btnGuardarAsis.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnGuardarAsis.UseVisualStyleBackColor = false;
+            this.btnGuardarAsis.Click += new System.EventHandler(this.btnGuardarAsistencia_Click);
             // 
             // FRM_NUEVO_ASISTENCIA
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.OliveDrab;
-            this.ClientSize = new System.Drawing.Size(425, 298);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.btnGuardarAsistencia);
+            this.ClientSize = new System.Drawing.Size(638, 458);
+            this.Controls.Add(this.txx_cerrar);
+            this.Controls.Add(this.btnGuardarAsis);
             this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.dtp_HoraSalida);
             this.Controls.Add(this.dtp_HoraEntrada);
@@ -172,7 +166,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FRM_NUEVO_ASISTENCIA";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FRM_NUEVO_ASISTENCIA";
@@ -188,8 +181,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.TextBox txtEstado;
-        public System.Windows.Forms.Button button1;
-        public System.Windows.Forms.Button btnGuardarAsistencia;
+        public System.Windows.Forms.Button txx_cerrar;
+        public System.Windows.Forms.Button btnGuardarAsis;
         public System.Windows.Forms.DateTimePicker dtp_FechaAsis;
         public System.Windows.Forms.DateTimePicker dtp_HoraEntrada;
         public System.Windows.Forms.DateTimePicker dtp_HoraSalida;
