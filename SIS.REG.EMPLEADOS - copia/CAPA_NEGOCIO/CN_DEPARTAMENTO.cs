@@ -38,7 +38,7 @@ namespace CAPA_NEGOCIO
         public void EditarDepartamento(CE_MDEPARTAMENTOS cE_MDEPARTAMENTOS)
         {
 
-           CD_departamento.EditarDepartamento(cE_MDEPARTAMENTOS)
+            CD_departamento.EditarDepartamento(cE_MDEPARTAMENTOS);
         }
 
         #endregion EDITAR DEPARTAMENTOS

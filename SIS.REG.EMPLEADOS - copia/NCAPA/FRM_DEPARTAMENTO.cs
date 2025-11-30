@@ -54,5 +54,11 @@ namespace NCAPA
             AbrirNuevoDepartamento.ShowDialog();
 
         }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            FRM_EDITAR_DEPA eDITAR_DEPA = new FRM_EDITAR_DEPA();
+            eDITAR_DEPA.ShowDialog();
+        }
     }
 }

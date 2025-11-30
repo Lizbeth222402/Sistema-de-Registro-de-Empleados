@@ -53,5 +53,11 @@ namespace NCAPA
             FRM_NUEVO_CONTRATO AbrirNuevoContrato = new FRM_NUEVO_CONTRATO();
             AbrirNuevoContrato.ShowDialog();
         }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            FRM_EDITAR_CONTRATO eDITAR_CONTRATO = new FRM_EDITAR_CONTRATO();
+            eDITAR_CONTRATO.ShowDialog();
+        }
     }
 }

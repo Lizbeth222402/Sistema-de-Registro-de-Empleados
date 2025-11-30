@@ -191,6 +191,30 @@
     <Compile Include="FRM_DEPARTAMENTO.Designer.cs">
       <DependentUpon>FRM_DEPARTAMENTO.cs</DependentUpon>
     </Compile>
+    <Compile Include="FRM_EDITAR_ASISTENCIAS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_EDITAR_ASISTENCIAS.Designer.cs">
+      <DependentUpon>FRM_EDITAR_ASISTENCIAS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_EDITAR_AUSENCIAS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_EDITAR_AUSENCIAS.Designer.cs">
+      <DependentUpon>FRM_EDITAR_AUSENCIAS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_EDITAR_CONTRATO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_EDITAR_CONTRATO.Designer.cs">
+      <DependentUpon>FRM_EDITAR_CONTRATO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FRM_EDITAR_DEPA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FRM_EDITAR_DEPA.Designer.cs">
+      <DependentUpon>FRM_EDITAR_DEPA.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_EMPLEADOS.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -288,6 +312,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FRM_DEPARTAMENTO.resx">
       <DependentUpon>FRM_DEPARTAMENTO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_EDITAR_ASISTENCIAS.resx">
+      <DependentUpon>FRM_EDITAR_ASISTENCIAS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_EDITAR_AUSENCIAS.resx">
+      <DependentUpon>FRM_EDITAR_AUSENCIAS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_EDITAR_CONTRATO.resx">
+      <DependentUpon>FRM_EDITAR_CONTRATO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FRM_EDITAR_DEPA.resx">
+      <DependentUpon>FRM_EDITAR_DEPA.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_EMPLEADOS.resx">
       <DependentUpon>Frm_EMPLEADOS.cs</DependentUpon>

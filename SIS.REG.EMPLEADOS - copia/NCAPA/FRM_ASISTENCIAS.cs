@@ -56,5 +56,11 @@ namespace NCAPA
             FRM_NUEVO_ASISTENCIA AbrirNuevoAsistencia = new FRM_NUEVO_ASISTENCIA();
             AbrirNuevoAsistencia.ShowDialog();
         }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            FRM_EDITAR_ASISTENCIAS eDITAR_ASISTENCIAS = new FRM_EDITAR_ASISTENCIAS();   
+            eDITAR_ASISTENCIAS.ShowDialog();
+        }
     }
 }

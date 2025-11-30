@@ -54,5 +54,11 @@ namespace NCAPA
             FRM_NUEVO_AUSENCIAS AbrirNuevaAusencias = new FRM_NUEVO_AUSENCIAS();
             AbrirNuevaAusencias.ShowDialog();
         }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            FRM_EDITAR_AUSENCIAS eDITAR_AUSENCIAS = new FRM_EDITAR_AUSENCIAS();
+            eDITAR_AUSENCIAS.ShowDialog();
+        }
     }
 }
