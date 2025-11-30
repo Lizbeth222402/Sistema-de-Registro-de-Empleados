@@ -76,6 +76,7 @@
             this.btnNuevoEmpleado.Text = "GUARDAR";
             this.btnNuevoEmpleado.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnNuevoEmpleado.UseVisualStyleBackColor = false;
+            this.btnNuevoEmpleado.Click += new System.EventHandler(this.btnNuevoEmpleado_Click);
             // 
             // label1
             // 

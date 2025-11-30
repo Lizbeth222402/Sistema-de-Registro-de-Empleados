@@ -21,5 +21,10 @@ namespace NCAPA
         {
             this.Close();
         }
+
+        private void btnNuevoEmpleado_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
