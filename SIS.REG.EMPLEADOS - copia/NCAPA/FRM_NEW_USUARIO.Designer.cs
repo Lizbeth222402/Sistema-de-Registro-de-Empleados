@@ -41,7 +41,7 @@
             // 
             // txt_Nameusuario
             // 
-            this.txt_Nameusuario.Location = new System.Drawing.Point(225, 117);
+            this.txt_Nameusuario.Location = new System.Drawing.Point(225, 56);
             this.txt_Nameusuario.Name = "txt_Nameusuario";
             this.txt_Nameusuario.Size = new System.Drawing.Size(301, 26);
             this.txt_Nameusuario.TabIndex = 0;
@@ -49,7 +49,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(57, 137);
+            this.label1.Location = new System.Drawing.Point(57, 76);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(124, 20);
             this.label1.TabIndex = 1;
@@ -58,7 +58,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(57, 227);
+            this.label2.Location = new System.Drawing.Point(57, 166);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(92, 20);
             this.label2.TabIndex = 3;
@@ -66,7 +66,7 @@
             // 
             // txtpasswork
             // 
-            this.txtpasswork.Location = new System.Drawing.Point(225, 221);
+            this.txtpasswork.Location = new System.Drawing.Point(225, 160);
             this.txtpasswork.Name = "txtpasswork";
             this.txtpasswork.Size = new System.Drawing.Size(301, 26);
             this.txtpasswork.TabIndex = 2;
@@ -75,7 +75,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(57, 304);
+            this.label3.Location = new System.Drawing.Point(57, 243);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(52, 20);
             this.label3.TabIndex = 5;
@@ -91,7 +91,7 @@
             this.txx_cerrarUsuario.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txx_cerrarUsuario.Image = ((System.Drawing.Image)(resources.GetObject("txx_cerrarUsuario.Image")));
             this.txx_cerrarUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.txx_cerrarUsuario.Location = new System.Drawing.Point(380, 449);
+            this.txx_cerrarUsuario.Location = new System.Drawing.Point(380, 310);
             this.txx_cerrarUsuario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txx_cerrarUsuario.Name = "txx_cerrarUsuario";
             this.txx_cerrarUsuario.Size = new System.Drawing.Size(146, 40);
@@ -110,7 +110,7 @@
             this.btnGuardarUsuario.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardarUsuario.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardarUsuario.Image")));
             this.btnGuardarUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardarUsuario.Location = new System.Drawing.Point(106, 446);
+            this.btnGuardarUsuario.Location = new System.Drawing.Point(106, 307);
             this.btnGuardarUsuario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnGuardarUsuario.Name = "btnGuardarUsuario";
             this.btnGuardarUsuario.Size = new System.Drawing.Size(141, 43);
@@ -122,17 +122,18 @@
             // 
             // txt_Activo
             // 
-            this.txt_Activo.Location = new System.Drawing.Point(225, 304);
+            this.txt_Activo.Location = new System.Drawing.Point(225, 243);
             this.txt_Activo.Name = "txt_Activo";
             this.txt_Activo.Size = new System.Drawing.Size(50, 26);
             this.txt_Activo.TabIndex = 4;
+            this.txt_Activo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumbers);
             // 
             // FRM_NEW_USUARIO
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Orange;
-            this.ClientSize = new System.Drawing.Size(612, 525);
+            this.ClientSize = new System.Drawing.Size(612, 386);
             this.Controls.Add(this.txx_cerrarUsuario);
             this.Controls.Add(this.btnGuardarUsuario);
             this.Controls.Add(this.label3);
@@ -141,7 +142,9 @@
             this.Controls.Add(this.txtpasswork);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txt_Nameusuario);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FRM_NEW_USUARIO";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FRM_NEW_USUARIO";
             this.ResumeLayout(false);
             this.PerformLayout();
