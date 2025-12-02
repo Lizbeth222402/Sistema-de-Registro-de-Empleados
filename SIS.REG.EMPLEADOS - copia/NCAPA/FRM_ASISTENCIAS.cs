@@ -23,6 +23,7 @@ namespace NCAPA
         private void FRM_ASISTENCIAS_Load(object sender, EventArgs e)
         {
             LISTAR_ASISTENCIA();
+
             //Evita que no esta seleccionado por defecto//
             DataGridAsistencia.ClearSelection();
             //PARA QUE NO APAREZCA EL ID//
@@ -86,8 +87,45 @@ namespace NCAPA
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            FRM_EDITAR_ASISTENCIAS eDITAR_ASISTENCIAS = new FRM_EDITAR_ASISTENCIAS();   
-            eDITAR_ASISTENCIAS.ShowDialog();
+            Editar();
+        }
+
+        private void Editar()
+        {
+
+
+            if (DataGridAsistencia.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Tienes que seleccionar una Asistencia", "Editar Asistencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+            }
+            else
+            {
+                try
+                {
+                    FRM_EDITAR_ASISTENCIAS eDITAR_ASISTENCIAS = new FRM_EDITAR_ASISTENCIAS();
+
+
+                    eDITAR_ASISTENCIAS.txtid.Text = DataGridAsistencia.SelectedRows[0].Cells[1].Value.ToString();
+                    eDITAR_ASISTENCIAS.dtp_FechaAsis.Text = DataGridAsistencia.SelectedRows[0].Cells[1].Value.ToString();
+
+
+                    eDITAR_ASISTENCIAS.ShowDialog();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Tienes que seleccionar un Registro", "Editar Cliente", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+
+
+
+            }
+
+                
+
+
+
         }
     }
 }
