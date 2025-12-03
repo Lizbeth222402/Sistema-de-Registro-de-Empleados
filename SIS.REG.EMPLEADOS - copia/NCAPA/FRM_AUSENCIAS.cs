@@ -91,5 +91,49 @@ namespace NCAPA
         {
 
         }
+
+        private void Editar()
+        {
+
+
+            if (DataGridAUSENCIAS.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Tienes que seleccionar una Asistencia", "Editar Asistencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+            }
+            else
+            {
+                try
+                {
+                    FRM_AUSENCIAS eDITAR_Ausencias = new FRM_AUSENCIAS();
+
+
+                    eDITAR_Ausencias.txt.Text = DataGridAUSENCIAS.SelectedRows[0].Cells[1].Value.ToString();
+                    eDITAR_Ausencias.txt_IdEmP.Text = DataGridAUSENCIAS.SelectedRows[0].Cells[1].Value.ToString();
+                    eDITAR_Ausencias.txtNombre_AUSENCIAS.Text = DataGridAUSENCIAS.SelectedRows[0].Cells[1].Value.ToString();
+                    eDITAR_Ausencias.dt.Text = DataGridAUSENCIAS.SelectedRows[0].Cells[1].Value.ToString();
+
+
+
+
+
+
+                    eDITAR_Ausencias.ShowDialog();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Tienes que seleccionar un Registro", "Editar Cliente", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+
+
+
+            }
+
+
+
+
+
+        }
     }
 }
