@@ -16,7 +16,7 @@ namespace NCAPA
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Frm_Presentacion());
+            Application.Run(new FRM_Login());
         }
     }
 }

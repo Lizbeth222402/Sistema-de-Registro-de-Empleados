@@ -149,6 +149,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CE_USUARIOS.cs" />
     <Compile Include="CN_AUSENCIAS.cs" />
     <Compile Include="CN_ASISTENCIAS.cs" />
     <Compile Include="CN_CONTRATOS.cs" />

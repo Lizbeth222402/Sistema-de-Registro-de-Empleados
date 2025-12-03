@@ -364,6 +364,9 @@
     <EmbeddedResource Include="Frm_EMPLEADOS.resx">
       <DependentUpon>Frm_EMPLEADOS.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FRM_Login.resx">
+      <DependentUpon>FRM_Login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FRM_NEW_USUARIO.resx">
       <DependentUpon>FRM_NEW_USUARIO.cs</DependentUpon>
     </EmbeddedResource>

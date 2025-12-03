@@ -113,5 +113,34 @@ namespace CAPA_DATO
         }
 
         #endregion EDITAR USUARIOS
+
+
+        public CE_MUSUARIOS Login(string usuario, string clave)
+        {
+            CE_MUSUARIOS obj = null;
+
+            using (SqlCommand cmd = new SqlCommand("SP_LOGIN", Con.Abrir()))
+            {
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@Usuario", usuario);
+                cmd.Parameters.AddWithValue("@Clave", clave);
+
+                using (SqlDataReader dr = cmd.ExecuteReader())
+                {
+                    if (dr.Read())
+                    {
+                        obj = new CE_MUSUARIOS()
+                        {
+                            ID_USUARIO = Convert.ToInt32(dr["ID_USUARIO"]),
+                            NOMBRE_USUARIO = dr["NOMBRE_USUARIO"].ToString(),
+                            ACTIVO = dr["ACTIVO"].ToString()
+                        };
+                    }
+                }
+            }
+
+            Con.Cerrar();
+            return obj;
+        }
     }
 }
