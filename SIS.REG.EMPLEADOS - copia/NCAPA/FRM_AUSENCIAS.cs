@@ -83,14 +83,13 @@ namespace NCAPA
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            FRM_EDITAR_AUSENCIAS eDITAR_AUSENCIAS = new FRM_EDITAR_AUSENCIAS();
-            eDITAR_AUSENCIAS.ShowDialog();
+            Editar();
         }
 
-        private void DataGridAUSENCIAS_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
+                                        private void DataGridAUSENCIAS_CellContentClick(object sender, DataGridViewCellEventArgs e)
+                                        {
 
-        }
+                                        }
 
         private void Editar()
         {
@@ -98,31 +97,29 @@ namespace NCAPA
 
             if (DataGridAUSENCIAS.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Tienes que seleccionar una Asistencia", "Editar Asistencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Tienes que seleccionar una Ausencia", "Editar Ausencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
 
             }
             else
             {
                 try
                 {
-                    FRM_AUSENCIAS eDITAR_Ausencias = new FRM_AUSENCIAS();
+                    FRM_EDITAR_AUSENCIAS eDITAR_Ausencias = new FRM_EDITAR_AUSENCIAS();
 
 
-                    eDITAR_Ausencias.txt.Text = DataGridAUSENCIAS.SelectedRows[0].Cells[1].Value.ToString();
+                    eDITAR_Ausencias.txtidausencias.Text = DataGridAUSENCIAS.SelectedRows[0].Cells[1].Value.ToString();
                     eDITAR_Ausencias.txt_IdEmP.Text = DataGridAUSENCIAS.SelectedRows[0].Cells[1].Value.ToString();
                     eDITAR_Ausencias.txtNombre_AUSENCIAS.Text = DataGridAUSENCIAS.SelectedRows[0].Cells[1].Value.ToString();
-                    eDITAR_Ausencias.dt.Text = DataGridAUSENCIAS.SelectedRows[0].Cells[1].Value.ToString();
-
-
-
-
+                    eDITAR_Ausencias.dtp_FechaInic.Text = DataGridAUSENCIAS.SelectedRows[0].Cells[1].Value.ToString();
+                    eDITAR_Ausencias.dtp_FechaFinal.Text = DataGridAUSENCIAS.SelectedRows[0].Cells[1].Value.ToString();
+                    eDITAR_Ausencias.txt_DescripcionAusencias.Text = DataGridAUSENCIAS.SelectedRows[0].Cells[1].Value.ToString();
 
 
                     eDITAR_Ausencias.ShowDialog();
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Tienes que seleccionar un Registro", "Editar Cliente", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Tienes que seleccionar un Registro", "Editar Ausencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 }
 
