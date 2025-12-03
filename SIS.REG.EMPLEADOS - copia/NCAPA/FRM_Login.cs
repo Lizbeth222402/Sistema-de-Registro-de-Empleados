@@ -63,6 +63,7 @@ namespace NCAPA
                 return;
             }
 
+
             // Llamar CAPA NEGOCIO
             CE_USUARIOS negocio = new CE_USUARIOS();
             CE_MUSUARIOS user = negocio.Login(usuario, clave);
