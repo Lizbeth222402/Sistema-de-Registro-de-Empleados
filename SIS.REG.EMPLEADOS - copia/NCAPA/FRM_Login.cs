@@ -45,6 +45,7 @@ namespace NCAPA
 
         }
 
+
         private void BTN_INGRESAR_Click_1(object sender, EventArgs e)
         {
             string usuario = TXT_USUARIO.Text.Trim();
