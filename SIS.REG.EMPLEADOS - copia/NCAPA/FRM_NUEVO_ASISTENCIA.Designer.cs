@@ -109,6 +109,7 @@
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.Size = new System.Drawing.Size(140, 26);
             this.txtEstado.TabIndex = 31;
+            this.txtEstado.TextChanged += new System.EventHandler(this.txtEstado_TextChanged);
             // 
             // txx_cerrar
             // 

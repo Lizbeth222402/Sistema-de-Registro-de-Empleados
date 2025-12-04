@@ -77,5 +77,9 @@ namespace NCAPA
             cN_ASISTENCIAS.InsertarAsistencia(Masistencias);
         }
 
+        private void txtEstado_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

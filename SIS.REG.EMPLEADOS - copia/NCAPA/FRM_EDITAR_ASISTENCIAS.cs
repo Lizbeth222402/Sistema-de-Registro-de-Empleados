@@ -19,6 +19,18 @@ namespace NCAPA
 
         private void FRM_EDITAR_ASISTENCIAS_Load(object sender, EventArgs e)
         {
+            // Fecha normal
+            dtp_FechaAsis.Format = DateTimePickerFormat.Short;
+
+            // Hora entrada
+            dtp_HoraEntrada.Format = DateTimePickerFormat.Custom;
+            dtp_HoraEntrada.CustomFormat = "HH:mm:ss";
+            dtp_HoraEntrada.ShowUpDown = true;
+
+            // Hora salida
+            dtp_HoraSalida.Format = DateTimePickerFormat.Custom;
+            dtp_HoraSalida.CustomFormat = "HH:mm:ss";
+            dtp_HoraSalida.ShowUpDown = true;
 
         }
 

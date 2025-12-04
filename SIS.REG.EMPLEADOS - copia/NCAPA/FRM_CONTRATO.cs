@@ -102,10 +102,10 @@ namespace NCAPA
 
                     eDITAR_CONTRATO.txtid.Text = DataGriContratos.SelectedRows[0].Cells[0].Value.ToString();
                     eDITAR_CONTRATO.txt_IdeMPLEADO.Text = DataGriContratos.SelectedRows[1].Cells[1].Value.ToString();
-                    eDITAR_CONTRATO.txtNombreCon.Text = DataGriContratos.SelectedRows[2].Cells[1].Value.ToString();
-                    eDITAR_CONTRATO.dtp_fechaInicio.Text = DataGriContratos.SelectedRows[3].Cells[1].Value.ToString();
-                    eDITAR_CONTRATO.dtp_FechaFin.Text = DataGriContratos.SelectedRows[4].Cells[1].Value.ToString();
-                    eDITAR_CONTRATO.txt_sALARIO.Text = DataGriContratos.SelectedRows[5].Cells[1].Value.ToString();
+                    eDITAR_CONTRATO.txtNombreCon.Text = DataGriContratos.SelectedRows[2].Cells[2].Value.ToString();
+                    eDITAR_CONTRATO.dtp_fechaInicio.Text = DataGriContratos.SelectedRows[3].Cells[3].Value.ToString();
+                    eDITAR_CONTRATO.dtp_FechaFin.Text = DataGriContratos.SelectedRows[4].Cells[4].Value.ToString();
+                    eDITAR_CONTRATO.txt_sALARIO.Text = DataGriContratos.SelectedRows[5].Cells[5].Value.ToString();
 
 
 
@@ -114,7 +114,7 @@ namespace NCAPA
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Tienes que seleccionar un contraro", "Editar contrato", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Tienes que seleccionar un contraTo", "Editar contrato", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 }
 
