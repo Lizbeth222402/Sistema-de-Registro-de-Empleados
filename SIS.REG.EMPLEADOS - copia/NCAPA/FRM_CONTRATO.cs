@@ -100,12 +100,12 @@ namespace NCAPA
                     FRM_EDITAR_CONTRATO eDITAR_CONTRATO = new FRM_EDITAR_CONTRATO();
 
 
-                    eDITAR_CONTRATO.txtid.Text = DataGriContratos.SelectedRows[0].Cells[1].Value.ToString();
-                    eDITAR_CONTRATO.txt_IdeMPLEADO.Text = DataGriContratos.SelectedRows[0].Cells[1].Value.ToString();
-                    eDITAR_CONTRATO.txtNombreCon.Text = DataGriContratos.SelectedRows[0].Cells[1].Value.ToString();
-                    eDITAR_CONTRATO.dtp_fechaInicio.Text = DataGriContratos.SelectedRows[0].Cells[1].Value.ToString();
-                    eDITAR_CONTRATO.dtp_FechaFin.Text = DataGriContratos.SelectedRows[0].Cells[1].Value.ToString();
-                    eDITAR_CONTRATO.txt_sALARIO.Text = DataGriContratos.SelectedRows[0].Cells[1].Value.ToString();
+                    eDITAR_CONTRATO.txtid.Text = DataGriContratos.SelectedRows[0].Cells[0].Value.ToString();
+                    eDITAR_CONTRATO.txt_IdeMPLEADO.Text = DataGriContratos.SelectedRows[1].Cells[1].Value.ToString();
+                    eDITAR_CONTRATO.txtNombreCon.Text = DataGriContratos.SelectedRows[2].Cells[1].Value.ToString();
+                    eDITAR_CONTRATO.dtp_fechaInicio.Text = DataGriContratos.SelectedRows[3].Cells[1].Value.ToString();
+                    eDITAR_CONTRATO.dtp_FechaFin.Text = DataGriContratos.SelectedRows[4].Cells[1].Value.ToString();
+                    eDITAR_CONTRATO.txt_sALARIO.Text = DataGriContratos.SelectedRows[5].Cells[1].Value.ToString();
 
 
 

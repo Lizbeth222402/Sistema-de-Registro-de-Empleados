@@ -24,6 +24,7 @@ namespace NCAPA
         {
             LISTAR_ASISTENCIA();
 
+            DataGridAsistencia.ClearSelection();
             //Evita que no esta seleccionado por defecto//
             DataGridAsistencia.ClearSelection();
             //PARA QUE NO APAREZCA EL ID//

@@ -40,7 +40,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtid = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btncerrar
@@ -160,16 +159,7 @@
             this.txtid.Name = "txtid";
             this.txtid.Size = new System.Drawing.Size(86, 26);
             this.txtid.TabIndex = 44;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label4.Location = new System.Drawing.Point(132, 131);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(23, 20);
-            this.label4.TabIndex = 45;
-            this.label4.Text = "Id";
+            this.txtid.Visible = false;
             // 
             // FRM_EDITAR_ASISTENCIAS
             // 
@@ -177,7 +167,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(692, 649);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.txtid);
             this.Controls.Add(this.txx_cerrar);
             this.Controls.Add(this.btnGuardarAsis);
@@ -205,7 +194,6 @@
             this.Controls.SetChildIndex(this.btnGuardarAsis, 0);
             this.Controls.SetChildIndex(this.txx_cerrar, 0);
             this.Controls.SetChildIndex(this.txtid, 0);
-            this.Controls.SetChildIndex(this.label4, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -224,6 +212,5 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.TextBox txtid;
-        private System.Windows.Forms.Label label4;
     }
 }
