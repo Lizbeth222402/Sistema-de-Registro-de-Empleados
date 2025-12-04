@@ -97,7 +97,7 @@ namespace NCAPA
 
             if (DataGridAsistencia.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Tienes que seleccionar una Asistencia", "Editar Asistencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Tienes que seleccionar una Asistencia");
 
             }
             else
@@ -107,28 +107,22 @@ namespace NCAPA
                     FRM_EDITAR_ASISTENCIAS eDITAR_ASISTENCIAS = new FRM_EDITAR_ASISTENCIAS();
 
 
-                    eDITAR_ASISTENCIAS.txtid.Text = DataGridAsistencia.SelectedRows[0].Cells[0].Value.ToString();
-                    eDITAR_ASISTENCIAS.dtp_FechaAsis.Text = DataGridAsistencia.SelectedRows[0].Cells[1].Value.ToString();
-                    eDITAR_ASISTENCIAS.dtp_HoraEntrada.Text = DataGridAsistencia.SelectedRows[0].Cells[1].Value.ToString();
-                    eDITAR_ASISTENCIAS.dtp_HoraSalida.Text = DataGridAsistencia.SelectedRows[0].Cells[1].Value.ToString();
-                    eDITAR_ASISTENCIAS.txtEstado.Text = DataGridAsistencia.SelectedRows[0].Cells[1].Value.ToString();
+                    eDITAR_ASISTENCIAS.txtid.Text = DataGridAsistencia.SelectedRows[0].             Cells[0].Value.ToString();
+                    eDITAR_ASISTENCIAS.dtp_FechaAsis.Text = DataGridAsistencia.SelectedRows[0].     Cells[1].Value.ToString();
+                    eDITAR_ASISTENCIAS.dtp_HoraEntrada.Text = DataGridAsistencia.SelectedRows[0].   Cells[2].Value.ToString();
+                    eDITAR_ASISTENCIAS.dtp_HoraSalida.Text = DataGridAsistencia.SelectedRows[0].    Cells[3].Value.ToString();
+                    eDITAR_ASISTENCIAS.txtEstado.Text = DataGridAsistencia.SelectedRows[0].         Cells[4].Value.ToString();
 
 
                     eDITAR_ASISTENCIAS.ShowDialog();
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Tienes que seleccionar un Registro", "Editar Cliente", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show($"No se selecciono por el error : {ex.Message}", "Editar Cliente", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 }
 
-
-
             }
-
-                
-
-
 
         }
     }

@@ -107,19 +107,19 @@ namespace NCAPA
                     FRM_EDITAR_AUSENCIAS eDITAR_Ausencias = new FRM_EDITAR_AUSENCIAS();
 
 
-                    eDITAR_Ausencias.txtidausencias.Text = DataGridAUSENCIAS.SelectedRows[0].Cells[1].Value.ToString();
-                    eDITAR_Ausencias.txt_IdEmP.Text = DataGridAUSENCIAS.SelectedRows[0].Cells[1].Value.ToString();
-                    eDITAR_Ausencias.txtNombre_AUSENCIAS.Text = DataGridAUSENCIAS.SelectedRows[0].Cells[1].Value.ToString();
-                    eDITAR_Ausencias.dtp_FechaInic.Text = DataGridAUSENCIAS.SelectedRows[0].Cells[1].Value.ToString();
-                    eDITAR_Ausencias.dtp_FechaFinal.Text = DataGridAUSENCIAS.SelectedRows[0].Cells[1].Value.ToString();
-                    eDITAR_Ausencias.txt_DescripcionAusencias.Text = DataGridAUSENCIAS.SelectedRows[0].Cells[1].Value.ToString();
+                    eDITAR_Ausencias.txtidausencias.Text = DataGridAUSENCIAS.SelectedRows[0].       Cells[1].Value.ToString();
+                    eDITAR_Ausencias.txt_IdEmP.Text = DataGridAUSENCIAS.SelectedRows[0].            Cells[2].Value.ToString();
+                    eDITAR_Ausencias.txtNombre_AUSENCIAS.Text = DataGridAUSENCIAS.SelectedRows[0].  Cells[3].Value.ToString();
+                    eDITAR_Ausencias.dtp_FechaInic.Text = DataGridAUSENCIAS.SelectedRows[0].        Cells[4].Value.ToString();
+                    eDITAR_Ausencias.dtp_FechaFinal.Text = DataGridAUSENCIAS.SelectedRows[0].       Cells[5].Value.ToString();
+                    eDITAR_Ausencias.txt_DescripcionAusencias.Text = DataGridAUSENCIAS.SelectedRows[0].Cells[6].Value.ToString();
 
 
                     eDITAR_Ausencias.ShowDialog();
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Tienes que seleccionar un Registro", "Editar Ausencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show($"No se selecciono por el error : {ex.Message}", "Editar Ausencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 }
 
