@@ -93,11 +93,9 @@ namespace NCAPA
 
         private void Editar()
         {
-
-
             if (DataGridAUSENCIAS.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Tienes que seleccionar una Ausencia", "Editar Ausencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Tienes que seleccionar una Asistencia");
 
             }
             else
@@ -106,14 +104,12 @@ namespace NCAPA
                 {
                     FRM_EDITAR_AUSENCIAS eDITAR_Ausencias = new FRM_EDITAR_AUSENCIAS();
 
-
-                    eDITAR_Ausencias.txtidausencias.Text = DataGridAUSENCIAS.SelectedRows[0].       Cells[1].Value.ToString();
-                    eDITAR_Ausencias.txt_IdEmP.Text = DataGridAUSENCIAS.SelectedRows[0].            Cells[2].Value.ToString();
-                    eDITAR_Ausencias.txtNombre_AUSENCIAS.Text = DataGridAUSENCIAS.SelectedRows[0].  Cells[3].Value.ToString();
-                    eDITAR_Ausencias.dtp_FechaInic.Text = DataGridAUSENCIAS.SelectedRows[0].        Cells[4].Value.ToString();
-                    eDITAR_Ausencias.dtp_FechaFinal.Text = DataGridAUSENCIAS.SelectedRows[0].       Cells[5].Value.ToString();
-                    eDITAR_Ausencias.txt_DescripcionAusencias.Text = DataGridAUSENCIAS.SelectedRows[0].Cells[6].Value.ToString();
-
+                    eDITAR_Ausencias.txtidausencias.Text = DataGridAUSENCIAS.SelectedRows[0].       Cells[0].Value.ToString();
+                    eDITAR_Ausencias.txt_IdEmP.Text = DataGridAUSENCIAS.SelectedRows[0].            Cells[1].Value.ToString();
+                    eDITAR_Ausencias.txtNombre_AUSENCIAS.Text = DataGridAUSENCIAS.SelectedRows[0].  Cells[2].Value.ToString();
+                    eDITAR_Ausencias.dtp_FechaInic.Text = DataGridAUSENCIAS.SelectedRows[0].        Cells[3].Value.ToString();
+                    eDITAR_Ausencias.dtp_FechaFinal.Text = DataGridAUSENCIAS.SelectedRows[0].       Cells[4].Value.ToString();
+                    eDITAR_Ausencias.txt_DescripcionAusencias.Text = DataGridAUSENCIAS.SelectedRows[0].Cells[5].Value.ToString();
 
                     eDITAR_Ausencias.ShowDialog();
                 }
@@ -123,13 +119,7 @@ namespace NCAPA
 
                 }
 
-
-
             }
-
-
-
-
 
         }
     }
