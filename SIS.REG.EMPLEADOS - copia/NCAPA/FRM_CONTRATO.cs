@@ -80,9 +80,56 @@ namespace NCAPA
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            FRM_EDITAR_CONTRATO eDITAR_CONTRATO = new FRM_EDITAR_CONTRATO();
-            eDITAR_CONTRATO.ShowDialog();
+            Editar();
         }
+
+
+        private void Editar()
+        {
+
+
+            if (DataGriContratos.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Tienes que seleccionar una contrato", "Editar contrato", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+            }
+            else
+            {
+                try
+                {
+                    FRM_EDITAR_CONTRATO eDITAR_CONTRATO = new FRM_EDITAR_CONTRATO();
+
+
+                    eDITAR_CONTRATO.txtid.Text = DataGriContratos.SelectedRows[0].Cells[1].Value.ToString();
+                    eDITAR_CONTRATO.txt_IdeMPLEADO.Text = DataGriContratos.SelectedRows[0].Cells[1].Value.ToString();
+                    eDITAR_CONTRATO.txtNombreCon.Text = DataGriContratos.SelectedRows[0].Cells[1].Value.ToString();
+                    eDITAR_CONTRATO.dtp_fechaInicio.Text = DataGriContratos.SelectedRows[0].Cells[1].Value.ToString();
+                    eDITAR_CONTRATO.dtp_FechaFin.Text = DataGriContratos.SelectedRows[0].Cells[1].Value.ToString();
+                    eDITAR_CONTRATO.txt_sALARIO.Text = DataGriContratos.SelectedRows[0].Cells[1].Value.ToString();
+
+
+
+
+                    eDITAR_CONTRATO.ShowDialog();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Tienes que seleccionar un contraro", "Editar contrato", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+
+
+
+            }
+
+
+
+
+
+        }
+
+
+
 
         private void DataGriContratos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {

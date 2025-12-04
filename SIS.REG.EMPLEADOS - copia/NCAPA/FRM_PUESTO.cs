@@ -87,8 +87,51 @@ namespace NCAPA
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            FRM_EDITAR_PUESTO eDITAR_PUESTO = new FRM_EDITAR_PUESTO();
-            eDITAR_PUESTO.ShowDialog(); 
+            Editar();
         }
+
+
+        private void Editar()
+        {
+
+
+            if (DataGridPuesto.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Tienes que seleccionar una Puesto", "Editar Puesto", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+            }
+            else
+            {
+                try
+                {
+                    FRM_EDITAR_PUESTO eDITAR_PUESTO = new FRM_EDITAR_PUESTO();
+
+
+                    eDITAR_PUESTO.txtid.Text = DataGridPuesto.SelectedRows[0].Cells[1].Value.ToString();
+                    eDITAR_PUESTO.txtNombre_Puesto.Text = DataGridPuesto.SelectedRows[0].Cells[1].Value.ToString();
+                    eDITAR_PUESTO.txt_des_puesto.Text = DataGridPuesto.SelectedRows[0].Cells[1].Value.ToString();
+                    eDITAR_PUESTO.txt_Salar_base.Text = DataGridPuesto.SelectedRows[0].Cells[1].Value.ToString();
+
+
+                    eDITAR_PUESTO.ShowDialog();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Tienes que seleccionar un Puesto", "Editar Puesto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+
+
+
+            }
+
+
+
+
+        }
+
+
+
+
     }
 }

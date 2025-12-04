@@ -82,41 +82,54 @@ namespace NCAPA
 
         private void btnNuveo_Click(object sender, EventArgs e)
         {
-            FRM_NEW_USUARIO AbrirNewUsuario = new FRM_NEW_USUARIO();
-            AbrirNewUsuario.ShowDialog();
+            Editar();
         }
+
+        private void Editar()
+        {
+
+
+            if (dataGridUsuaios.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Tienes que seleccionar una Usuario", "Editar Usuario", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+            }
+            else
+            {
+                try
+                {
+                    FRM_EDITAR_USUARIO eDITAR_USUARIO = new FRM_EDITAR_USUARIO();
+
+
+                    eDITAR_USUARIO.txtid.Text = dataGridUsuaios.SelectedRows[0].Cells[1].Value.ToString();
+                    eDITAR_USUARIO.txt_Nameusuario.Text = dataGridUsuaios.SelectedRows[0].Cells[1].Value.ToString();
+                    eDITAR_USUARIO.txtpasswork.Text = dataGridUsuaios.SelectedRows[0].Cells[1].Value.ToString();
+                    eDITAR_USUARIO.txt_Activo.Text = dataGridUsuaios.SelectedRows[0].Cells[1].Value.ToString();
+
+                    eDITAR_USUARIO.ShowDialog();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Tienes que seleccionar un Usuario", "Editar Usuario", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+
+
+
+            }
+
+
+
+
+
+        }
+
 
         private void dataGridUsuaios_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
 
-        /*
-        private void CargarDatos()
-            
-        {
-            try
-            {
-                if(dataGridUsuaios.SelectedCells.Count)
-                {
-
-                }
-                else
-                {
-                    FRM_USUARIO AbrirUsuario = new FRM_USUARIO();
-                    AbrirUsuario.txtBusqueda.Text = dataGridUsuaios.SelectedRows[0].Cells[0].Value.ToString();
-                    AbrirUsuario.ShowDialog();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al seleccionar el Usuario" , MessageBoxButtons.OK,MessageBoxIcon)
-
-
-            }
-
-           
-        }
-        */
+    
     }
 }

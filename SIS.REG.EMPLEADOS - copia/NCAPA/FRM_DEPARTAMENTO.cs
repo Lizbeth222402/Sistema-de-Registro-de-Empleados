@@ -81,13 +81,64 @@ namespace NCAPA
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            FRM_EDITAR_DEPA eDITAR_DEPA = new FRM_EDITAR_DEPA();
-            eDITAR_DEPA.ShowDialog();
+            Editar(); 
         }
+
+
+
+
+
+        private void Editar()
+        {
+
+
+            if (DataGridDepartamento.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Tienes que seleccionar una Departamento", "Editar Departamento", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+            }
+            else
+            {
+                try
+                {
+                    FRM_EDITAR_DEPA eDITAR_DEPA = new FRM_EDITAR_DEPA();
+
+
+                    eDITAR_DEPA.txtid.Text = DataGridDepartamento.SelectedRows[0].Cells[1].Value.ToString();
+                    eDITAR_DEPA.txtNombre_DEPA.Text = DataGridDepartamento.SelectedRows[0].Cells[1].Value.ToString();
+                    eDITAR_DEPA.txt_descrip.Text = DataGridDepartamento.SelectedRows[0].Cells[1].Value.ToString();
+
+
+
+                    eDITAR_DEPA.ShowDialog();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Tienes que seleccionar un Departamento", "Editar Departamento", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+
+
+
+            }
+
+
+
+
+
+        }
+
+
+
+
+
 
         private void DataGridDepartamento_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
+
+
+
     }
 }

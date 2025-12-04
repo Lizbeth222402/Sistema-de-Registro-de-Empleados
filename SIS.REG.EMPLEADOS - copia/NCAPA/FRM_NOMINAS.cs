@@ -87,9 +87,55 @@ namespace NCAPA
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            FRM_EDITAR_NOMINAS eDITAR_NOMINAS = new FRM_EDITAR_NOMINAS();
-            eDITAR_NOMINAS.ShowDialog();
+            Editar();
         }
+
+
+
+
+        private void Editar()
+        {
+
+
+            if (DataGridAusencias.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Tienes que seleccionar una Nomina", "Editar Nomina", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+            }
+            else
+            {
+                try
+                {
+                    FRM_EDITAR_NOMINAS eDITAR_NOMINAS = new FRM_EDITAR_NOMINAS();
+
+                    eDITAR_NOMINAS.txtid.Text = DataGridAusencias.SelectedRows[0].Cells[1].Value.ToString();
+                    eDITAR_NOMINAS.txt_IdemplNominas.Text = DataGridAusencias.SelectedRows[0].Cells[1].Value.ToString();
+                    eDITAR_NOMINAS.dtp_FechaPago.Text = DataGridAusencias.SelectedRows[0].Cells[1].Value.ToString();
+                    eDITAR_NOMINAS.txt_Salario_Bru.Text = DataGridAusencias.SelectedRows[0].Cells[1].Value.ToString();
+                    eDITAR_NOMINAS.txt_Deducc.Text = DataGridAusencias.SelectedRows[0].Cells[1].Value.ToString();
+                    eDITAR_NOMINAS.txt_Salari_Neto.Text = DataGridAusencias.SelectedRows[0].Cells[1].Value.ToString();
+
+
+                    eDITAR_NOMINAS.ShowDialog();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Tienes que seleccionar una Nomina", "Editar Nomina", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+
+
+
+            }
+
+
+
+
+
+        }
+
+
+
 
         private void DataGridAusencias_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {

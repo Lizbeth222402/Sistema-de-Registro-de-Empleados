@@ -204,12 +204,12 @@
 
         private System.Windows.Forms.TextBox textBox1;
         public System.Windows.Forms.Button BtncerrarD;
-        private System.Windows.Forms.DataGridView dataGridUsuaios;
         public System.Windows.Forms.Button btnEditar_Usuario;
         public System.Windows.Forms.Button btnEliminar;
         public System.Windows.Forms.Button btnNuveo;
         public System.Windows.Forms.TextBox txtBusqueda;
         private System.Windows.Forms.ComboBox cboBuscar;
         public System.Windows.Forms.TextBox textBox2;
+        public System.Windows.Forms.DataGridView dataGridUsuaios;
     }
 }

@@ -91,8 +91,54 @@ namespace NCAPA
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            FRM_EDITAR_EMPLEADOS eDITAR_EMPLEADOS = new FRM_EDITAR_EMPLEADOS();
-            eDITAR_EMPLEADOS.ShowDialog();
+            Editar();
         }
+
+
+        private void Editar()
+        {
+
+
+            if (DataGriEmpleados.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Tienes que seleccionar una Empleado", "Editar Empleado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+
+            }
+            else
+            {
+                try
+                {
+                    FRM_EDITAR_EMPLEADOS eDITAR_EMPLEADOS = new FRM_EDITAR_EMPLEADOS();
+
+
+                    eDITAR_EMPLEADOS.txtNombre_emple.Text = DataGriEmpleados.SelectedRows[0].Cells[1].Value.ToString();
+                    eDITAR_EMPLEADOS.txtapellido_Emple.Text = DataGriEmpleados.SelectedRows[0].Cells[1].Value.ToString();
+                    eDITAR_EMPLEADOS.txttelefono_Emple.Text = DataGriEmpleados.SelectedRows[0].Cells[1].Value.ToString();
+                    eDITAR_EMPLEADOS.dtp_FechaN.Text = DataGriEmpleados.SelectedRows[0].Cells[1].Value.ToString();
+                    eDITAR_EMPLEADOS.txtgmail_Emple.Text = DataGriEmpleados.SelectedRows[0].Cells[1].Value.ToString();
+                    eDITAR_EMPLEADOS.dtp_FechaIng.Text = DataGriEmpleados.SelectedRows[0].Cells[1].Value.ToString();
+                    eDITAR_EMPLEADOS.txt_Puesto.Text = DataGriEmpleados.SelectedRows[0].Cells[1].Value.ToString();
+                    eDITAR_EMPLEADOS.txtid.Text = DataGriEmpleados.SelectedRows[0].Cells[1].Value.ToString();
+
+
+                    eDITAR_EMPLEADOS.ShowDialog();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Tienes que seleccionar un Empleado", "Editar Empleado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+
+
+
+            }
+
+
+
+
+
+        }
+
+
     }
 }

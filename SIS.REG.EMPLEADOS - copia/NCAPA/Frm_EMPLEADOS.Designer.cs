@@ -209,7 +209,7 @@
         public System.Windows.Forms.Button btnEditar;
         public System.Windows.Forms.Button btnEliminar;
         public System.Windows.Forms.Button btnNuevoEmpleado;
-        private System.Windows.Forms.DataGridView DataGriEmpleados;
         private System.Windows.Forms.TextBox textboxEMPLEADOS;
+        public System.Windows.Forms.DataGridView DataGriEmpleados;
     }
 }

@@ -201,8 +201,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView DataGridAusencias;
         public System.Windows.Forms.Button btnEditar;
         public System.Windows.Forms.Button btnEliminar;
         public System.Windows.Forms.Button btnNuveo;
@@ -210,5 +208,6 @@
         private System.Windows.Forms.TextBox textboxNOMINAS;
         public System.Windows.Forms.TextBox txtBusqueda;
         private System.Windows.Forms.ComboBox cboBuscar;
+        public System.Windows.Forms.DataGridView DataGridAusencias;
     }
 }

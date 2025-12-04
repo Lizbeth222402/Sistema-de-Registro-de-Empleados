@@ -249,9 +249,9 @@
         private System.Windows.Forms.Label label3;
         public System.Windows.Forms.TextBox txt_Salario_Bru;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dtp_FechaPago;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label6;
         public System.Windows.Forms.TextBox txtid;
+        public System.Windows.Forms.DateTimePicker dtp_FechaPago;
     }
 }

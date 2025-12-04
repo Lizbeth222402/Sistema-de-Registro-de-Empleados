@@ -207,7 +207,7 @@
         public System.Windows.Forms.Button btnEditar;
         public System.Windows.Forms.Button btnEliminar;
         public System.Windows.Forms.Button btnNuveo;
-        private System.Windows.Forms.DataGridView DataGridPuesto;
         private System.Windows.Forms.TextBox textboxPUESTO;
+        public System.Windows.Forms.DataGridView DataGridPuesto;
     }
 }
