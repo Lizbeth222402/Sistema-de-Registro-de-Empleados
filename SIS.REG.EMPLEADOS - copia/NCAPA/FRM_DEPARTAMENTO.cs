@@ -105,7 +105,7 @@ namespace NCAPA
 
 
                     eDITAR_DEPA.txtid.Text = DataGridDepartamento.SelectedRows[0].          Cells[0].Value.ToString();
-                    eDITAR_DEPA.txtNombre_DEPA.Text = DataGridDepartamento.SelectedRows[0].Cells[1].Value.ToString();
+                    eDITAR_DEPA.txtNombre_DEPA.Text = DataGridDepartamento.SelectedRows[0]. Cells[1].Value.ToString();
                     eDITAR_DEPA.txt_descrip.Text = DataGridDepartamento.SelectedRows[0].    Cells[2].Value.ToString();
 
                     eDITAR_DEPA.ShowDialog();

@@ -42,7 +42,6 @@
             this.txtNombreCon = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtid = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btncerrar
@@ -182,16 +181,7 @@
             this.txtid.Name = "txtid";
             this.txtid.Size = new System.Drawing.Size(47, 26);
             this.txtid.TabIndex = 51;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label6.Location = new System.Drawing.Point(160, 107);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(23, 20);
-            this.label6.TabIndex = 52;
-            this.label6.Text = "Id";
+            this.txtid.Visible = false;
             // 
             // FRM_EDITAR_CONTRATO
             // 
@@ -199,7 +189,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(838, 581);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.txtid);
             this.Controls.Add(this.txt_IdeMPLEADO);
             this.Controls.Add(this.label5);
@@ -231,7 +220,6 @@
             this.Controls.SetChildIndex(this.label5, 0);
             this.Controls.SetChildIndex(this.txt_IdeMPLEADO, 0);
             this.Controls.SetChildIndex(this.txtid, 0);
-            this.Controls.SetChildIndex(this.label6, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -252,6 +240,5 @@
         public System.Windows.Forms.TextBox txtNombreCon;
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.TextBox txtid;
-        private System.Windows.Forms.Label label6;
     }
 }
