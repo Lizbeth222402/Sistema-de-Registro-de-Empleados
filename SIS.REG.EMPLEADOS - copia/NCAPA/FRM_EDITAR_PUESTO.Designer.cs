@@ -117,6 +117,7 @@
             this.button1.Text = "CERRAR";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnGuardarPuesto
             // 
@@ -170,6 +171,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnGuardarPuesto);
             this.Name = "FRM_EDITAR_PUESTO";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FRM_EDITAR_PUESTO";
             this.Load += new System.EventHandler(this.FRM_EDITAR_PUESTO_Load);
             this.Controls.SetChildIndex(this.btncerrar, 0);

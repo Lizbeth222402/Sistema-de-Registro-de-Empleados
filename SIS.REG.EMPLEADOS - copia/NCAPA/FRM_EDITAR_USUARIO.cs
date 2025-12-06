@@ -26,5 +26,10 @@ namespace NCAPA
         {
             this.Close();
         }
+
+        private void btnEditarUsuario_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

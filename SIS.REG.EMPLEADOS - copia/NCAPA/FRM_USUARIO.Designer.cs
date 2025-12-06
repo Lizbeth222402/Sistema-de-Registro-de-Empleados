@@ -34,7 +34,7 @@
             this.dataGridUsuaios = new System.Windows.Forms.DataGridView();
             this.btnEditar_Usuario = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnNuveo = new System.Windows.Forms.Button();
+            this.btnNuevoUsuario = new System.Windows.Forms.Button();
             this.txtBusqueda = new System.Windows.Forms.TextBox();
             this.cboBuscar = new System.Windows.Forms.ComboBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -79,9 +79,9 @@
             this.dataGridUsuaios.RowHeadersVisible = false;
             this.dataGridUsuaios.RowHeadersWidth = 62;
             this.dataGridUsuaios.RowTemplate.Height = 28;
+            this.dataGridUsuaios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridUsuaios.Size = new System.Drawing.Size(665, 383);
             this.dataGridUsuaios.TabIndex = 10;
-            this.dataGridUsuaios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridUsuaios_CellContentClick);
             // 
             // btnEditar_Usuario
             // 
@@ -118,23 +118,23 @@
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEliminar.UseVisualStyleBackColor = false;
             // 
-            // btnNuveo
+            // btnNuevoUsuario
             // 
-            this.btnNuveo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnNuveo.BackColor = System.Drawing.Color.LightBlue;
-            this.btnNuveo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnNuveo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuveo.Image = ((System.Drawing.Image)(resources.GetObject("btnNuveo.Image")));
-            this.btnNuveo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuveo.Location = new System.Drawing.Point(814, 218);
-            this.btnNuveo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnNuveo.Name = "btnNuveo";
-            this.btnNuveo.Size = new System.Drawing.Size(124, 53);
-            this.btnNuveo.TabIndex = 34;
-            this.btnNuveo.Text = "Nuevo";
-            this.btnNuveo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnNuveo.UseVisualStyleBackColor = false;
-            this.btnNuveo.Click += new System.EventHandler(this.btnNuveo_Click);
+            this.btnNuevoUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnNuevoUsuario.BackColor = System.Drawing.Color.LightBlue;
+            this.btnNuevoUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnNuevoUsuario.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNuevoUsuario.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevoUsuario.Image")));
+            this.btnNuevoUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNuevoUsuario.Location = new System.Drawing.Point(814, 218);
+            this.btnNuevoUsuario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnNuevoUsuario.Name = "btnNuevoUsuario";
+            this.btnNuevoUsuario.Size = new System.Drawing.Size(124, 53);
+            this.btnNuevoUsuario.TabIndex = 34;
+            this.btnNuevoUsuario.Text = "Nuevo";
+            this.btnNuevoUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnNuevoUsuario.UseVisualStyleBackColor = false;
+            this.btnNuevoUsuario.Click += new System.EventHandler(this.btnEditarUsuario);
             // 
             // txtBusqueda
             // 
@@ -184,7 +184,7 @@
             this.Controls.Add(this.cboBuscar);
             this.Controls.Add(this.btnEditar_Usuario);
             this.Controls.Add(this.btnEliminar);
-            this.Controls.Add(this.btnNuveo);
+            this.Controls.Add(this.btnNuevoUsuario);
             this.Controls.Add(this.dataGridUsuaios);
             this.Controls.Add(this.BtncerrarD);
             this.Controls.Add(this.textBox1);
@@ -206,7 +206,7 @@
         public System.Windows.Forms.Button BtncerrarD;
         public System.Windows.Forms.Button btnEditar_Usuario;
         public System.Windows.Forms.Button btnEliminar;
-        public System.Windows.Forms.Button btnNuveo;
+        public System.Windows.Forms.Button btnNuevoUsuario;
         public System.Windows.Forms.TextBox txtBusqueda;
         private System.Windows.Forms.ComboBox cboBuscar;
         public System.Windows.Forms.TextBox textBox2;

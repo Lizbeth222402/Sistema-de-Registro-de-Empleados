@@ -107,10 +107,10 @@ namespace NCAPA
                     FRM_EDITAR_PUESTO eDITAR_PUESTO = new FRM_EDITAR_PUESTO();
 
 
-                    eDITAR_PUESTO.txtid.Text = DataGridPuesto.SelectedRows[0].Cells[1].Value.ToString();
+                    eDITAR_PUESTO.txtid.Text = DataGridPuesto.SelectedRows[0].Cells[0].Value.ToString();
                     eDITAR_PUESTO.txtNombre_Puesto.Text = DataGridPuesto.SelectedRows[0].Cells[1].Value.ToString();
-                    eDITAR_PUESTO.txt_des_puesto.Text = DataGridPuesto.SelectedRows[0].Cells[1].Value.ToString();
-                    eDITAR_PUESTO.txt_Salar_base.Text = DataGridPuesto.SelectedRows[0].Cells[1].Value.ToString();
+                    eDITAR_PUESTO.txt_des_puesto.Text = DataGridPuesto.SelectedRows[0].Cells[2].Value.ToString();
+                    eDITAR_PUESTO.txt_Salar_base.Text = DataGridPuesto.SelectedRows[0].Cells[3].Value.ToString();
 
 
                     eDITAR_PUESTO.ShowDialog();

@@ -48,7 +48,7 @@
             // btncerrar
             // 
             this.btncerrar.Location = new System.Drawing.Point(1122, 603);
-            this.btncerrar.Margin = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.btncerrar.Margin = new System.Windows.Forms.Padding(3);
             // 
             // txt_IdEmP
             // 
@@ -193,6 +193,7 @@
             this.label6.Size = new System.Drawing.Size(23, 20);
             this.label6.TabIndex = 58;
             this.label6.Text = "Id";
+            this.label6.Visible = false;
             // 
             // FRM_EDITAR_AUSENCIAS
             // 
@@ -214,7 +215,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtNombre_AUSENCIAS);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FRM_EDITAR_AUSENCIAS";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FRM_EDITAR_AUSENCIAS";

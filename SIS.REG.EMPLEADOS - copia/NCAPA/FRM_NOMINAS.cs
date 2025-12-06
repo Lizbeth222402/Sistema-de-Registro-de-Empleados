@@ -26,8 +26,7 @@ namespace NCAPA
             LISTAR_NOMINAS();
             //Evita que no esta seleccionado por defecto//
             DataGridAusencias.ClearSelection();
-            //PARA QUE NO APAREZCA EL ID//
-            DataGridAusencias.Columns[0].Visible = false;
+           
             //PARA EL TAMAÑO DE LAS FILAS DEL DATA GRID//
             DataGridAusencias.Columns[1].Width = 130;
             DataGridAusencias.Columns[2].Width = 130;
@@ -99,7 +98,7 @@ namespace NCAPA
 
             if (DataGridAusencias.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Tienes que seleccionar una Nomina", "Editar Nomina", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Tienes que seleccionar una Nomina");
 
             }
             else
@@ -108,19 +107,19 @@ namespace NCAPA
                 {
                     FRM_EDITAR_NOMINAS eDITAR_NOMINAS = new FRM_EDITAR_NOMINAS();
 
-                    eDITAR_NOMINAS.txtid.Text = DataGridAusencias.SelectedRows[0].Cells[1].Value.ToString();
-                    eDITAR_NOMINAS.txt_IdemplNominas.Text = DataGridAusencias.SelectedRows[0].Cells[1].Value.ToString();
-                    eDITAR_NOMINAS.dtp_FechaPago.Text = DataGridAusencias.SelectedRows[0].Cells[1].Value.ToString();
-                    eDITAR_NOMINAS.txt_Salario_Bru.Text = DataGridAusencias.SelectedRows[0].Cells[1].Value.ToString();
-                    eDITAR_NOMINAS.txt_Deducc.Text = DataGridAusencias.SelectedRows[0].Cells[1].Value.ToString();
-                    eDITAR_NOMINAS.txt_Salari_Neto.Text = DataGridAusencias.SelectedRows[0].Cells[1].Value.ToString();
+                    eDITAR_NOMINAS.txtid.Text = DataGridAusencias.SelectedRows[0].                  Cells[0].Value.ToString();
+                    eDITAR_NOMINAS.txt_IdemplNominas.Text = DataGridAusencias.SelectedRows[0].      Cells[0].Value.ToString();
+                    eDITAR_NOMINAS.dtp_FechaPago.Text = DataGridAusencias.SelectedRows[0].          Cells[1].Value.ToString();
+                    eDITAR_NOMINAS.txt_Salario_Bru.Text = DataGridAusencias.SelectedRows[0].        Cells[2].Value.ToString();
+                    eDITAR_NOMINAS.txt_Deducc.Text = DataGridAusencias.SelectedRows[0].             Cells[3].Value.ToString();
+                    eDITAR_NOMINAS.txt_Salari_Neto.Text = DataGridAusencias.SelectedRows[0].        Cells[4].Value.ToString();
 
 
                     eDITAR_NOMINAS.ShowDialog();
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Tienes que seleccionar una Nomina", "Editar Nomina", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show($"No se selecciono por el error : {ex.Message}", "Editar Nomina", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 }
 

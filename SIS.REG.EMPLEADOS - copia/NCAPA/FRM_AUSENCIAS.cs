@@ -106,10 +106,11 @@ namespace NCAPA
 
                     eDITAR_Ausencias.txtidausencias.Text = DataGridAUSENCIAS.SelectedRows[0].Cells[0].Value.ToString();
 
-                    eDITAR_Ausencias.txt_IdEmP.Text = DataGridAUSENCIAS.SelectedRows[0].Cells[1].Value.ToString();
-                    eDITAR_Ausencias.txtNombre_AUSENCIAS.Text = DataGridAUSENCIAS.SelectedRows[0].Cells[2].Value.ToString();
-                    eDITAR_Ausencias.dtp_FechaInic.Value = Convert.ToDateTime(DataGridAUSENCIAS.SelectedRows[0].Cells[3].Value);
-                    eDITAR_Ausencias.dtp_FechaFinal.Value = Convert.ToDateTime(DataGridAUSENCIAS.SelectedRows[0].Cells[4].Value);
+                    eDITAR_Ausencias.txt_IdEmP.Text = DataGridAUSENCIAS.SelectedRows[0].                            Cells[0].Value.ToString();
+                    eDITAR_Ausencias.txtNombre_AUSENCIAS.Text = DataGridAUSENCIAS.SelectedRows[0].                  Cells[1].Value.ToString();
+                    eDITAR_Ausencias.dtp_FechaInic.Value = Convert.ToDateTime(DataGridAUSENCIAS.SelectedRows[0].    Cells[2].Value);
+                    eDITAR_Ausencias.dtp_FechaFinal.Value = Convert.ToDateTime(DataGridAUSENCIAS.SelectedRows[0].   Cells[3].Value);
+                    eDITAR_Ausencias.txt_motivoAusencias.Text = DataGridAUSENCIAS.SelectedRows[0].                  Cells[4].Value.ToString();
 
 
                     eDITAR_Ausencias.ShowDialog();

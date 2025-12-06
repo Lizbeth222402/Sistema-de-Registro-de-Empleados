@@ -152,6 +152,7 @@
             this.DataGridPuesto.ReadOnly = true;
             this.DataGridPuesto.RowHeadersVisible = false;
             this.DataGridPuesto.RowHeadersWidth = 62;
+            this.DataGridPuesto.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DataGridPuesto.Size = new System.Drawing.Size(1157, 361);
             this.DataGridPuesto.TabIndex = 27;
             this.DataGridPuesto.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridPuesto_CellContentClick);
