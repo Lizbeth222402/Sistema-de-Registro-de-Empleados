@@ -26,6 +26,8 @@ namespace NCAPA
             LISTAR_EMPLEADOS();
             //Evita que no esta seleccionado por defecto//
             DataGriEmpleados.ClearSelection();
+            //PARA QUE NO APAREZCA EL ID//
+            DataGriEmpleados.Columns[0].Visible = false;
             //PARA EL TAMAÑO DE LAS FILAS DEL DATA GRID//
             DataGriEmpleados.Columns[1].Width = 130;
             DataGriEmpleados.Columns[2].Width = 130;
@@ -101,7 +103,7 @@ namespace NCAPA
 
             if (DataGriEmpleados.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Tienes que seleccionar una Empleado", "Editar Empleado", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Tienes que seleccionar una Asistencia");
 
             }
             else
@@ -110,22 +112,27 @@ namespace NCAPA
                 {
                     FRM_EDITAR_EMPLEADOS eDITAR_EMPLEADOS = new FRM_EDITAR_EMPLEADOS();
 
+                    eDITAR_EMPLEADOS.txtid.Text = DataGriEmpleados.SelectedRows[0].                             Cells[0].Value.ToString();
+                    eDITAR_EMPLEADOS.txtNombre_emple.Text = DataGriEmpleados.SelectedRows[0].                   Cells[1].Value.ToString();
+                    eDITAR_EMPLEADOS.txtapellido_Emple.Text = DataGriEmpleados.SelectedRows[0].                 Cells[2].Value.ToString();
+                    eDITAR_EMPLEADOS.dtp_FechaN.Text = DataGriEmpleados.SelectedRows[0].                        Cells[3].Value.ToString();
+                    eDITAR_EMPLEADOS.txtdireccion_Emple.Text = DataGriEmpleados.SelectedRows[0].                Cells[4].Value.ToString();
+                    eDITAR_EMPLEADOS.txttelefono_Emple.Text = DataGriEmpleados.SelectedRows[0].                 Cells[5].Value.ToString();
+                   
+                    eDITAR_EMPLEADOS.txtgmail_Emple.Text = DataGriEmpleados.SelectedRows[0].                    Cells[6].Value.ToString();
+                    eDITAR_EMPLEADOS.dtp_FechaIng.Text = DataGriEmpleados.SelectedRows[0].                      Cells[7].Value.ToString();
+                    eDITAR_EMPLEADOS.txt_iddepa.Text = DataGriEmpleados.SelectedRows[0].                        Cells[8].Value.ToString();
+                    eDITAR_EMPLEADOS.txt_Puesto.Text = DataGriEmpleados.SelectedRows[0].                        Cells[9].Value.ToString();
+                   
+                    
 
-                    eDITAR_EMPLEADOS.txtNombre_emple.Text = DataGriEmpleados.SelectedRows[0].Cells[1].Value.ToString();
-                    eDITAR_EMPLEADOS.txtapellido_Emple.Text = DataGriEmpleados.SelectedRows[0].Cells[1].Value.ToString();
-                    eDITAR_EMPLEADOS.txttelefono_Emple.Text = DataGriEmpleados.SelectedRows[0].Cells[1].Value.ToString();
-                    eDITAR_EMPLEADOS.dtp_FechaN.Text = DataGriEmpleados.SelectedRows[0].Cells[1].Value.ToString();
-                    eDITAR_EMPLEADOS.txtgmail_Emple.Text = DataGriEmpleados.SelectedRows[0].Cells[1].Value.ToString();
-                    eDITAR_EMPLEADOS.dtp_FechaIng.Text = DataGriEmpleados.SelectedRows[0].Cells[1].Value.ToString();
-                    eDITAR_EMPLEADOS.txt_Puesto.Text = DataGriEmpleados.SelectedRows[0].Cells[1].Value.ToString();
-                    eDITAR_EMPLEADOS.txtid.Text = DataGriEmpleados.SelectedRows[0].Cells[1].Value.ToString();
 
 
                     eDITAR_EMPLEADOS.ShowDialog();
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Tienes que seleccionar un Empleado", "Editar Empleado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show($"No se selecciono por el error : {ex.Message}", "Editar Cliente", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 }
 

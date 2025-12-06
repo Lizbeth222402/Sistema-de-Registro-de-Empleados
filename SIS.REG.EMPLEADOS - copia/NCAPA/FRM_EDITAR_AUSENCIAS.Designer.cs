@@ -183,6 +183,7 @@
             this.txtidausencias.Name = "txtidausencias";
             this.txtidausencias.Size = new System.Drawing.Size(42, 26);
             this.txtidausencias.TabIndex = 57;
+            this.txtidausencias.Visible = false;
             // 
             // label6
             // 

@@ -60,16 +60,16 @@
             // txt_Puesto
             // 
             this.txt_Puesto.BackColor = System.Drawing.Color.Silver;
-            this.txt_Puesto.Location = new System.Drawing.Point(857, 137);
+            this.txt_Puesto.Location = new System.Drawing.Point(695, 134);
             this.txt_Puesto.Name = "txt_Puesto";
-            this.txt_Puesto.Size = new System.Drawing.Size(62, 26);
+            this.txt_Puesto.Size = new System.Drawing.Size(196, 26);
             this.txt_Puesto.TabIndex = 49;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label9.Location = new System.Drawing.Point(705, 143);
+            this.label9.Location = new System.Drawing.Point(572, 140);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(77, 20);
             this.label9.TabIndex = 48;
@@ -79,16 +79,16 @@
             // txt_iddepa
             // 
             this.txt_iddepa.BackColor = System.Drawing.Color.Silver;
-            this.txt_iddepa.Location = new System.Drawing.Point(857, 90);
+            this.txt_iddepa.Location = new System.Drawing.Point(744, 78);
             this.txt_iddepa.Name = "txt_iddepa";
-            this.txt_iddepa.Size = new System.Drawing.Size(62, 26);
+            this.txt_iddepa.Size = new System.Drawing.Size(189, 26);
             this.txt_iddepa.TabIndex = 47;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label8.Location = new System.Drawing.Point(652, 96);
+            this.label8.Location = new System.Drawing.Point(572, 84);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(130, 20);
             this.label8.TabIndex = 46;
@@ -113,14 +113,14 @@
             // 
             // dtp_FechaIng
             // 
-            this.dtp_FechaIng.Location = new System.Drawing.Point(231, 463);
+            this.dtp_FechaIng.Location = new System.Drawing.Point(231, 452);
             this.dtp_FechaIng.Name = "dtp_FechaIng";
             this.dtp_FechaIng.Size = new System.Drawing.Size(290, 26);
             this.dtp_FechaIng.TabIndex = 44;
             // 
             // dtp_FechaN
             // 
-            this.dtp_FechaN.Location = new System.Drawing.Point(260, 274);
+            this.dtp_FechaN.Location = new System.Drawing.Point(263, 203);
             this.dtp_FechaN.Name = "dtp_FechaN";
             this.dtp_FechaN.Size = new System.Drawing.Size(290, 26);
             this.dtp_FechaN.TabIndex = 43;
@@ -129,7 +129,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label7.Location = new System.Drawing.Point(52, 463);
+            this.label7.Location = new System.Drawing.Point(52, 457);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(143, 20);
             this.label7.TabIndex = 42;
@@ -138,7 +138,7 @@
             // txttelefono_Emple
             // 
             this.txttelefono_Emple.BackColor = System.Drawing.Color.Silver;
-            this.txttelefono_Emple.Location = new System.Drawing.Point(204, 220);
+            this.txttelefono_Emple.Location = new System.Drawing.Point(204, 327);
             this.txttelefono_Emple.Name = "txttelefono_Emple";
             this.txttelefono_Emple.Size = new System.Drawing.Size(173, 26);
             this.txttelefono_Emple.TabIndex = 41;
@@ -147,7 +147,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(52, 223);
+            this.label5.Location = new System.Drawing.Point(55, 327);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(94, 20);
             this.label5.TabIndex = 40;
@@ -156,7 +156,7 @@
             // txtgmail_Emple
             // 
             this.txtgmail_Emple.BackColor = System.Drawing.Color.Silver;
-            this.txtgmail_Emple.Location = new System.Drawing.Point(204, 400);
+            this.txtgmail_Emple.Location = new System.Drawing.Point(204, 386);
             this.txtgmail_Emple.Name = "txtgmail_Emple";
             this.txtgmail_Emple.Size = new System.Drawing.Size(253, 26);
             this.txtgmail_Emple.TabIndex = 39;
@@ -165,7 +165,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label6.Location = new System.Drawing.Point(52, 406);
+            this.label6.Location = new System.Drawing.Point(52, 386);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(60, 20);
             this.label6.TabIndex = 38;
@@ -175,7 +175,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(52, 280);
+            this.label3.Location = new System.Drawing.Point(52, 203);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(167, 20);
             this.label3.TabIndex = 37;
@@ -184,7 +184,7 @@
             // txtdireccion_Emple
             // 
             this.txtdireccion_Emple.BackColor = System.Drawing.Color.Silver;
-            this.txtdireccion_Emple.Location = new System.Drawing.Point(204, 342);
+            this.txtdireccion_Emple.Location = new System.Drawing.Point(204, 259);
             this.txtdireccion_Emple.Name = "txtdireccion_Emple";
             this.txtdireccion_Emple.Size = new System.Drawing.Size(317, 26);
             this.txtdireccion_Emple.TabIndex = 36;
@@ -193,7 +193,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label4.Location = new System.Drawing.Point(52, 358);
+            this.label4.Location = new System.Drawing.Point(52, 275);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(99, 20);
             this.label4.TabIndex = 35;
@@ -263,6 +263,7 @@
             this.label10.Size = new System.Drawing.Size(23, 20);
             this.label10.TabIndex = 51;
             this.label10.Text = "Id";
+            this.label10.Visible = false;
             // 
             // txtid
             // 
@@ -270,6 +271,7 @@
             this.txtid.Name = "txtid";
             this.txtid.Size = new System.Drawing.Size(62, 26);
             this.txtid.TabIndex = 50;
+            this.txtid.Visible = false;
             // 
             // FRM_EDITAR_EMPLEADOS
             // 

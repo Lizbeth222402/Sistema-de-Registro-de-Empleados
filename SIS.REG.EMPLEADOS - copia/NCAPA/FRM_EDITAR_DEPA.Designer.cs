@@ -123,6 +123,7 @@
             this.txtid.Name = "txtid";
             this.txtid.Size = new System.Drawing.Size(44, 26);
             this.txtid.TabIndex = 34;
+            this.txtid.Visible = false;
             // 
             // FRM_EDITAR_DEPA
             // 
