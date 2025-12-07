@@ -72,11 +72,6 @@ namespace NCAPA
 
         }
 
-        private void ck_Activo_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void chk_ACTIVO_CheckedChanged(object sender, EventArgs e)
         {
 

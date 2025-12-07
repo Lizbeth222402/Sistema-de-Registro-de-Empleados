@@ -103,7 +103,6 @@ namespace CAPA_DATO
 
                     cmd.ExecuteNonQuery();
 
-
                 }
 
             }

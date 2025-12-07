@@ -32,8 +32,6 @@ namespace CAPA_NEGOCIO
 
         }
 
-
-       
         public void EditarUsuario(CE_MUSUARIOS cE_MUSUARIOS)
         {
 

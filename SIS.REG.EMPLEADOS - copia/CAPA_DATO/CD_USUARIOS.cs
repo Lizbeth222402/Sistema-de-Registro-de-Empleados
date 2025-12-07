@@ -59,7 +59,6 @@ namespace CAPA_DATO
                 using (SqlCommand cmd = new SqlCommand("SP_INSERTAR_USUARIO", Con.Abrir()))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
-
                     cmd.Parameters.Add(new SqlParameter("@NOMBRE_USUARIO", cE_MUSUARIOS.NOMBRE_USUARIO));
                     cmd.Parameters.Add(new SqlParameter("@CONTRASEÑA", cE_MUSUARIOS.CONTRASEÑA));
                     cmd.Parameters.Add(new SqlParameter("@ACTIVO", cE_MUSUARIOS.ACTIVO));
@@ -92,7 +91,6 @@ namespace CAPA_DATO
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
 
-                    cmd.Parameters.Add(new SqlParameter("@ID_USUARIO", cE_MUSUARIOS.ID_USUARIO));
                     cmd.Parameters.Add(new SqlParameter("@ID_USUARIO", cE_MUSUARIOS.ID_USUARIO));
                     cmd.Parameters.Add(new SqlParameter("@NOMBRE_USUARIO", cE_MUSUARIOS.NOMBRE_USUARIO));
                     cmd.Parameters.Add(new SqlParameter("@CONTRASEÑA", cE_MUSUARIOS.CONTRASEÑA));
@@ -136,7 +134,7 @@ namespace CAPA_DATO
                         {
                             ID_USUARIO = Convert.ToInt32(dr["ID_USUARIO"]),
                             NOMBRE_USUARIO = dr["NOMBRE_USUARIO"].ToString(),
-                            ACTIVO = Convert.ToInt32(dr["ACTIVO"]),
+                            ACTIVO = Convert.ToInt32(dr["ACTIVO"]),  
                         };
                     }
                 }

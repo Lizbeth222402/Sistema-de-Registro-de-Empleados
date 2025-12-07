@@ -36,7 +36,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txx_cerrarUsuario = new System.Windows.Forms.Button();
             this.btnGuardarUsuario = new System.Windows.Forms.Button();
-            this.txt_Activo = new System.Windows.Forms.TextBox();
+            this.chk_ACTIVO = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // txt_Nameusuario
@@ -120,13 +120,14 @@
             this.btnGuardarUsuario.UseVisualStyleBackColor = false;
             this.btnGuardarUsuario.Click += new System.EventHandler(this.btnGuardarUsuario_Click);
             // 
-            // txt_Activo
+            // chk_ACTIVO
             // 
-            this.txt_Activo.Location = new System.Drawing.Point(225, 243);
-            this.txt_Activo.Name = "txt_Activo";
-            this.txt_Activo.Size = new System.Drawing.Size(50, 26);
-            this.txt_Activo.TabIndex = 4;
-            this.txt_Activo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumbers);
+            this.chk_ACTIVO.AutoSize = true;
+            this.chk_ACTIVO.Location = new System.Drawing.Point(225, 239);
+            this.chk_ACTIVO.Name = "chk_ACTIVO";
+            this.chk_ACTIVO.Size = new System.Drawing.Size(22, 21);
+            this.chk_ACTIVO.TabIndex = 52;
+            this.chk_ACTIVO.UseVisualStyleBackColor = true;
             // 
             // FRM_NEW_USUARIO
             // 
@@ -134,10 +135,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Orange;
             this.ClientSize = new System.Drawing.Size(612, 386);
+            this.Controls.Add(this.chk_ACTIVO);
             this.Controls.Add(this.txx_cerrarUsuario);
             this.Controls.Add(this.btnGuardarUsuario);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txt_Activo);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtpasswork);
             this.Controls.Add(this.label1);
@@ -159,6 +160,6 @@
         public System.Windows.Forms.Label label3;
         public System.Windows.Forms.Button txx_cerrarUsuario;
         public System.Windows.Forms.Button btnGuardarUsuario;
-        public System.Windows.Forms.TextBox txt_Activo;
+        public System.Windows.Forms.CheckBox chk_ACTIVO;
     }
 }

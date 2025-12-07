@@ -31,7 +31,7 @@ namespace NCAPA
             //PARA EL TAMAÑO DE LAS FILAS DEL DATA GRID//
             dataGridUsuaios.Columns[1].Width = 150;
             dataGridUsuaios.Columns[2].Width = 150;
-            dataGridUsuaios.Columns[2].Width = 150;
+            dataGridUsuaios.Columns[3].Width = 150;
 
 
             // Cabecera
@@ -64,7 +64,7 @@ namespace NCAPA
         //metodo para alistar//
         private void LISTAR_USUARIOS()
         {
-            dataGridUsuaios.DataSource = cn_Procedimientos.ListarEmpleados("SP_LISTAR_USUARIO");
+            dataGridUsuaios.DataSource = cn_Procedimientos.ListarUsuarios("SP_LISTAR_USUARIO");
 
 
         }
@@ -85,7 +85,6 @@ namespace NCAPA
         private void Editar()
         {
 
-
             if (dataGridUsuaios.SelectedRows.Count == 0)
             {
                 MessageBox.Show("Tienes que seleccionar una Usuario");
@@ -99,8 +98,8 @@ namespace NCAPA
 
                     eDITAR_USUARIO.txtid_usuario.Text = dataGridUsuaios.        SelectedRows[0].       Cells[0].Value.ToString();
                     eDITAR_USUARIO.txt_Nameusuario.Text = dataGridUsuaios.     SelectedRows[0].        Cells[1].Value.ToString();
-                    eDITAR_USUARIO.txtpasswork.Text = dataGridUsuaios.       SelectedRows[0].        Cells[2].Value.ToString();
-                    eDITAR_USUARIO.chk_ACTIVO.Text = dataGridUsuaios.       SelectedRows[0].        Cells[3].Value.ToString();
+                    eDITAR_USUARIO.txtpasswork.Text = dataGridUsuaios.       SelectedRows[0].          Cells[2].Value.ToString();
+                    eDITAR_USUARIO.chk_ACTIVO.Text = dataGridUsuaios.       SelectedRows[0].           Cells[3].Value.ToString();
 
                     eDITAR_USUARIO.ShowDialog();
                 }
@@ -122,6 +121,11 @@ namespace NCAPA
         {
             FRM_NEW_USUARIO AbrirNuevoUsuario = new FRM_NEW_USUARIO();
             AbrirNuevoUsuario.ShowDialog();
+        }
+
+        private void dataGridUsuaios_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

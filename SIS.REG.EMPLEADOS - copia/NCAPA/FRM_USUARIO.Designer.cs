@@ -82,6 +82,7 @@
             this.dataGridUsuaios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridUsuaios.Size = new System.Drawing.Size(665, 383);
             this.dataGridUsuaios.TabIndex = 10;
+            this.dataGridUsuaios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridUsuaios_CellContentClick_1);
             // 
             // btnEditar_Usuario
             // 

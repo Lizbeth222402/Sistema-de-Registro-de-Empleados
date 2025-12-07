@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Authentication.ExtendedProtection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -37,7 +38,9 @@ namespace NCAPA
         {
             Musuarios.NOMBRE_USUARIO = txt_Nameusuario.Text.Trim();
             Musuarios.CONTRASEÑA = txtpasswork.Text.Trim();
+
             Musuarios.ACTIVO = chk_ACTIVO.Checked ? 1 : 0;
+
 
 
             cN_USUARIOS.InsertarUsuario(Musuarios);
@@ -56,5 +59,7 @@ namespace NCAPA
 
             }
         }
+
+       
     }
 }
