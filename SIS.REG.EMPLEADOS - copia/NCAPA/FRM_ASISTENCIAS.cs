@@ -28,7 +28,7 @@ namespace NCAPA
             //Evita que no esta seleccionado por defecto//
             DataGridAsistencia.ClearSelection();
             //PARA QUE NO APAREZCA EL ID//
-            DataGridAsistencia.Columns[0].Visible = false;
+            //DataGridAsistencia.Columns[0].Visible = false;
             //PARA EL TAMAÑO DE LAS FILAS DEL DATA GRID//
             DataGridAsistencia.Columns[1].Width = 130;
             DataGridAsistencia.Columns[2].Width = 200;
@@ -107,11 +107,11 @@ namespace NCAPA
                     FRM_EDITAR_ASISTENCIAS eDITAR_ASISTENCIAS = new FRM_EDITAR_ASISTENCIAS();
 
 
-                    eDITAR_ASISTENCIAS.txtid.Text = DataGridAsistencia.SelectedRows[0].             Cells[0].Value.ToString();
-                    eDITAR_ASISTENCIAS.dtp_FechaAsis.Text = DataGridAsistencia.SelectedRows[0].     Cells[1].Value.ToString();
-                    eDITAR_ASISTENCIAS.dtp_HoraEntra.Text = DataGridAsistencia.SelectedRows[0].   Cells[2].Value.ToString();
-                    eDITAR_ASISTENCIAS.dtp_HoraSalidadAsistencia.Text = DataGridAsistencia.SelectedRows[0].    Cells[3].Value.ToString();
-                    eDITAR_ASISTENCIAS.txtEstado.Text = DataGridAsistencia.SelectedRows[0].         Cells[4].Value.ToString();
+                    eDITAR_ASISTENCIAS.txtid_emp_asistencia.Text = DataGridAsistencia.SelectedRows[0].              Cells[0].Value.ToString();
+                    eDITAR_ASISTENCIAS.dtp_FechaAsis.Text = DataGridAsistencia.SelectedRows[0].                     Cells[1].Value.ToString();
+                    eDITAR_ASISTENCIAS.dtp_HoraEntra.Text = DataGridAsistencia.SelectedRows[0].                     Cells[2].Value.ToString();
+                    eDITAR_ASISTENCIAS.dtp_HoraSalidadAsistencia.Text = DataGridAsistencia.SelectedRows[0].         Cells[3].Value.ToString();
+                    eDITAR_ASISTENCIAS.txtEstado.Text = DataGridAsistencia.SelectedRows[0].                         Cells[4].Value.ToString();
 
 
                     eDITAR_ASISTENCIAS.ShowDialog();

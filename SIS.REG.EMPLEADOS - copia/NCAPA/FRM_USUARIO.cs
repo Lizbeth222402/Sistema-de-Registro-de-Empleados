@@ -34,6 +34,7 @@ namespace NCAPA
             dataGridUsuaios.Columns[3].Width = 150;
 
 
+
             // Cabecera
             dataGridUsuaios.EnableHeadersVisualStyles = false;
             dataGridUsuaios.ColumnHeadersDefaultCellStyle.BackColor = Color.SteelBlue;
@@ -78,8 +79,6 @@ namespace NCAPA
         {
 
             Editar();
-
-
         }
 
         private void Editar()
@@ -96,10 +95,20 @@ namespace NCAPA
                 {
                     FRM_EDITAR_USUARIO eDITAR_USUARIO = new FRM_EDITAR_USUARIO();
 
-                    eDITAR_USUARIO.txtid_usuario.Text = dataGridUsuaios.        SelectedRows[0].       Cells[0].Value.ToString();
-                    eDITAR_USUARIO.txt_Nameusuario.Text = dataGridUsuaios.     SelectedRows[0].        Cells[1].Value.ToString();
-                    eDITAR_USUARIO.txtpasswork.Text = dataGridUsuaios.       SelectedRows[0].          Cells[2].Value.ToString();
-                    eDITAR_USUARIO.chk_ACTIVO.Text = dataGridUsuaios.       SelectedRows[0].           Cells[3].Value.ToString();
+
+                    eDITAR_USUARIO.txtid_usuario.Text =
+                    dataGridUsuaios.SelectedRows[0].Cells[0].Value.ToString();
+
+                    eDITAR_USUARIO.txt_Nameusuario.Text = 
+                        dataGridUsuaios.SelectedRows[0].Cells[1].Value.ToString();
+
+                    eDITAR_USUARIO.txtpasswork.Text =
+                        dataGridUsuaios.SelectedRows[0].Cells[2].Value.ToString();
+
+                    eDITAR_USUARIO.chk_ACTIVO.Checked =
+                        Convert.ToBoolean(dataGridUsuaios.SelectedRows[0].Cells[3].Value);
+
+                   
 
                     eDITAR_USUARIO.ShowDialog();
                 }

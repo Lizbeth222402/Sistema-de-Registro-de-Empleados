@@ -92,10 +92,10 @@
             this.btnEditar_Usuario.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar_Usuario.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar_Usuario.Image")));
             this.btnEditar_Usuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditar_Usuario.Location = new System.Drawing.Point(814, 301);
+            this.btnEditar_Usuario.Location = new System.Drawing.Point(805, 301);
             this.btnEditar_Usuario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnEditar_Usuario.Name = "btnEditar_Usuario";
-            this.btnEditar_Usuario.Size = new System.Drawing.Size(124, 45);
+            this.btnEditar_Usuario.Size = new System.Drawing.Size(133, 45);
             this.btnEditar_Usuario.TabIndex = 36;
             this.btnEditar_Usuario.Text = "Editar";
             this.btnEditar_Usuario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -165,10 +165,10 @@
             this.btnNuevoUsuario.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevoUsuario.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevoUsuario.Image")));
             this.btnNuevoUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuevoUsuario.Location = new System.Drawing.Point(814, 205);
+            this.btnNuevoUsuario.Location = new System.Drawing.Point(805, 205);
             this.btnNuevoUsuario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnNuevoUsuario.Name = "btnNuevoUsuario";
-            this.btnNuevoUsuario.Size = new System.Drawing.Size(124, 40);
+            this.btnNuevoUsuario.Size = new System.Drawing.Size(133, 40);
             this.btnNuevoUsuario.TabIndex = 40;
             this.btnNuevoUsuario.Text = "Nuevo";
             this.btnNuevoUsuario.TextAlign = System.Drawing.ContentAlignment.MiddleRight;

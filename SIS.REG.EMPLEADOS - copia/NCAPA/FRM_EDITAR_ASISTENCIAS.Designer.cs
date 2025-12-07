@@ -37,7 +37,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtid = new System.Windows.Forms.TextBox();
+            this.txtid_emp_asistencia = new System.Windows.Forms.TextBox();
             this.dtp_HoraEntra = new System.Windows.Forms.DateTimePicker();
             this.dtp_HoraSalidadAsistencia = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
@@ -140,12 +140,12 @@
             this.label1.TabIndex = 34;
             this.label1.Text = "FECHA";
             // 
-            // txtid
+            // txtid_emp_asistencia
             // 
-            this.txtid.Location = new System.Drawing.Point(281, 131);
-            this.txtid.Name = "txtid";
-            this.txtid.Size = new System.Drawing.Size(86, 26);
-            this.txtid.TabIndex = 44;
+            this.txtid_emp_asistencia.Location = new System.Drawing.Point(281, 131);
+            this.txtid_emp_asistencia.Name = "txtid_emp_asistencia";
+            this.txtid_emp_asistencia.Size = new System.Drawing.Size(68, 26);
+            this.txtid_emp_asistencia.TabIndex = 44;
             // 
             // dtp_HoraEntra
             // 
@@ -169,7 +169,7 @@
             this.ClientSize = new System.Drawing.Size(692, 649);
             this.Controls.Add(this.dtp_HoraSalidadAsistencia);
             this.Controls.Add(this.dtp_HoraEntra);
-            this.Controls.Add(this.txtid);
+            this.Controls.Add(this.txtid_emp_asistencia);
             this.Controls.Add(this.txx_cerrar);
             this.Controls.Add(this.btnActualizarAsistencia);
             this.Controls.Add(this.txtEstado);
@@ -190,7 +190,7 @@
             this.Controls.SetChildIndex(this.txtEstado, 0);
             this.Controls.SetChildIndex(this.btnActualizarAsistencia, 0);
             this.Controls.SetChildIndex(this.txx_cerrar, 0);
-            this.Controls.SetChildIndex(this.txtid, 0);
+            this.Controls.SetChildIndex(this.txtid_emp_asistencia, 0);
             this.Controls.SetChildIndex(this.btncerrar, 0);
             this.Controls.SetChildIndex(this.dtp_HoraEntra, 0);
             this.Controls.SetChildIndex(this.dtp_HoraSalidadAsistencia, 0);
@@ -209,7 +209,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        public System.Windows.Forms.TextBox txtid;
+        public System.Windows.Forms.TextBox txtid_emp_asistencia;
         public System.Windows.Forms.DateTimePicker dtp_HoraEntra;
         public System.Windows.Forms.DateTimePicker dtp_HoraSalidadAsistencia;
     }

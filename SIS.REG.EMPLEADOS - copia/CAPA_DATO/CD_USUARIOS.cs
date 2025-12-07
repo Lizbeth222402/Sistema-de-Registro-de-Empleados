@@ -32,7 +32,6 @@ namespace CAPA_DATO
                     {
                         oList.Add(new CE_MUSUARIOS()
                         {
-
                             ID_USUARIO = Convert.ToInt32(dr["ID_USUARIO"]),
                             NOMBRE_USUARIO = dr["NOMBRE_USUARIO"].ToString(),
                             CONTRASEÑA = dr["CONTRASEÑA"].ToString(),
