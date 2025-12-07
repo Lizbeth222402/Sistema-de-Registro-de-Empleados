@@ -26,13 +26,13 @@ namespace NCAPA
 
             //Evita que no esta seleccionado por defecto//
             DataGridAUSENCIAS.ClearSelection();
-            
+
             //PARA EL TAMAÑO DE LAS FILAS DEL DATA GRID//
             DataGridAUSENCIAS.Columns[1].Width = 130;
             DataGridAUSENCIAS.Columns[2].Width = 200;
             DataGridAUSENCIAS.Columns[3].Width = 200;
             DataGridAUSENCIAS.Columns[4].Width = 195;
-            
+
 
 
 
@@ -71,7 +71,7 @@ namespace NCAPA
         }
 
         private void BtncerrarD_Click(object sender, EventArgs e)
-        {   
+        {
             this.Close();
         }
 
@@ -86,10 +86,10 @@ namespace NCAPA
             Editar();
         }
 
-                                        private void DataGridAUSENCIAS_CellContentClick(object sender, DataGridViewCellEventArgs e)
-                                        {
+        private void DataGridAUSENCIAS_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
-                                        }
+        }
 
         private void Editar()
         {
@@ -104,26 +104,48 @@ namespace NCAPA
                 {
                     FRM_EDITAR_AUSENCIAS eDITAR_Ausencias = new FRM_EDITAR_AUSENCIAS();
 
-                    eDITAR_Ausencias.txtidausencias.Text = DataGridAUSENCIAS.SelectedRows[0].Cells[0].Value.ToString();
+                    //ID AUSENCIAS
+                    eDITAR_Ausencias.txtid_Ausencia.Text =
+                    DataGridAUSENCIAS.CurrentRow.Cells[0].Value.ToString();
+                        
 
-                    eDITAR_Ausencias.txt_IdEmP.Text = DataGridAUSENCIAS.SelectedRows[0].                            Cells[0].Value.ToString();
-                    eDITAR_Ausencias.txtNombre_AUSENCIAS.Text = DataGridAUSENCIAS.SelectedRows[0].                  Cells[1].Value.ToString();
-                    eDITAR_Ausencias.dtp_FechaInic.Value = Convert.ToDateTime(DataGridAUSENCIAS.SelectedRows[0].    Cells[2].Value);
-                    eDITAR_Ausencias.dtp_FechaFinal.Value = Convert.ToDateTime(DataGridAUSENCIAS.SelectedRows[0].   Cells[3].Value);
-                    eDITAR_Ausencias.txt_motivoAusencias.Text = DataGridAUSENCIAS.SelectedRows[0].                  Cells[4].Value.ToString();
+                    //ID EMPLEADO
+                    eDITAR_Ausencias.txt_IdEmP.Text =
+                    DataGridAUSENCIAS.CurrentRow.Cells[0].Value.ToString();
+
+                    //NOMBRE USENCIAS
+                    eDITAR_Ausencias.txtNombre_AUSENCIAS.Text =
+                    DataGridAUSENCIAS.CurrentRow.Cells[1].Value.ToString();
+
+                    //FECHA INICIO
+                    eDITAR_Ausencias.dtp_FechaInic.Value =
+                    Convert.ToDateTime(DataGridAUSENCIAS.CurrentRow.Cells[2].Value);
+
+                    //FECHA FINAL
+                    eDITAR_Ausencias.dtp_FechaFinal.Value =
+                    Convert.ToDateTime(DataGridAUSENCIAS.CurrentRow.Cells[3].Value);
+
+                    //MOTIVO DE AUSENCIAS
+                    eDITAR_Ausencias.txt_motivoAusencias.Text =
+                    DataGridAUSENCIAS.CurrentRow.Cells[4].Value.ToString();
 
 
                     eDITAR_Ausencias.ShowDialog();
+                    LISTAR_AUSENCIAS(); // ✅ RECARGA AUTOMÁTICA
 
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"No se selecciono por el error : {ex.Message}", "Editar Ausencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(
+                        "No se pudo cargar la asistencia por este error: " + ex.Message,
+                        "Editar Asistencia",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error
+                    );
 
                 }
-
             }
-
         }
     }
 }
+

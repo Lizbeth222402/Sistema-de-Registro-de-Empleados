@@ -89,14 +89,14 @@
             // txtEstado
             // 
             this.txtEstado.BackColor = System.Drawing.Color.Silver;
-            this.txtEstado.Location = new System.Drawing.Point(278, 432);
+            this.txtEstado.Location = new System.Drawing.Point(278, 394);
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.Size = new System.Drawing.Size(140, 26);
             this.txtEstado.TabIndex = 41;
             // 
             // dtp_FechaAsis
             // 
-            this.dtp_FechaAsis.Location = new System.Drawing.Point(278, 208);
+            this.dtp_FechaAsis.Location = new System.Drawing.Point(278, 170);
             this.dtp_FechaAsis.Name = "dtp_FechaAsis";
             this.dtp_FechaAsis.Size = new System.Drawing.Size(260, 26);
             this.dtp_FechaAsis.TabIndex = 38;
@@ -105,7 +105,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(129, 352);
+            this.label5.Location = new System.Drawing.Point(129, 314);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(119, 20);
             this.label5.TabIndex = 37;
@@ -115,7 +115,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label3.Location = new System.Drawing.Point(129, 432);
+            this.label3.Location = new System.Drawing.Point(129, 394);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(75, 20);
             this.label3.TabIndex = 36;
@@ -125,7 +125,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label2.Location = new System.Drawing.Point(129, 280);
+            this.label2.Location = new System.Drawing.Point(129, 242);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(137, 20);
             this.label2.TabIndex = 35;
@@ -135,7 +135,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(129, 214);
+            this.label1.Location = new System.Drawing.Point(129, 176);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(64, 20);
             this.label1.TabIndex = 34;
@@ -143,31 +143,32 @@
             // 
             // txtid_emp_asistencia
             // 
-            this.txtid_emp_asistencia.Location = new System.Drawing.Point(278, 157);
+            this.txtid_emp_asistencia.Location = new System.Drawing.Point(278, 113);
             this.txtid_emp_asistencia.Name = "txtid_emp_asistencia";
             this.txtid_emp_asistencia.Size = new System.Drawing.Size(68, 26);
             this.txtid_emp_asistencia.TabIndex = 44;
             // 
             // dtp_HoraEntra
             // 
-            this.dtp_HoraEntra.Location = new System.Drawing.Point(278, 271);
+            this.dtp_HoraEntra.Location = new System.Drawing.Point(278, 233);
             this.dtp_HoraEntra.Name = "dtp_HoraEntra";
             this.dtp_HoraEntra.Size = new System.Drawing.Size(259, 26);
             this.dtp_HoraEntra.TabIndex = 45;
             // 
             // dtp_HoraSalidadAsistencia
             // 
-            this.dtp_HoraSalidadAsistencia.Location = new System.Drawing.Point(279, 352);
+            this.dtp_HoraSalidadAsistencia.Location = new System.Drawing.Point(279, 314);
             this.dtp_HoraSalidadAsistencia.Name = "dtp_HoraSalidadAsistencia";
             this.dtp_HoraSalidadAsistencia.Size = new System.Drawing.Size(259, 26);
             this.dtp_HoraSalidadAsistencia.TabIndex = 46;
             // 
             // txtIdAsistencia
             // 
-            this.txtIdAsistencia.Location = new System.Drawing.Point(278, 100);
+            this.txtIdAsistencia.Location = new System.Drawing.Point(278, 63);
             this.txtIdAsistencia.Name = "txtIdAsistencia";
             this.txtIdAsistencia.Size = new System.Drawing.Size(68, 26);
             this.txtIdAsistencia.TabIndex = 47;
+            this.txtIdAsistencia.Visible = false;
             // 
             // FRM_EDITAR_ASISTENCIAS
             // 

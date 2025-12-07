@@ -39,60 +39,93 @@ namespace NCAPA
         }
 
         private void ActualizarAusencia()
-
         {
-
             try
             {
-
-                if(string.IsNullOrWhiteSpace(txt_IdEmP.Text) || string.IsNullOrWhiteSpace(txtNombre_AUSENCIAS.Text) || string.IsNullOrWhiteSpace(dtp_FechaInic.Text) || string.IsNullOrWhiteSpace(dtp_FechaFinal.Text)
-                    || string.IsNullOrWhiteSpace(txt_motivoAusencias.Text))
+                // ✅ Validaciones de campos texto
+                if (string.IsNullOrWhiteSpace(txtid_Ausencia.Text) ||
+                    string.IsNullOrWhiteSpace(txt_IdEmP.Text) ||
+                    string.IsNullOrWhiteSpace(txtNombre_AUSENCIAS.Text) ||
+                    string.IsNullOrWhiteSpace(txt_motivoAusencias.Text))
                 {
-                    MessageBox.Show("Tienes que llenar todos los campos", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Tienes que llenar todos los campos",
+                        "Validación",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Warning);
+                    return;
+                }
 
+                // ✅ Validación fechas
+                DateTime fechaInicio = dtp_FechaInic.Value.Date;
+                DateTime fechaFin = dtp_FechaFinal.Value.Date;
+
+                if (fechaFin < fechaInicio)
+                {
+                    MessageBox.Show("La fecha final no puede ser menor que la fecha inicial",
+                        "Validación",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Warning);
+                    return;
+                }
+
+                // ✅ Validación ID AUSENCIA (PK)
+                if (!int.TryParse(txtid_Ausencia.Text, out int idAusencia))
+                {
+                    MessageBox.Show("Id de ausencia inválido",
+                        "Error",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                    return;
+                }
+
+                // ✅ Validación ID EMPLEADO
+                if (!int.TryParse(txt_IdEmP.Text, out int idEmpleado))
+                {
+                    MessageBox.Show("Id de empleado inválido",
+                        "Error",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                    return;
+                }
+
+                // ✅ Carga de datos al objeto
+                MAusenicas.Id_ausencia = idAusencia;          // 🔥 CLAVE DEL PROBLEMA
+                MAusenicas.Id_empleado = idEmpleado;
+                MAusenicas.Tipo_ausencia = txtNombre_AUSENCIAS.Text.Trim();
+                MAusenicas.Fecha_inicio = fechaInicio;
+                MAusenicas.Fecha_fin = fechaFin;
+                MAusenicas.Motivo = txt_motivoAusencias.Text.Trim();
+
+                // ✅ Envío a capa negocio
+                int resultado = XAusencias.EditarAusencias(MAusenicas);
+
+                if (resultado > 0)
+                {
+                    MessageBox.Show("✅ Ausencia actualizada correctamente",
+                        "Editar Ausencia",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
+
+                    Close();
                 }
                 else
-
                 {
-                   
-                    MAusenicas.Id_empleado = Convert.ToInt32(txt_IdEmP.Text);
-                    MAusenicas.Tipo_ausencia = txtNombre_AUSENCIAS.Text;
-                    MAusenicas.Fecha_inicio = dtp_FechaInic.Value;
-                    MAusenicas.Fecha_fin = dtp_FechaFinal.Value;
-                    MAusenicas.Motivo = txt_motivoAusencias.Text;
-
-
-                    /*XAusencias.EditarAusencias(MAusenicas);*/
-                    int resultado = XAusencias.EditarAusencias(MAusenicas);
-
-                    if (resultado > 0)
-                    {
-
-                        MessageBox.Show("Se actualizo correctamente", "Editar Ausencias", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        Close();
-
-                    }
-                    else
-                    {
-
-                        MessageBox.Show("No se encontró el registro para actualizar", "Editar Ausencias", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }
-
-
+                    MessageBox.Show("⚠ No se encontró el registro para actualizar",
+                        "Editar Ausencia",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Warning);
                 }
-
-
             }
             catch (Exception ex)
             {
-
-                MessageBox.Show("No se puedo Editar El Cliente" + ex.Message, "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-
+                MessageBox.Show("❌ No se pudo editar la ausencia: " + ex.Message,
+                    "Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
             }
-
-
-
         }
+
+
+
     }
 }

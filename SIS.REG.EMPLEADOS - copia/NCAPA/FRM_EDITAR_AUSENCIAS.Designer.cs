@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_EDITAR_AUSENCIAS));
             this.txt_IdEmP = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.btnGuardarAusencias = new System.Windows.Forms.Button();
+            this.btnActualizarAusencias = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.dtp_FechaFinal = new System.Windows.Forms.DateTimePicker();
             this.dtp_FechaInic = new System.Windows.Forms.DateTimePicker();
@@ -41,8 +41,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtNombre_AUSENCIAS = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtidausencias = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.txtid_Ausencia = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btncerrar
@@ -68,24 +68,24 @@
             this.label5.TabIndex = 55;
             this.label5.Text = "Id Empleado";
             // 
-            // btnGuardarAusencias
+            // btnActualizarAusencias
             // 
-            this.btnGuardarAusencias.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnGuardarAusencias.BackColor = System.Drawing.Color.LightBlue;
-            this.btnGuardarAusencias.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGuardarAusencias.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnGuardarAusencias.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardarAusencias.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardarAusencias.Image")));
-            this.btnGuardarAusencias.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardarAusencias.Location = new System.Drawing.Point(662, 255);
-            this.btnGuardarAusencias.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnGuardarAusencias.Name = "btnGuardarAusencias";
-            this.btnGuardarAusencias.Size = new System.Drawing.Size(141, 43);
-            this.btnGuardarAusencias.TabIndex = 54;
-            this.btnGuardarAusencias.Text = "GUARDAR";
-            this.btnGuardarAusencias.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnGuardarAusencias.UseVisualStyleBackColor = false;
-            this.btnGuardarAusencias.Click += new System.EventHandler(this.btnGuardarAusencias_Click);
+            this.btnActualizarAusencias.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnActualizarAusencias.BackColor = System.Drawing.Color.LightBlue;
+            this.btnActualizarAusencias.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnActualizarAusencias.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnActualizarAusencias.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizarAusencias.Image = ((System.Drawing.Image)(resources.GetObject("btnActualizarAusencias.Image")));
+            this.btnActualizarAusencias.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnActualizarAusencias.Location = new System.Drawing.Point(662, 255);
+            this.btnActualizarAusencias.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnActualizarAusencias.Name = "btnActualizarAusencias";
+            this.btnActualizarAusencias.Size = new System.Drawing.Size(141, 43);
+            this.btnActualizarAusencias.TabIndex = 54;
+            this.btnActualizarAusencias.Text = "Actualizar";
+            this.btnActualizarAusencias.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnActualizarAusencias.UseVisualStyleBackColor = false;
+            this.btnActualizarAusencias.Click += new System.EventHandler(this.btnGuardarAusencias_Click);
             // 
             // button1
             // 
@@ -177,14 +177,6 @@
             this.label1.TabIndex = 45;
             this.label1.Text = "TIPO AUSENCIAS";
             // 
-            // txtidausencias
-            // 
-            this.txtidausencias.BackColor = System.Drawing.Color.Silver;
-            this.txtidausencias.Location = new System.Drawing.Point(274, 100);
-            this.txtidausencias.Name = "txtidausencias";
-            this.txtidausencias.Size = new System.Drawing.Size(42, 26);
-            this.txtidausencias.TabIndex = 57;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -196,17 +188,24 @@
             this.label6.Text = "Id";
             this.label6.Visible = false;
             // 
+            // txtid_Ausencia
+            // 
+            this.txtid_Ausencia.Location = new System.Drawing.Point(274, 100);
+            this.txtid_Ausencia.Name = "txtid_Ausencia";
+            this.txtid_Ausencia.Size = new System.Drawing.Size(42, 26);
+            this.txtid_Ausencia.TabIndex = 59;
+            // 
             // FRM_EDITAR_AUSENCIAS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(862, 558);
+            this.Controls.Add(this.txtid_Ausencia);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.txtidausencias);
             this.Controls.Add(this.txt_IdEmP);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.btnGuardarAusencias);
+            this.Controls.Add(this.btnActualizarAusencias);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dtp_FechaFinal);
             this.Controls.Add(this.dtp_FechaInic);
@@ -231,11 +230,11 @@
             this.Controls.SetChildIndex(this.dtp_FechaInic, 0);
             this.Controls.SetChildIndex(this.dtp_FechaFinal, 0);
             this.Controls.SetChildIndex(this.button1, 0);
-            this.Controls.SetChildIndex(this.btnGuardarAusencias, 0);
+            this.Controls.SetChildIndex(this.btnActualizarAusencias, 0);
             this.Controls.SetChildIndex(this.label5, 0);
             this.Controls.SetChildIndex(this.txt_IdEmP, 0);
-            this.Controls.SetChildIndex(this.txtidausencias, 0);
             this.Controls.SetChildIndex(this.label6, 0);
+            this.Controls.SetChildIndex(this.txtid_Ausencia, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -245,7 +244,7 @@
 
         public System.Windows.Forms.TextBox txt_IdEmP;
         private System.Windows.Forms.Label label5;
-        public System.Windows.Forms.Button btnGuardarAusencias;
+        public System.Windows.Forms.Button btnActualizarAusencias;
         public System.Windows.Forms.Button button1;
         public System.Windows.Forms.DateTimePicker dtp_FechaFinal;
         public System.Windows.Forms.DateTimePicker dtp_FechaInic;
@@ -255,7 +254,7 @@
         private System.Windows.Forms.Label label3;
         public System.Windows.Forms.TextBox txtNombre_AUSENCIAS;
         private System.Windows.Forms.Label label1;
-        public System.Windows.Forms.TextBox txtidausencias;
         private System.Windows.Forms.Label label6;
+        public System.Windows.Forms.TextBox txtid_Ausencia;
     }
 }

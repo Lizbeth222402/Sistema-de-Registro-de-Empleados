@@ -106,10 +106,12 @@ namespace NCAPA
                 {
                     FRM_EDITAR_ASISTENCIAS eDITAR_ASISTENCIAS = new FRM_EDITAR_ASISTENCIAS();
 
+
+                    //ID ASISTENCIA
                     eDITAR_ASISTENCIAS.txtIdAsistencia.Text =
                     DataGridAsistencia.CurrentRow.Cells[0].Value.ToString(); // Id_asistencia (PK)
 
-                    // ID ASISTENCIA
+                    // ID ASISTENCIA empleado
                     eDITAR_ASISTENCIAS.txtid_emp_asistencia.Text =
                         DataGridAsistencia.CurrentRow.Cells[0].Value.ToString();
 
