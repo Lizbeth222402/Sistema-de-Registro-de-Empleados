@@ -29,36 +29,37 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_EDITAR_DEPA));
-            this.btnNuevoDepa = new System.Windows.Forms.Button();
+            this.btnActualizarDepa = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.txt_descrip = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtNombre_DEPA = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtid = new System.Windows.Forms.TextBox();
+            this.txtid_ = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btncerrar
             // 
             this.btncerrar.Location = new System.Drawing.Point(1004, 496);
             // 
-            // btnNuevoDepa
+            // btnActualizarDepa
             // 
-            this.btnNuevoDepa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnNuevoDepa.BackColor = System.Drawing.Color.LightBlue;
-            this.btnNuevoDepa.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNuevoDepa.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnNuevoDepa.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuevoDepa.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevoDepa.Image")));
-            this.btnNuevoDepa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuevoDepa.Location = new System.Drawing.Point(565, 214);
-            this.btnNuevoDepa.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnNuevoDepa.Name = "btnNuevoDepa";
-            this.btnNuevoDepa.Size = new System.Drawing.Size(141, 43);
-            this.btnNuevoDepa.TabIndex = 33;
-            this.btnNuevoDepa.Text = "GUARDAR";
-            this.btnNuevoDepa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnNuevoDepa.UseVisualStyleBackColor = false;
+            this.btnActualizarDepa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnActualizarDepa.BackColor = System.Drawing.Color.LightBlue;
+            this.btnActualizarDepa.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnActualizarDepa.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnActualizarDepa.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizarDepa.Image = ((System.Drawing.Image)(resources.GetObject("btnActualizarDepa.Image")));
+            this.btnActualizarDepa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnActualizarDepa.Location = new System.Drawing.Point(565, 214);
+            this.btnActualizarDepa.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnActualizarDepa.Name = "btnActualizarDepa";
+            this.btnActualizarDepa.Size = new System.Drawing.Size(141, 43);
+            this.btnActualizarDepa.TabIndex = 33;
+            this.btnActualizarDepa.Text = "Actualizar";
+            this.btnActualizarDepa.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnActualizarDepa.UseVisualStyleBackColor = false;
+            this.btnActualizarDepa.Click += new System.EventHandler(this.btnActualizarDepa_Click);
             // 
             // button1
             // 
@@ -116,14 +117,14 @@
             this.label1.TabIndex = 29;
             this.label1.Text = "NOMBRE";
             // 
-            // txtid
+            // txtid_
             // 
-            this.txtid.BackColor = System.Drawing.Color.Silver;
-            this.txtid.Location = new System.Drawing.Point(222, 147);
-            this.txtid.Name = "txtid";
-            this.txtid.Size = new System.Drawing.Size(44, 26);
-            this.txtid.TabIndex = 34;
-            this.txtid.Visible = false;
+            this.txtid_.BackColor = System.Drawing.Color.Silver;
+            this.txtid_.Location = new System.Drawing.Point(222, 147);
+            this.txtid_.Name = "txtid_";
+            this.txtid_.Size = new System.Drawing.Size(44, 26);
+            this.txtid_.TabIndex = 34;
+            this.txtid_.Visible = false;
             // 
             // FRM_EDITAR_DEPA
             // 
@@ -131,8 +132,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(745, 451);
-            this.Controls.Add(this.txtid);
-            this.Controls.Add(this.btnNuevoDepa);
+            this.Controls.Add(this.txtid_);
+            this.Controls.Add(this.btnActualizarDepa);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txt_descrip);
             this.Controls.Add(this.label2);
@@ -148,8 +149,8 @@
             this.Controls.SetChildIndex(this.label2, 0);
             this.Controls.SetChildIndex(this.txt_descrip, 0);
             this.Controls.SetChildIndex(this.button1, 0);
-            this.Controls.SetChildIndex(this.btnNuevoDepa, 0);
-            this.Controls.SetChildIndex(this.txtid, 0);
+            this.Controls.SetChildIndex(this.btnActualizarDepa, 0);
+            this.Controls.SetChildIndex(this.txtid_, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -157,12 +158,12 @@
 
         #endregion
 
-        public System.Windows.Forms.Button btnNuevoDepa;
+        public System.Windows.Forms.Button btnActualizarDepa;
         public System.Windows.Forms.Button button1;
         public System.Windows.Forms.TextBox txt_descrip;
         private System.Windows.Forms.Label label2;
         public System.Windows.Forms.TextBox txtNombre_DEPA;
         private System.Windows.Forms.Label label1;
-        public System.Windows.Forms.TextBox txtid;
+        public System.Windows.Forms.TextBox txtid_;
     }
 }

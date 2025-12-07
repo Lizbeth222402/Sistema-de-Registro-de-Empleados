@@ -36,9 +36,9 @@
             this.txtNombre_Puesto = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.btnGuardarPuesto = new System.Windows.Forms.Button();
+            this.btnActualizarPuesto = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtid = new System.Windows.Forms.TextBox();
+            this.txtid_puesto = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btncerrar
@@ -119,23 +119,24 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // btnGuardarPuesto
+            // btnActualizarPuesto
             // 
-            this.btnGuardarPuesto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnGuardarPuesto.BackColor = System.Drawing.Color.LightBlue;
-            this.btnGuardarPuesto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGuardarPuesto.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnGuardarPuesto.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardarPuesto.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardarPuesto.Image")));
-            this.btnGuardarPuesto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardarPuesto.Location = new System.Drawing.Point(614, 221);
-            this.btnGuardarPuesto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnGuardarPuesto.Name = "btnGuardarPuesto";
-            this.btnGuardarPuesto.Size = new System.Drawing.Size(145, 43);
-            this.btnGuardarPuesto.TabIndex = 36;
-            this.btnGuardarPuesto.Text = "GUARDAR";
-            this.btnGuardarPuesto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnGuardarPuesto.UseVisualStyleBackColor = false;
+            this.btnActualizarPuesto.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnActualizarPuesto.BackColor = System.Drawing.Color.LightBlue;
+            this.btnActualizarPuesto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnActualizarPuesto.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnActualizarPuesto.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizarPuesto.Image = ((System.Drawing.Image)(resources.GetObject("btnActualizarPuesto.Image")));
+            this.btnActualizarPuesto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnActualizarPuesto.Location = new System.Drawing.Point(614, 221);
+            this.btnActualizarPuesto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnActualizarPuesto.Name = "btnActualizarPuesto";
+            this.btnActualizarPuesto.Size = new System.Drawing.Size(145, 43);
+            this.btnActualizarPuesto.TabIndex = 36;
+            this.btnActualizarPuesto.Text = "Actualizar";
+            this.btnActualizarPuesto.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnActualizarPuesto.UseVisualStyleBackColor = false;
+            this.btnActualizarPuesto.Click += new System.EventHandler(this.btnActualizarPuesto_Click);
             // 
             // label4
             // 
@@ -146,13 +147,14 @@
             this.label4.Size = new System.Drawing.Size(23, 20);
             this.label4.TabIndex = 47;
             this.label4.Text = "Id";
+            this.label4.Visible = false;
             // 
-            // txtid
+            // txtid_puesto
             // 
-            this.txtid.Location = new System.Drawing.Point(257, 116);
-            this.txtid.Name = "txtid";
-            this.txtid.Size = new System.Drawing.Size(48, 26);
-            this.txtid.TabIndex = 46;
+            this.txtid_puesto.Location = new System.Drawing.Point(257, 116);
+            this.txtid_puesto.Name = "txtid_puesto";
+            this.txtid_puesto.Size = new System.Drawing.Size(48, 26);
+            this.txtid_puesto.TabIndex = 46;
             // 
             // FRM_EDITAR_PUESTO
             // 
@@ -161,7 +163,7 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(800, 467);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtid);
+            this.Controls.Add(this.txtid_puesto);
             this.Controls.Add(this.txt_Salar_base);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txt_des_puesto);
@@ -169,13 +171,13 @@
             this.Controls.Add(this.txtNombre_Puesto);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.btnGuardarPuesto);
+            this.Controls.Add(this.btnActualizarPuesto);
             this.Name = "FRM_EDITAR_PUESTO";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FRM_EDITAR_PUESTO";
             this.Load += new System.EventHandler(this.FRM_EDITAR_PUESTO_Load);
             this.Controls.SetChildIndex(this.btncerrar, 0);
-            this.Controls.SetChildIndex(this.btnGuardarPuesto, 0);
+            this.Controls.SetChildIndex(this.btnActualizarPuesto, 0);
             this.Controls.SetChildIndex(this.button1, 0);
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.txtNombre_Puesto, 0);
@@ -183,7 +185,7 @@
             this.Controls.SetChildIndex(this.txt_des_puesto, 0);
             this.Controls.SetChildIndex(this.label2, 0);
             this.Controls.SetChildIndex(this.txt_Salar_base, 0);
-            this.Controls.SetChildIndex(this.txtid, 0);
+            this.Controls.SetChildIndex(this.txtid_puesto, 0);
             this.Controls.SetChildIndex(this.label4, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -199,8 +201,8 @@
         public System.Windows.Forms.TextBox txtNombre_Puesto;
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.Button button1;
-        public System.Windows.Forms.Button btnGuardarPuesto;
+        public System.Windows.Forms.Button btnActualizarPuesto;
         private System.Windows.Forms.Label label4;
-        public System.Windows.Forms.TextBox txtid;
+        public System.Windows.Forms.TextBox txtid_puesto;
     }
 }

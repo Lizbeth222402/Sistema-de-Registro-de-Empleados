@@ -14,8 +14,8 @@ namespace NCAPA
     public partial class FRM_PUESTO : Frm_Base
     {
 
-
         CN_PROCEDIMIENTOS cn_Procedimientos = new CN_PROCEDIMIENTOS();
+
         public FRM_PUESTO()
         {
             InitializeComponent();
@@ -93,8 +93,6 @@ namespace NCAPA
 
         private void Editar()
         {
-
-
             if (DataGridPuesto.SelectedRows.Count == 0)
             {
                 MessageBox.Show("Tienes que seleccionar una Puesto", "Editar Puesto", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -107,17 +105,17 @@ namespace NCAPA
                     FRM_EDITAR_PUESTO eDITAR_PUESTO = new FRM_EDITAR_PUESTO();
 
 
-                    eDITAR_PUESTO.txtid.Text = DataGridPuesto.SelectedRows[0].Cells[0].Value.ToString();
-                    eDITAR_PUESTO.txtNombre_Puesto.Text = DataGridPuesto.SelectedRows[0].Cells[1].Value.ToString();
-                    eDITAR_PUESTO.txt_des_puesto.Text = DataGridPuesto.SelectedRows[0].Cells[2].Value.ToString();
-                    eDITAR_PUESTO.txt_Salar_base.Text = DataGridPuesto.SelectedRows[0].Cells[3].Value.ToString();
+                    eDITAR_PUESTO.txtid_puesto.Text = DataGridPuesto.SelectedRows[0].           Cells[0].Value.ToString();
+                    eDITAR_PUESTO.txtNombre_Puesto.Text = DataGridPuesto.SelectedRows[0].       Cells[1].Value.ToString();
+                    eDITAR_PUESTO.txt_des_puesto.Text = DataGridPuesto.SelectedRows[0].         Cells[2].Value.ToString();
+                    eDITAR_PUESTO.txt_Salar_base.Text = DataGridPuesto.SelectedRows[0].         Cells[3].Value.ToString();
 
 
                     eDITAR_PUESTO.ShowDialog();
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Tienes que seleccionar un Puesto", "Editar Puesto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show($"No se selecciono por el error : {ex.Message}", "Editar Puesto", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 }
 

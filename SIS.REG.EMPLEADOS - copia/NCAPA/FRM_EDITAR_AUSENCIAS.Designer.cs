@@ -85,6 +85,7 @@
             this.btnGuardarAusencias.Text = "GUARDAR";
             this.btnGuardarAusencias.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGuardarAusencias.UseVisualStyleBackColor = false;
+            this.btnGuardarAusencias.Click += new System.EventHandler(this.btnGuardarAusencias_Click);
             // 
             // button1
             // 
@@ -183,7 +184,6 @@
             this.txtidausencias.Name = "txtidausencias";
             this.txtidausencias.Size = new System.Drawing.Size(42, 26);
             this.txtidausencias.TabIndex = 57;
-            this.txtidausencias.Visible = false;
             // 
             // label6
             // 

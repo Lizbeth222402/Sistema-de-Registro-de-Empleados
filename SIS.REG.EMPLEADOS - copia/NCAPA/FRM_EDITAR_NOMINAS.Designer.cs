@@ -32,7 +32,7 @@
             this.txt_IdemplNominas = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.btnNewNominas = new System.Windows.Forms.Button();
+            this.btnActualizarNominas = new System.Windows.Forms.Button();
             this.txt_Salari_Neto = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txt_Deducc = new System.Windows.Forms.TextBox();
@@ -42,7 +42,7 @@
             this.dtp_FechaPago = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtid = new System.Windows.Forms.TextBox();
+            this.txtid_Nmina = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btncerrar
@@ -87,23 +87,24 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // btnNewNominas
+            // btnActualizarNominas
             // 
-            this.btnNewNominas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnNewNominas.BackColor = System.Drawing.Color.LightBlue;
-            this.btnNewNominas.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnNewNominas.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnNewNominas.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNewNominas.Image = ((System.Drawing.Image)(resources.GetObject("btnNewNominas.Image")));
-            this.btnNewNominas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNewNominas.Location = new System.Drawing.Point(658, 298);
-            this.btnNewNominas.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnNewNominas.Name = "btnNewNominas";
-            this.btnNewNominas.Size = new System.Drawing.Size(141, 43);
-            this.btnNewNominas.TabIndex = 59;
-            this.btnNewNominas.Text = "GUARDAR";
-            this.btnNewNominas.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnNewNominas.UseVisualStyleBackColor = false;
+            this.btnActualizarNominas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnActualizarNominas.BackColor = System.Drawing.Color.LightBlue;
+            this.btnActualizarNominas.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnActualizarNominas.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnActualizarNominas.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizarNominas.Image = ((System.Drawing.Image)(resources.GetObject("btnActualizarNominas.Image")));
+            this.btnActualizarNominas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnActualizarNominas.Location = new System.Drawing.Point(658, 298);
+            this.btnActualizarNominas.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnActualizarNominas.Name = "btnActualizarNominas";
+            this.btnActualizarNominas.Size = new System.Drawing.Size(141, 43);
+            this.btnActualizarNominas.TabIndex = 59;
+            this.btnActualizarNominas.Text = "Actualizar";
+            this.btnActualizarNominas.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnActualizarNominas.UseVisualStyleBackColor = false;
+            this.btnActualizarNominas.Click += new System.EventHandler(this.btnActualizarNominas_Click);
             // 
             // txt_Salari_Neto
             // 
@@ -185,13 +186,14 @@
             this.label6.Size = new System.Drawing.Size(23, 20);
             this.label6.TabIndex = 64;
             this.label6.Text = "Id";
+            this.label6.Visible = false;
             // 
-            // txtid
+            // txtid_Nmina
             // 
-            this.txtid.Location = new System.Drawing.Point(276, 97);
-            this.txtid.Name = "txtid";
-            this.txtid.Size = new System.Drawing.Size(86, 26);
-            this.txtid.TabIndex = 63;
+            this.txtid_Nmina.Location = new System.Drawing.Point(276, 97);
+            this.txtid_Nmina.Name = "txtid_Nmina";
+            this.txtid_Nmina.Size = new System.Drawing.Size(86, 26);
+            this.txtid_Nmina.TabIndex = 63;
             // 
             // FRM_EDITAR_NOMINAS
             // 
@@ -200,11 +202,11 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(872, 581);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.txtid);
+            this.Controls.Add(this.txtid_Nmina);
             this.Controls.Add(this.txt_IdemplNominas);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.btnNewNominas);
+            this.Controls.Add(this.btnActualizarNominas);
             this.Controls.Add(this.txt_Salari_Neto);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txt_Deducc);
@@ -226,11 +228,11 @@
             this.Controls.SetChildIndex(this.txt_Deducc, 0);
             this.Controls.SetChildIndex(this.label4, 0);
             this.Controls.SetChildIndex(this.txt_Salari_Neto, 0);
-            this.Controls.SetChildIndex(this.btnNewNominas, 0);
+            this.Controls.SetChildIndex(this.btnActualizarNominas, 0);
             this.Controls.SetChildIndex(this.button1, 0);
             this.Controls.SetChildIndex(this.label5, 0);
             this.Controls.SetChildIndex(this.txt_IdemplNominas, 0);
-            this.Controls.SetChildIndex(this.txtid, 0);
+            this.Controls.SetChildIndex(this.txtid_Nmina, 0);
             this.Controls.SetChildIndex(this.label6, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -242,7 +244,7 @@
         public System.Windows.Forms.TextBox txt_IdemplNominas;
         private System.Windows.Forms.Label label5;
         public System.Windows.Forms.Button button1;
-        public System.Windows.Forms.Button btnNewNominas;
+        public System.Windows.Forms.Button btnActualizarNominas;
         public System.Windows.Forms.TextBox txt_Salari_Neto;
         private System.Windows.Forms.Label label4;
         public System.Windows.Forms.TextBox txt_Deducc;
@@ -251,7 +253,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label6;
-        public System.Windows.Forms.TextBox txtid;
+        public System.Windows.Forms.TextBox txtid_Nmina;
         public System.Windows.Forms.DateTimePicker dtp_FechaPago;
     }
 }

@@ -64,10 +64,10 @@ namespace NCAPA
             // Fecha correcta (solo la fecha sin hora)
             Masistencias.Fecha = dtp_FechaAsis.Value.Date;
 
-            // Hora entrada (solo time)
+            
             Masistencias.Hora_entrada = dtp_HoraEntrada.Value.TimeOfDay;
 
-            // Hora salida (solo time)
+            
             Masistencias.Hora_salida = dtp_HoraSalida.Value.TimeOfDay;
 
             // Estado (texto)

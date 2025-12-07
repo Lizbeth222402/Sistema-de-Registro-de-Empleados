@@ -75,7 +75,7 @@ namespace NCAPA
                 return;
             }
 
-            if (user.ACTIVO != "True")
+            if (user.ACTIVO != 0)
             {
                 MessageBox.Show("🔒 Este usuario está inactivo.", "Acceso denegado", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                 return;

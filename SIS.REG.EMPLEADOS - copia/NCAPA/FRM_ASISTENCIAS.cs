@@ -109,8 +109,8 @@ namespace NCAPA
 
                     eDITAR_ASISTENCIAS.txtid.Text = DataGridAsistencia.SelectedRows[0].             Cells[0].Value.ToString();
                     eDITAR_ASISTENCIAS.dtp_FechaAsis.Text = DataGridAsistencia.SelectedRows[0].     Cells[1].Value.ToString();
-                    eDITAR_ASISTENCIAS.dtp_HoraEntrada.Text = DataGridAsistencia.SelectedRows[0].   Cells[2].Value.ToString();
-                    eDITAR_ASISTENCIAS.dtp_HoraSalida.Text = DataGridAsistencia.SelectedRows[0].    Cells[3].Value.ToString();
+                    eDITAR_ASISTENCIAS.dtp_HoraEntra.Text = DataGridAsistencia.SelectedRows[0].   Cells[2].Value.ToString();
+                    eDITAR_ASISTENCIAS.dtp_HoraSalidadAsistencia.Text = DataGridAsistencia.SelectedRows[0].    Cells[3].Value.ToString();
                     eDITAR_ASISTENCIAS.txtEstado.Text = DataGridAsistencia.SelectedRows[0].         Cells[4].Value.ToString();
 
 

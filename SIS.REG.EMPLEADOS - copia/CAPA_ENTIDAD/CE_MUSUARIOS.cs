@@ -13,7 +13,7 @@ namespace CAPA_ENTIDAD
         public string NOMBRE_USUARIO { get; set; }
         public string CONTRASEÑA { get; set; }
 
-        public string ACTIVO {  get; set; }
+        public int ACTIVO {  get; set; }
     
     
     }

@@ -30,16 +30,16 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_EDITAR_ASISTENCIAS));
             this.txx_cerrar = new System.Windows.Forms.Button();
-            this.btnGuardarAsis = new System.Windows.Forms.Button();
+            this.btnActualizarAsistencia = new System.Windows.Forms.Button();
             this.txtEstado = new System.Windows.Forms.TextBox();
-            this.dtp_HoraSalida = new System.Windows.Forms.DateTimePicker();
-            this.dtp_HoraEntrada = new System.Windows.Forms.DateTimePicker();
             this.dtp_FechaAsis = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtid = new System.Windows.Forms.TextBox();
+            this.dtp_HoraEntra = new System.Windows.Forms.DateTimePicker();
+            this.dtp_HoraSalidadAsistencia = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // btncerrar
@@ -66,23 +66,24 @@
             this.txx_cerrar.UseVisualStyleBackColor = false;
             this.txx_cerrar.Click += new System.EventHandler(this.txx_cerrar_Click);
             // 
-            // btnGuardarAsis
+            // btnActualizarAsistencia
             // 
-            this.btnGuardarAsis.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnGuardarAsis.BackColor = System.Drawing.Color.LightBlue;
-            this.btnGuardarAsis.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGuardarAsis.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnGuardarAsis.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardarAsis.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardarAsis.Image")));
-            this.btnGuardarAsis.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardarAsis.Location = new System.Drawing.Point(86, 505);
-            this.btnGuardarAsis.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnGuardarAsis.Name = "btnGuardarAsis";
-            this.btnGuardarAsis.Size = new System.Drawing.Size(141, 43);
-            this.btnGuardarAsis.TabIndex = 42;
-            this.btnGuardarAsis.Text = "GUARDAR";
-            this.btnGuardarAsis.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnGuardarAsis.UseVisualStyleBackColor = false;
+            this.btnActualizarAsistencia.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnActualizarAsistencia.BackColor = System.Drawing.Color.LightBlue;
+            this.btnActualizarAsistencia.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnActualizarAsistencia.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnActualizarAsistencia.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizarAsistencia.Image = ((System.Drawing.Image)(resources.GetObject("btnActualizarAsistencia.Image")));
+            this.btnActualizarAsistencia.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnActualizarAsistencia.Location = new System.Drawing.Point(86, 505);
+            this.btnActualizarAsistencia.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnActualizarAsistencia.Name = "btnActualizarAsistencia";
+            this.btnActualizarAsistencia.Size = new System.Drawing.Size(141, 43);
+            this.btnActualizarAsistencia.TabIndex = 42;
+            this.btnActualizarAsistencia.Text = "Actualizar";
+            this.btnActualizarAsistencia.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnActualizarAsistencia.UseVisualStyleBackColor = false;
+            this.btnActualizarAsistencia.Click += new System.EventHandler(this.btnActualizarAsistencia_Click);
             // 
             // txtEstado
             // 
@@ -91,20 +92,6 @@
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.Size = new System.Drawing.Size(140, 26);
             this.txtEstado.TabIndex = 41;
-            // 
-            // dtp_HoraSalida
-            // 
-            this.dtp_HoraSalida.Location = new System.Drawing.Point(281, 322);
-            this.dtp_HoraSalida.Name = "dtp_HoraSalida";
-            this.dtp_HoraSalida.Size = new System.Drawing.Size(260, 26);
-            this.dtp_HoraSalida.TabIndex = 40;
-            // 
-            // dtp_HoraEntrada
-            // 
-            this.dtp_HoraEntrada.Location = new System.Drawing.Point(281, 248);
-            this.dtp_HoraEntrada.Name = "dtp_HoraEntrada";
-            this.dtp_HoraEntrada.Size = new System.Drawing.Size(260, 26);
-            this.dtp_HoraEntrada.TabIndex = 39;
             // 
             // dtp_FechaAsis
             // 
@@ -159,7 +146,20 @@
             this.txtid.Name = "txtid";
             this.txtid.Size = new System.Drawing.Size(86, 26);
             this.txtid.TabIndex = 44;
-            this.txtid.Visible = false;
+            // 
+            // dtp_HoraEntra
+            // 
+            this.dtp_HoraEntra.Location = new System.Drawing.Point(281, 245);
+            this.dtp_HoraEntra.Name = "dtp_HoraEntra";
+            this.dtp_HoraEntra.Size = new System.Drawing.Size(259, 26);
+            this.dtp_HoraEntra.TabIndex = 45;
+            // 
+            // dtp_HoraSalidadAsistencia
+            // 
+            this.dtp_HoraSalidadAsistencia.Location = new System.Drawing.Point(282, 326);
+            this.dtp_HoraSalidadAsistencia.Name = "dtp_HoraSalidadAsistencia";
+            this.dtp_HoraSalidadAsistencia.Size = new System.Drawing.Size(259, 26);
+            this.dtp_HoraSalidadAsistencia.TabIndex = 46;
             // 
             // FRM_EDITAR_ASISTENCIAS
             // 
@@ -167,12 +167,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(692, 649);
+            this.Controls.Add(this.dtp_HoraSalidadAsistencia);
+            this.Controls.Add(this.dtp_HoraEntra);
             this.Controls.Add(this.txtid);
             this.Controls.Add(this.txx_cerrar);
-            this.Controls.Add(this.btnGuardarAsis);
+            this.Controls.Add(this.btnActualizarAsistencia);
             this.Controls.Add(this.txtEstado);
-            this.Controls.Add(this.dtp_HoraSalida);
-            this.Controls.Add(this.dtp_HoraEntrada);
             this.Controls.Add(this.dtp_FechaAsis);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
@@ -182,18 +182,18 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FRM_EDITAR_ASISTENCIAS";
             this.Load += new System.EventHandler(this.FRM_EDITAR_ASISTENCIAS_Load);
-            this.Controls.SetChildIndex(this.btncerrar, 0);
             this.Controls.SetChildIndex(this.label1, 0);
             this.Controls.SetChildIndex(this.label2, 0);
             this.Controls.SetChildIndex(this.label3, 0);
             this.Controls.SetChildIndex(this.label5, 0);
             this.Controls.SetChildIndex(this.dtp_FechaAsis, 0);
-            this.Controls.SetChildIndex(this.dtp_HoraEntrada, 0);
-            this.Controls.SetChildIndex(this.dtp_HoraSalida, 0);
             this.Controls.SetChildIndex(this.txtEstado, 0);
-            this.Controls.SetChildIndex(this.btnGuardarAsis, 0);
+            this.Controls.SetChildIndex(this.btnActualizarAsistencia, 0);
             this.Controls.SetChildIndex(this.txx_cerrar, 0);
             this.Controls.SetChildIndex(this.txtid, 0);
+            this.Controls.SetChildIndex(this.btncerrar, 0);
+            this.Controls.SetChildIndex(this.dtp_HoraEntra, 0);
+            this.Controls.SetChildIndex(this.dtp_HoraSalidadAsistencia, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -202,15 +202,15 @@
         #endregion
 
         public System.Windows.Forms.Button txx_cerrar;
-        public System.Windows.Forms.Button btnGuardarAsis;
+        public System.Windows.Forms.Button btnActualizarAsistencia;
         public System.Windows.Forms.TextBox txtEstado;
-        public System.Windows.Forms.DateTimePicker dtp_HoraSalida;
-        public System.Windows.Forms.DateTimePicker dtp_HoraEntrada;
         public System.Windows.Forms.DateTimePicker dtp_FechaAsis;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         public System.Windows.Forms.TextBox txtid;
+        public System.Windows.Forms.DateTimePicker dtp_HoraEntra;
+        public System.Windows.Forms.DateTimePicker dtp_HoraSalidadAsistencia;
     }
 }

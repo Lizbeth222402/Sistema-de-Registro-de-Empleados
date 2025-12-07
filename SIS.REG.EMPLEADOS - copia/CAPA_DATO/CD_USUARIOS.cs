@@ -36,7 +36,7 @@ namespace CAPA_DATO
                             ID_USUARIO = Convert.ToInt32(dr["ID_USUARIO"]),
                             NOMBRE_USUARIO = dr["NOMBRE_USUARIO"].ToString(),
                             CONTRASEÑA = dr["CONTRASEÑA"].ToString(),
-                            ACTIVO = dr["ACTIVO"].ToString(),
+                            ACTIVO = Convert.ToInt32(dr["ACTIVO"]),
 
                         });
 
@@ -93,6 +93,7 @@ namespace CAPA_DATO
                     cmd.CommandType = CommandType.StoredProcedure;
 
                     cmd.Parameters.Add(new SqlParameter("@ID_USUARIO", cE_MUSUARIOS.ID_USUARIO));
+                    cmd.Parameters.Add(new SqlParameter("@ID_USUARIO", cE_MUSUARIOS.ID_USUARIO));
                     cmd.Parameters.Add(new SqlParameter("@NOMBRE_USUARIO", cE_MUSUARIOS.NOMBRE_USUARIO));
                     cmd.Parameters.Add(new SqlParameter("@CONTRASEÑA", cE_MUSUARIOS.CONTRASEÑA));
                     cmd.Parameters.Add(new SqlParameter("@ACTIVO", cE_MUSUARIOS.ACTIVO));
@@ -115,12 +116,14 @@ namespace CAPA_DATO
         #endregion EDITAR USUARIOS
 
 
+        #region LOGIN
         public CE_MUSUARIOS Login(string usuario, string clave)
         {
             CE_MUSUARIOS obj = null;
 
             using (SqlCommand cmd = new SqlCommand("SP_LOGIN", Con.Abrir()))
             {
+
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@Usuario", usuario);
                 cmd.Parameters.AddWithValue("@Clave", clave);
@@ -133,7 +136,7 @@ namespace CAPA_DATO
                         {
                             ID_USUARIO = Convert.ToInt32(dr["ID_USUARIO"]),
                             NOMBRE_USUARIO = dr["NOMBRE_USUARIO"].ToString(),
-                            ACTIVO = dr["ACTIVO"].ToString()
+                            ACTIVO = Convert.ToInt32(dr["ACTIVO"]),
                         };
                     }
                 }
@@ -142,5 +145,7 @@ namespace CAPA_DATO
             Con.Cerrar();
             return obj;
         }
+
+        #endregion LOGIN  
     }
 }

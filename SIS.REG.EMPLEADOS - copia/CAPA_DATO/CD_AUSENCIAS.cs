@@ -91,16 +91,13 @@ namespace CAPA_DATO
 
         #region EDITAR ASENCIAS
 
-        public void EditarAusencias(CE_MAUSENCIAS cE_MAUSENCIAS)
+        public int EditarAusencias(CE_MAUSENCIAS cE_MAUSENCIAS)
         {
-
             try
             {
-
                 using (SqlCommand cmd = new SqlCommand("SP_EDITAR_AUSENCIAS", Con.Abrir()))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
-
 
                     cmd.Parameters.Add(new SqlParameter("@Id_ausencia", cE_MAUSENCIAS.Id_ausencia));
                     cmd.Parameters.Add(new SqlParameter("@Id_empleado", cE_MAUSENCIAS.Id_empleado));
@@ -109,21 +106,21 @@ namespace CAPA_DATO
                     cmd.Parameters.Add(new SqlParameter("@Fecha_fin", cE_MAUSENCIAS.Fecha_fin));
                     cmd.Parameters.Add(new SqlParameter("@Motivo", cE_MAUSENCIAS.Motivo));
 
-                    cmd.ExecuteNonQuery();
-
-
+                    int filasAfectadas = cmd.ExecuteNonQuery();
+                    return filasAfectadas;
                 }
-
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Ups no se Ingreso por el error: {ex.Message}", "Error al Ingresar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return 0;
             }
             finally
             {
                 Con.Cerrar();
             }
         }
+
 
         #endregion EDITAR AUSENCIAS
 

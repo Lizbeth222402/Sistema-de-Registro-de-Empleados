@@ -91,20 +91,20 @@ namespace CAPA_DATO
         {
             try
             {
-                using (SqlCommand cmd = new SqlCommand("SP_INSERTAR_ASISTENCIAS", Con.Abrir()))
+                using (SqlCommand cmd = new SqlCommand("SP_EDITAR_ASISTENCIAS", Con.Abrir()))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
 
-
-                    cmd.Parameters.Add(new SqlParameter("@Id_asistencia", cE_MASISTENCIAS.Id_asistencia));
-                    cmd.Parameters.Add(new SqlParameter("@Id_empleado", SqlDbType.Int) { Value = cE_MASISTENCIAS.Id_empleado });
-                    cmd.Parameters.Add(new SqlParameter("@Fecha", SqlDbType.Date) { Value = cE_MASISTENCIAS.Fecha });
-                    cmd.Parameters.Add(new SqlParameter("@Hora_entrada", SqlDbType.Time) { Value = cE_MASISTENCIAS.Hora_entrada }); // TimeSpan
-                    cmd.Parameters.Add(new SqlParameter("@Hora_salida", SqlDbType.Time) { Value = cE_MASISTENCIAS.Hora_salida });   // TimeSpan
-                    cmd.Parameters.Add(new SqlParameter("@Estado", SqlDbType.VarChar, 50) { Value = cE_MASISTENCIAS.Estado });
+                    cmd.Parameters.Add("@Id_asistencia", SqlDbType.Int).Value = cE_MASISTENCIAS.Id_asistencia;
+                    cmd.Parameters.Add("@Id_empleado", SqlDbType.Int).Value = cE_MASISTENCIAS.Id_empleado;
+                    cmd.Parameters.Add("@Fecha", SqlDbType.Date).Value = cE_MASISTENCIAS.Fecha;
+                    cmd.Parameters.Add("@Hora_entrada", SqlDbType.Time).Value = cE_MASISTENCIAS.Hora_entrada;
+                    cmd.Parameters.Add("@Hora_salida", SqlDbType.Time).Value = cE_MASISTENCIAS.Hora_salida;
+                    cmd.Parameters.Add("@Estado", SqlDbType.VarChar, 50).Value = cE_MASISTENCIAS.Estado;
 
                     cmd.ExecuteNonQuery();
                 }
+
             }
             catch (Exception ex)
             {

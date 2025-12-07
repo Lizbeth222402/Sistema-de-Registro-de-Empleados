@@ -24,11 +24,13 @@ namespace NCAPA
         private void FRM_USUARIO_Load(object sender, EventArgs e)
         {
             LISTAR_USUARIOS();
+
             //Evita que no esta seleccionado por defecto//
-            dataGridUsuaios.ClearSelection();
-            
+            dataGridUsuaios.ClearSelection(); 
+
             //PARA EL TAMAÑO DE LAS FILAS DEL DATA GRID//
             dataGridUsuaios.Columns[1].Width = 150;
+            dataGridUsuaios.Columns[2].Width = 150;
             dataGridUsuaios.Columns[2].Width = 150;
 
 
@@ -74,16 +76,9 @@ namespace NCAPA
 
         private void btnEditar_Usuario_Click(object sender, EventArgs e)
         {
+
             Editar();
 
-            /*CargarDatos();*/
-        }
-
-        private void btnEditarUsuario(object sender, EventArgs e)
-        {
-           
-            FRM_EDITAR_USUARIO eDITAR_USUARIO = new FRM_EDITAR_USUARIO();
-            eDITAR_USUARIO.ShowDialog();
 
         }
 
@@ -102,11 +97,10 @@ namespace NCAPA
                 {
                     FRM_EDITAR_USUARIO eDITAR_USUARIO = new FRM_EDITAR_USUARIO();
 
-                    eDITAR_USUARIO.txt_Nameusuario.Text = dataGridUsuaios.SelectedRows[0].Cells[0].Value.ToString(); /*ESTA BIEN*/
-                    /*eDITAR_USUARIO.txtid.Text = dataGridUsuaios.SelectedRows[0].                Cells[1].Value.ToString();*/
-                   
-                    eDITAR_USUARIO.txtpasswork.Text = dataGridUsuaios.SelectedRows[0].          Cells[1].Value.ToString();  /*ESTA BIEN*/
-                    eDITAR_USUARIO.txt_Activo.Text = dataGridUsuaios.SelectedRows[0].           Cells[2].Value.ToString();
+                    eDITAR_USUARIO.txtid_usuario.Text = dataGridUsuaios.        SelectedRows[0].       Cells[0].Value.ToString();
+                    eDITAR_USUARIO.txt_Nameusuario.Text = dataGridUsuaios.     SelectedRows[0].        Cells[1].Value.ToString();
+                    eDITAR_USUARIO.txtpasswork.Text = dataGridUsuaios.       SelectedRows[0].        Cells[2].Value.ToString();
+                    eDITAR_USUARIO.chk_ACTIVO.Text = dataGridUsuaios.       SelectedRows[0].        Cells[3].Value.ToString();
 
                     eDITAR_USUARIO.ShowDialog();
                 }
@@ -115,15 +109,7 @@ namespace NCAPA
                     MessageBox.Show($"No se selecciono por el error : {ex.Message}", "Editar Usuario", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 }
-
-
-
             }
-
-
-
-
-
         }
 
 
@@ -132,6 +118,11 @@ namespace NCAPA
 
         }
 
-    
+        private void btnNuevoUsuario_Click(object sender, EventArgs e)
+        {
+            FRM_NEW_USUARIO AbrirNuevoUsuario = new FRM_NEW_USUARIO();
+            AbrirNuevoUsuario.ShowDialog();
+        }
     }
 }
+

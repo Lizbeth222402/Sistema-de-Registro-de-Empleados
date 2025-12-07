@@ -37,7 +37,7 @@ namespace CAPA_DATO
 
                             Id_empleado = Convert.ToInt32(dr["Id_empleado"]),
                             Nombres = dr["Nombres"].ToString(),
-                            Apellidos = dr["Nombres"].ToString(),
+                            Apellidos = dr["Apellidos"].ToString(),
                             Fecha_nacimiento = Convert.ToDateTime(dr["Fecha_nacimiento"]),
                             Direccion = dr["Direccion"].ToString(),
                             Telefono = dr["Telefono"].ToString(),

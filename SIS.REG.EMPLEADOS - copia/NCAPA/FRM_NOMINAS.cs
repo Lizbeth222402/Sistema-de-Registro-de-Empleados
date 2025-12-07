@@ -107,7 +107,7 @@ namespace NCAPA
                 {
                     FRM_EDITAR_NOMINAS eDITAR_NOMINAS = new FRM_EDITAR_NOMINAS();
 
-                    eDITAR_NOMINAS.txtid.Text = DataGridAusencias.SelectedRows[0].                  Cells[0].Value.ToString();
+                    eDITAR_NOMINAS.txtid_Nmina.Text = DataGridAusencias.SelectedRows[0].                  Cells[0].Value.ToString();
                     eDITAR_NOMINAS.txt_IdemplNominas.Text = DataGridAusencias.SelectedRows[0].      Cells[0].Value.ToString();
                     eDITAR_NOMINAS.dtp_FechaPago.Text = DataGridAusencias.SelectedRows[0].          Cells[1].Value.ToString();
                     eDITAR_NOMINAS.txt_Salario_Bru.Text = DataGridAusencias.SelectedRows[0].        Cells[2].Value.ToString();

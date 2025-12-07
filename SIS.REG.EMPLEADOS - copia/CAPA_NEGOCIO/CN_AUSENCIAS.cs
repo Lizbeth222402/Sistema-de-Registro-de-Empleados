@@ -33,15 +33,22 @@ namespace CAPA_NEGOCIO
         }
 
 
-        //Editar Ausencias//
-
-        public void EditarAusencias(CE_MAUSENCIAS cE_MAUSENCIAS)
+        public int EditarAusencias(CE_MAUSENCIAS cE_MAUSENCIAS)
         {
-
-            cD_AUSENCIAS.EditarAusencias(cE_MAUSENCIAS);
+            return cD_AUSENCIAS.EditarAusencias(cE_MAUSENCIAS);
         }
 
-        
+
+
+        //Editar Ausencias//
+
+        /* public void EditarAusencias(CE_MAUSENCIAS cE_MAUSENCIAS)
+         {
+
+             cD_AUSENCIAS.EditarAusencias(cE_MAUSENCIAS);
+         }*/
+
+
 
     }
 }

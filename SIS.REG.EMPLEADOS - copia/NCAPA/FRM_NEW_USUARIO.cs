@@ -34,18 +34,15 @@ namespace NCAPA
         }
 
         private void GUARDARUSUARIO()
-
         {
-
             Musuarios.NOMBRE_USUARIO = txt_Nameusuario.Text.Trim();
-
             Musuarios.CONTRASEÑA = txtpasswork.Text.Trim();
-            Musuarios.ACTIVO = txt_Activo.Text.Trim();
+            Musuarios.ACTIVO = chk_ACTIVO.Checked ? 1 : 0;
 
 
             cN_USUARIOS.InsertarUsuario(Musuarios);
-
         }
+
 
         private void OnlyNumbers(object sender, KeyPressEventArgs e)
         {

@@ -33,7 +33,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.txt_iddepa = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.btnNuevoEmpleado = new System.Windows.Forms.Button();
+            this.btnActualizarEmpleado = new System.Windows.Forms.Button();
             this.dtp_FechaIng = new System.Windows.Forms.DateTimePicker();
             this.dtp_FechaN = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
@@ -94,22 +94,23 @@
             this.label8.TabIndex = 46;
             this.label8.Text = "Id Departamento";
             // 
-            // btnNuevoEmpleado
+            // btnActualizarEmpleado
             // 
-            this.btnNuevoEmpleado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnNuevoEmpleado.BackColor = System.Drawing.Color.LightBlue;
-            this.btnNuevoEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnNuevoEmpleado.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuevoEmpleado.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevoEmpleado.Image")));
-            this.btnNuevoEmpleado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuevoEmpleado.Location = new System.Drawing.Point(757, 346);
-            this.btnNuevoEmpleado.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnNuevoEmpleado.Name = "btnNuevoEmpleado";
-            this.btnNuevoEmpleado.Size = new System.Drawing.Size(150, 40);
-            this.btnNuevoEmpleado.TabIndex = 45;
-            this.btnNuevoEmpleado.Text = "GUARDAR";
-            this.btnNuevoEmpleado.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnNuevoEmpleado.UseVisualStyleBackColor = false;
+            this.btnActualizarEmpleado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnActualizarEmpleado.BackColor = System.Drawing.Color.LightBlue;
+            this.btnActualizarEmpleado.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnActualizarEmpleado.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizarEmpleado.Image = ((System.Drawing.Image)(resources.GetObject("btnActualizarEmpleado.Image")));
+            this.btnActualizarEmpleado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnActualizarEmpleado.Location = new System.Drawing.Point(757, 346);
+            this.btnActualizarEmpleado.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnActualizarEmpleado.Name = "btnActualizarEmpleado";
+            this.btnActualizarEmpleado.Size = new System.Drawing.Size(150, 40);
+            this.btnActualizarEmpleado.TabIndex = 45;
+            this.btnActualizarEmpleado.Text = "Actualizar";
+            this.btnActualizarEmpleado.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnActualizarEmpleado.UseVisualStyleBackColor = false;
+            this.btnActualizarEmpleado.Click += new System.EventHandler(this.btnActualizarEmpleado_Click);
             // 
             // dtp_FechaIng
             // 
@@ -285,7 +286,7 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.txt_iddepa);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.btnNuevoEmpleado);
+            this.Controls.Add(this.btnActualizarEmpleado);
             this.Controls.Add(this.dtp_FechaIng);
             this.Controls.Add(this.dtp_FechaN);
             this.Controls.Add(this.label7);
@@ -321,7 +322,7 @@
             this.Controls.SetChildIndex(this.label7, 0);
             this.Controls.SetChildIndex(this.dtp_FechaN, 0);
             this.Controls.SetChildIndex(this.dtp_FechaIng, 0);
-            this.Controls.SetChildIndex(this.btnNuevoEmpleado, 0);
+            this.Controls.SetChildIndex(this.btnActualizarEmpleado, 0);
             this.Controls.SetChildIndex(this.label8, 0);
             this.Controls.SetChildIndex(this.txt_iddepa, 0);
             this.Controls.SetChildIndex(this.label9, 0);
@@ -339,7 +340,7 @@
         public System.Windows.Forms.Label label9;
         public System.Windows.Forms.TextBox txt_iddepa;
         private System.Windows.Forms.Label label8;
-        public System.Windows.Forms.Button btnNuevoEmpleado;
+        public System.Windows.Forms.Button btnActualizarEmpleado;
         public System.Windows.Forms.DateTimePicker dtp_FechaIng;
         public System.Windows.Forms.DateTimePicker dtp_FechaN;
         private System.Windows.Forms.Label label7;
