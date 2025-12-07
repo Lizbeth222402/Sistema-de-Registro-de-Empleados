@@ -98,7 +98,7 @@ namespace NCAPA
             if (DataGridAsistencia.SelectedRows.Count == 0)
             {
                 MessageBox.Show("Tienes que seleccionar una Asistencia");
-
+                return;
             }
             else
             {
@@ -106,24 +106,52 @@ namespace NCAPA
                 {
                     FRM_EDITAR_ASISTENCIAS eDITAR_ASISTENCIAS = new FRM_EDITAR_ASISTENCIAS();
 
+                    eDITAR_ASISTENCIAS.txtIdAsistencia.Text =
+                    DataGridAsistencia.CurrentRow.Cells[0].Value.ToString(); // Id_asistencia (PK)
 
-                    eDITAR_ASISTENCIAS.txtid_emp_asistencia.Text = DataGridAsistencia.SelectedRows[0].              Cells[0].Value.ToString();
-                    eDITAR_ASISTENCIAS.dtp_FechaAsis.Text = DataGridAsistencia.SelectedRows[0].                     Cells[1].Value.ToString();
-                    eDITAR_ASISTENCIAS.dtp_HoraEntra.Text = DataGridAsistencia.SelectedRows[0].                     Cells[2].Value.ToString();
-                    eDITAR_ASISTENCIAS.dtp_HoraSalidadAsistencia.Text = DataGridAsistencia.SelectedRows[0].         Cells[3].Value.ToString();
-                    eDITAR_ASISTENCIAS.txtEstado.Text = DataGridAsistencia.SelectedRows[0].                         Cells[4].Value.ToString();
+                    // ID ASISTENCIA
+                    eDITAR_ASISTENCIAS.txtid_emp_asistencia.Text =
+                        DataGridAsistencia.CurrentRow.Cells[0].Value.ToString();
 
+
+
+                    // FECHA
+                    eDITAR_ASISTENCIAS.dtp_FechaAsis.Value =
+                        Convert.ToDateTime(DataGridAsistencia.CurrentRow.Cells[1].Value);
+
+                    // HORA ENTRADA (PUEDE SER NULL)
+                    if (DataGridAsistencia.CurrentRow.Cells[2].Value != DBNull.Value)
+                        eDITAR_ASISTENCIAS.dtp_HoraEntra.Value =
+                            DateTime.Today.Add((TimeSpan)DataGridAsistencia.CurrentRow.Cells[2].Value);
+
+                    // HORA SALIDA (PUEDE SER NULL)
+                    if (DataGridAsistencia.CurrentRow.Cells[3].Value != DBNull.Value)
+                        eDITAR_ASISTENCIAS.dtp_HoraSalidadAsistencia.Value =
+                            DateTime.Today.Add((TimeSpan)DataGridAsistencia.CurrentRow.Cells[3].Value);
+
+                    // ESTADO
+                    eDITAR_ASISTENCIAS.txtEstado.Text =
+                        DataGridAsistencia.CurrentRow.Cells[4].Value.ToString();
 
                     eDITAR_ASISTENCIAS.ShowDialog();
+
+                    eDITAR_ASISTENCIAS.ShowDialog();
+                    LISTAR_ASISTENCIA(); // ✅ RECARGA AUTOMÁTICA
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"No se selecciono por el error : {ex.Message}", "Editar Cliente", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                    MessageBox.Show(
+                        "No se pudo cargar la asistencia por este error: " + ex.Message,
+                        "Editar Asistencia",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error
+                    );
                 }
-
             }
 
+
         }
+
     }
 }
+
