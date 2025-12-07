@@ -47,42 +47,73 @@ namespace NCAPA
         {
             try
             {
-
-                if (string.IsNullOrWhiteSpace(txtNombre_emple.Text) || string.IsNullOrWhiteSpace(txtapellido_Emple.Text) || string.IsNullOrWhiteSpace(dtp_FechaN.Text) || string.IsNullOrWhiteSpace(txtdireccion_Emple.Text)
-                    || string.IsNullOrWhiteSpace(txttelefono_Emple.Text) || string.IsNullOrWhiteSpace(txtgmail_Emple.Text) || string.IsNullOrWhiteSpace(dtp_FechaIng.Text))
+                if (string.IsNullOrWhiteSpace(txtNombre_emple.Text) ||
+                    string.IsNullOrWhiteSpace(txtapellido_Emple.Text) ||
+                    string.IsNullOrWhiteSpace(dtp_FechaN.Text) ||
+                    string.IsNullOrWhiteSpace(txtdireccion_Emple.Text) ||
+                    string.IsNullOrWhiteSpace(txttelefono_Emple.Text) ||
+                    string.IsNullOrWhiteSpace(txtgmail_Emple.Text) ||
+                    string.IsNullOrWhiteSpace(dtp_FechaIng.Text) ||
+                    string.IsNullOrWhiteSpace(txt_iddepa.Text) ||
+                    string.IsNullOrWhiteSpace(txt_Puesto.Text))
                 {
-                    MessageBox.Show("Tienes que llenar todos los campos", "Editar Empleados", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                     
+                    MessageBox.Show("Tienes que llenar todos los campos",
+                        "Editar Empleados",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                    return;
                 }
-                else
+
+                // ✅ VALIDACIÓN CORRECTA DE IDS
+                if (!int.TryParse(txt_iddepa.Text, out int idDepartamento))
                 {
-
-                    mEMPLEADOS.Id_empleado = Convert.ToInt32(txtid.Text);
-                    mEMPLEADOS.Nombres = txtNombre_emple.Text;
-                    mEMPLEADOS.Apellidos = txtapellido_Emple.Text;
-                    mEMPLEADOS.Fecha_nacimiento = dtp_FechaN.Value;
-                    mEMPLEADOS.Direccion = txtdireccion_Emple.Text;
-                    mEMPLEADOS.Telefono = txttelefono_Emple.Text;
-                    mEMPLEADOS.Email = txtdireccion_Emple.Text;
-                    mEMPLEADOS.Fecha_ingreso = dtp_FechaIng.Value;
-                    mEMPLEADOS.Id_departamento = Convert.ToInt32(txt_iddepa.Text);
-                    mEMPLEADOS.Id_puesto = Convert.ToInt32(txt_Puesto.Text);
-
-
-                    XEmpleados.EditarEmpleados(mEMPLEADOS);
-
-                    MessageBox.Show("Se actualizo correctamente", "Editar Ausencias", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Close();
+                    MessageBox.Show("El Id del Departamento debe ser numérico",
+                        "Error",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                    return;
                 }
+
+                if (!int.TryParse(txt_Puesto.Text, out int idPuesto))
+                {
+                    MessageBox.Show("El Id del Puesto debe ser numérico",
+                        "Error",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                    return;
+                }
+
+                // ✅ CARGA DE DATOS SEGURA
+                mEMPLEADOS.Id_empleado = Convert.ToInt32(txtid.Text);
+                mEMPLEADOS.Nombres = txtNombre_emple.Text;
+                mEMPLEADOS.Apellidos = txtapellido_Emple.Text;
+                mEMPLEADOS.Fecha_nacimiento = dtp_FechaN.Value;
+                mEMPLEADOS.Direccion = txtdireccion_Emple.Text;
+                mEMPLEADOS.Telefono = txttelefono_Emple.Text;
+                mEMPLEADOS.Email = txtgmail_Emple.Text;
+                mEMPLEADOS.Fecha_ingreso = dtp_FechaIng.Value;
+                mEMPLEADOS.Id_departamento = idDepartamento;
+                mEMPLEADOS.Id_puesto = idPuesto;
+
+                // ✅ ENVÍO A CAPA NEGOCIO
+                XEmpleados.EditarEmpleados(mEMPLEADOS);
+
+                MessageBox.Show("✅ Empleado actualizado correctamente",
+                    "Editar Empleados",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information);
+
+                Close();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("No se puedo Editar El Empleado" + ex.Message, "Editar Empleados", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+                MessageBox.Show("❌ No se pudo editar el empleado: " + ex.Message,
+                    "Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
             }
-
-
-
         }
+
+
     }
 }
