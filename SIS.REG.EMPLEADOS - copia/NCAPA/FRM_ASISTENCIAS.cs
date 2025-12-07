@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CAPA_ENTIDAD;
 using CAPA_NEGOCIO;
 
 namespace NCAPA
@@ -15,6 +16,8 @@ namespace NCAPA
     {
 
         CN_PROCEDIMIENTOS cn_Procedimientos = new CN_PROCEDIMIENTOS();
+        CN_ASISTENCIAS cN_ASISTENCIAS = new CN_ASISTENCIAS();
+        CE_MASISTENCIAS cE_MASISTENCIAS = new CE_MASISTENCIAS();
         public FRM_ASISTENCIAS()
         {
             InitializeComponent();
@@ -154,6 +157,48 @@ namespace NCAPA
 
         }
 
+        private void btnEliminar_Asistencia_Click(object sender, EventArgs e)
+        {
+            EliminarAsistencia();
+        }
+
+        private void EliminarAsistencia()
+
+        {
+            if (DataGridAsistencia.Rows.Count == 0)
+            {
+                MessageBox.Show("Mira bien , tienes que seleccionar un Cliente", "Eliminar Cliente", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            else
+            {
+                try
+                {
+                    if (DataGridAsistencia.SelectedRows == null)
+                    {
+                        return;
+                    }
+                    else
+                    {
+                        DialogResult resultado = MessageBox.Show("Deseas Eliminar", "Eliminar Cliente", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                        if (resultado == DialogResult.Yes)
+                        {
+                            cE_MASISTENCIAS.Id_asistencia = Convert.ToInt32(DataGridAsistencia.SelectedRows[0].Cells[0].Value.ToString());
+                            cN_ASISTENCIAS.ELIMINARASISTENCIA(cE_MASISTENCIAS);
+                            MessageBox.Show("Muy bien!! Se elimino corretamente", "Eliminar Cliente", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+
+                    }
+                }
+                catch
+                (Exception ex)
+                {
+                    MessageBox.Show("No se pudo Eliminar", "Eliminar Cliente", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+            }
+        }
     }
 }
 

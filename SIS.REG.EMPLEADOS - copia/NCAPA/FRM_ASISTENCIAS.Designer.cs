@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_ASISTENCIAS));
             this.btnEditar = new System.Windows.Forms.Button();
-            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnEliminar_Asistencia = new System.Windows.Forms.Button();
             this.btnNuveo = new System.Windows.Forms.Button();
             this.DataGridAsistencia = new System.Windows.Forms.DataGridView();
             this.BtncerrarD = new System.Windows.Forms.Button();
@@ -62,22 +62,23 @@
             this.btnEditar.UseVisualStyleBackColor = false;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
-            // btnEliminar
+            // btnEliminar_Asistencia
             // 
-            this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnEliminar.BackColor = System.Drawing.Color.LightBlue;
-            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
-            this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(361, 512);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(134, 40);
-            this.btnEliminar.TabIndex = 27;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar_Asistencia.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnEliminar_Asistencia.BackColor = System.Drawing.Color.LightBlue;
+            this.btnEliminar_Asistencia.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnEliminar_Asistencia.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar_Asistencia.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar_Asistencia.Image")));
+            this.btnEliminar_Asistencia.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEliminar_Asistencia.Location = new System.Drawing.Point(361, 512);
+            this.btnEliminar_Asistencia.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnEliminar_Asistencia.Name = "btnEliminar_Asistencia";
+            this.btnEliminar_Asistencia.Size = new System.Drawing.Size(134, 40);
+            this.btnEliminar_Asistencia.TabIndex = 27;
+            this.btnEliminar_Asistencia.Text = "Eliminar";
+            this.btnEliminar_Asistencia.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEliminar_Asistencia.UseVisualStyleBackColor = false;
+            this.btnEliminar_Asistencia.Click += new System.EventHandler(this.btnEliminar_Asistencia_Click);
             // 
             // btnNuveo
             // 
@@ -176,7 +177,7 @@
             this.Controls.Add(this.cboBuscar);
             this.Controls.Add(this.textboxASISTENCIA);
             this.Controls.Add(this.btnEditar);
-            this.Controls.Add(this.btnEliminar);
+            this.Controls.Add(this.btnEliminar_Asistencia);
             this.Controls.Add(this.btnNuveo);
             this.Controls.Add(this.DataGridAsistencia);
             this.Controls.Add(this.BtncerrarD);
@@ -188,7 +189,7 @@
             this.Controls.SetChildIndex(this.BtncerrarD, 0);
             this.Controls.SetChildIndex(this.DataGridAsistencia, 0);
             this.Controls.SetChildIndex(this.btnNuveo, 0);
-            this.Controls.SetChildIndex(this.btnEliminar, 0);
+            this.Controls.SetChildIndex(this.btnEliminar_Asistencia, 0);
             this.Controls.SetChildIndex(this.btnEditar, 0);
             this.Controls.SetChildIndex(this.textboxASISTENCIA, 0);
             this.Controls.SetChildIndex(this.cboBuscar, 0);
@@ -202,7 +203,7 @@
         #endregion
 
         public System.Windows.Forms.Button btnEditar;
-        public System.Windows.Forms.Button btnEliminar;
+        public System.Windows.Forms.Button btnEliminar_Asistencia;
         public System.Windows.Forms.Button btnNuveo;
         private System.Windows.Forms.DataGridView DataGridAsistencia;
         public System.Windows.Forms.Button BtncerrarD;

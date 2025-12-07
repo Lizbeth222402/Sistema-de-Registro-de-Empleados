@@ -39,5 +39,14 @@ namespace CAPA_NEGOCIO
         {
             cD_ASISTENCIAS.EditarAsistencia(cE_MASISTENCIAS);
         }
+
+
+        public void ELIMINARASISTENCIA(CE_MASISTENCIAS cE_MASISTENCIAS)
+        {
+
+           cD_ASISTENCIAS.ELIMINARASISTENCIA(cE_MASISTENCIAS);
+
+
+        }
     }
 }

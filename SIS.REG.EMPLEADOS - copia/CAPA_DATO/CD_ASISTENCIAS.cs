@@ -83,7 +83,6 @@ namespace CAPA_DATO
 
         #endregion INSERTAR ASISTENCIA
 
-
         #region EDITAR ASISTENCIA
 
 
@@ -118,6 +117,36 @@ namespace CAPA_DATO
 
 
         #endregion EDITAR ASISTENCIA
+
+
+        #region ELIMINAR ASISTENCiA
+        public void ELIMINARASISTENCIA(CE_MASISTENCIAS cE_MASISTENCIAS)
+        {
+
+            try
+            {
+                using(SqlCommand cmd = new SqlCommand("SP_ELIMINAR_ASISTENCIAS", Con.Abrir()))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.Parameters.Add(new SqlParameter("@Id_asistencias", cE_MASISTENCIAS.Id_asistencia));
+                }
+            }
+            catch (Exception ex)
+            {
+
+
+                MessageBox.Show($"Ups no se Elimino por el error {ex.Message}", "Elimiar Asistencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                Con.Cerrar();
+            }
+
+
+        }
+
+        #endregion ELIMINAR ASISTENCIA
 
     }
 }
