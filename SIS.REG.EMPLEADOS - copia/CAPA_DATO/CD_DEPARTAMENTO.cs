@@ -115,5 +115,34 @@ namespace CAPA_DATO
 
         #endregion EDITAR DEPARTAMENTOS
 
+        #region ELIMINAR DEPARTAMENTO
+        public void ELIMINARDEPARTAMENTO(CE_MDEPARTAMENTOS cE_MDEPARTAMENTOS)
+        {
+
+            try
+            {
+                using (SqlCommand cmd = new SqlCommand("Sp_EliminarDepartamento", Con.Abrir()))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.Parameters.Add(new SqlParameter("@id", cE_MDEPARTAMENTOS.Id_departamento));
+                }
+            }
+            catch (Exception ex)
+            {
+
+
+                MessageBox.Show($"Ups no se Elimino por el error {ex.Message}", "Elimiar Departamento", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                Con.Cerrar();
+            }
+
+
+        }
+
+        #endregion ELIMINAR DEPARTAMENTO
+
     }
 }

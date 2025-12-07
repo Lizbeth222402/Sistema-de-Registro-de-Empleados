@@ -41,7 +41,14 @@ namespace CAPA_NEGOCIO
             cD_CONTRATOS.EditarContrato(cE_Mcontratos);
             
         }
+
+        public void ELIMINARCONTRATO(CE_MCONTRATOS cE_MCONTRATOS)
+        {
+
+           cD_CONTRATOS.ELIMINARCONTRATO(cE_MCONTRATOS);
+
+        }
+
         
-       
     }
 }

@@ -42,7 +42,14 @@ namespace CAPA_NEGOCIO
            
         }
 
-        
+
+        public void ELIMINAREmpleados(CE_MEMPLEADOS cE_MEMPLEADOS)
+        {
+
+            CD_empleados.ELIMINAREmpleados(cE_MEMPLEADOS);
+
+
+        }
 
     }
 }

@@ -1,4 +1,5 @@
-﻿using CAPA_NEGOCIO;
+﻿using CAPA_ENTIDAD;
+using CAPA_NEGOCIO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +15,9 @@ namespace NCAPA
     public partial class FRM_CONTRATO : Frm_Base
     {
         CN_PROCEDIMIENTOS cn_Procedimientos = new CN_PROCEDIMIENTOS();
+        CN_CONTRATOS cN_CONTRATOS = new CN_CONTRATOS();
+        CE_MCONTRATOS cE_MASISTENCIAS = new CE_MCONTRATOS();
+
 
         public FRM_CONTRATO()
         {
@@ -121,6 +125,49 @@ namespace NCAPA
         private void DataGriContratos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            EliminarCONTRATO();
+        }
+
+        private void EliminarCONTRATO()
+
+        {
+            if (DataGriContratos.Rows.Count == 0)
+            {
+                MessageBox.Show("Mira bien , tienes que seleccionar un Contrato", "Eliminar Contrato", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            else
+            {
+                try
+                {
+                    if (DataGriContratos.SelectedRows == null)
+                    {
+                        return;
+                    }
+                    else
+                    {
+                        DialogResult resultado = MessageBox.Show("Deseas Eliminar", "Eliminar Contrato", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                        if (resultado == DialogResult.Yes)
+                        {
+                            cE_MASISTENCIAS.Id_contrato = Convert.ToInt32(DataGriContratos.SelectedRows[0].Cells[0].Value.ToString());
+                            cN_CONTRATOS.ELIMINARCONTRATO(cE_MASISTENCIAS);
+                            MessageBox.Show("Muy bien!! Se elimino corretamente", "Eliminar Contrato", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+
+                    }
+                }
+                catch
+                (Exception ex)
+                {
+                    MessageBox.Show("No se pudo Eliminar", "Eliminar Cliente", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+            }
         }
     }
 }

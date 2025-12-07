@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CAPA_ENTIDAD;
+using CAPA_NEGOCIO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,7 +9,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using CAPA_NEGOCIO;
 
 namespace NCAPA
 {
@@ -149,7 +150,50 @@ namespace NCAPA
             }
         }
 
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+
+        }
 
 
+        private void EliminarEmpleados()
+
+        {
+            if (DataGrid.Rows.Count == 0)
+            {
+                MessageBox.Show("Mira bien , tienes que seleccionar un Cliente", "Eliminar Cliente", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            else
+            {
+                try
+                {
+                    if (DataGridAsistencia.SelectedRows == null)
+                    {
+                        return;
+                    }
+                    else
+                    {
+                        DialogResult resultado = MessageBox.Show("Deseas Eliminar", "Eliminar Cliente", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                        if (resultado == DialogResult.Yes)
+                        {
+                            cE_MASISTENCIAS.Id_asistencia = Convert.ToInt32(DataGridAsistencia.SelectedRows[0].Cells[0].Value.ToString());
+                            cN_ASISTENCIAS.ELIMINARASISTENCIA(cE_MASISTENCIAS);
+                            MessageBox.Show("Muy bien!! Se elimino corretamente", "Eliminar Cliente", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+
+                    }
+                }
+                catch
+                (Exception ex)
+                {
+                    MessageBox.Show("No se pudo Eliminar", "Eliminar Cliente", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+            }
+
+
+        }
     }
 }

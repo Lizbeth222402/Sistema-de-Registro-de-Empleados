@@ -39,6 +39,17 @@ namespace CAPA_NEGOCIO
         }
 
 
+        
+        public void ELIMINARAUSENSIA(CE_MAUSENCIAS cE_MAUSENCIAS)
+        {
+
+           cD_AUSENCIAS.ELIMINARAUSENSIA(cE_MAUSENCIAS);
+
+
+        }
+
+       
+
 
         //Editar Ausencias//
 

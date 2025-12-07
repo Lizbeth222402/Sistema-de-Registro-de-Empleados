@@ -1,4 +1,5 @@
-﻿using CAPA_NEGOCIO;
+﻿using CAPA_ENTIDAD;
+using CAPA_NEGOCIO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,6 +16,8 @@ namespace NCAPA
     {
 
         CN_PROCEDIMIENTOS cn_Procedimientos = new CN_PROCEDIMIENTOS();
+        CN_AUSENCIAS cN_AUSENCIAS= new CN_AUSENCIAS();
+        CE_MAUSENCIAS cE_MAUSENCIAS = new CE_MAUSENCIAS();
         public FRM_AUSENCIAS()
         {
             InitializeComponent();
@@ -146,6 +149,49 @@ namespace NCAPA
                 }
             }
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            EliminarAusencia();
+        }
+        private void EliminarAusencia()
+
+        {
+            if (DataGridAUSENCIAS.Rows.Count == 0)
+            {
+                MessageBox.Show("Mira bien , tienes que seleccionar un Cliente", "Eliminar Cliente", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            else
+            {
+                try
+                {
+                    if (DataGridAUSENCIAS.SelectedRows == null)
+                    {
+                        return;
+                    }
+                    else
+                    {
+                        DialogResult resultado = MessageBox.Show("Deseas Eliminar", "Eliminar Ausencia", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                        if (resultado == DialogResult.Yes)
+                        {
+                            cE_MAUSENCIAS.Id_ausencia = Convert.ToInt32(DataGridAUSENCIAS.SelectedRows[0].Cells[0].Value.ToString());
+                            cN_AUSENCIAS.ELIMINARAUSENSIA(cE_MAUSENCIAS);
+                            MessageBox.Show("Muy bien!! Se elimino corretamente", "Eliminar Ausencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+
+                    }
+                }
+                catch
+                (Exception ex)
+                {
+                    MessageBox.Show("No se pudo Eliminar", "Eliminar Ausencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+            }
+        }
+
     }
 }
 

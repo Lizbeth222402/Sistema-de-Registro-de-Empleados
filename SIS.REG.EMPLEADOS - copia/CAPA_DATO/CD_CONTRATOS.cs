@@ -128,5 +128,34 @@ namespace CAPA_DATO
 
         #endregion EDITAR CONTRATOS
 
+        #region ELIMINAR CONTRATO
+        public void ELIMINARCONTRATO(CE_MCONTRATOS cE_MCONTRATOS)
+        {
+
+            try
+            {
+                using (SqlCommand cmd = new SqlCommand("Sp_EliminarContrato", Con.Abrir()))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.Parameters.Add(new SqlParameter("@Id_contrato", cE_MCONTRATOS.Id_contrato));
+                }
+            }
+            catch (Exception ex)
+            {
+
+
+                MessageBox.Show($"Ups no se Elimino por el error {ex.Message}", "Elimiar Contrato", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                Con.Cerrar();
+            }
+
+
+        }
+
+        #endregion ELIMINAR CONTRATO
+
     }
 }

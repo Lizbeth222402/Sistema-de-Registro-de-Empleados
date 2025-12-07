@@ -147,5 +147,34 @@ namespace CAPA_DATO
 
         #endregion EDITAR EMPLEADOS
 
+
+        #region ELIMINAR EMPLEADOS
+        public void ELIMINAREmpleados(CE_MEMPLEADOS cE_MEMPLEADOS)
+        {
+
+            try
+            {
+                using (SqlCommand cmd = new SqlCommand("Sp_EliminarEmpleado", Con.Abrir()))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.Parameters.Add(new SqlParameter("@Id_empleado", cE_MEMPLEADOS.Id_empleado));
+                }
+            }
+            catch (Exception ex)
+            {
+
+
+                MessageBox.Show($"Ups no se Elimino por el error {ex.Message}", "Elimiar Empleado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                Con.Cerrar();
+            }
+
+
+        }
+
+        #endregion ELIMINAR EMPLEADOS
     }
 }

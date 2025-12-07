@@ -33,7 +33,7 @@ namespace CAPA_NEGOCIO
         }
 
 
-        #region EDITAR DEPARTAMENTOS
+        
 
         public void EditarDepartamento(CE_MDEPARTAMENTOS cE_MDEPARTAMENTOS)
         {
@@ -41,6 +41,15 @@ namespace CAPA_NEGOCIO
             CD_departamento.EditarDepartamento(cE_MDEPARTAMENTOS);
         }
 
-        #endregion EDITAR DEPARTAMENTOS
+       
+        public void ELIMINARDEPARTAMENTO(CE_MDEPARTAMENTOS cE_MDEPARTAMENTOS)
+        {
+
+            CD_departamento.ELIMINARDEPARTAMENTO(cE_MDEPARTAMENTOS);
+
+
+        }
+
+       
     }
 }

@@ -124,5 +124,35 @@ namespace CAPA_DATO
 
         #endregion EDITAR AUSENCIAS
 
+
+        #region ELIMINAR AUSENCIAS
+        public void ELIMINARAUSENSIA(CE_MAUSENCIAS cE_MAUSENCIAS)
+        {
+
+            try
+            {
+                using (SqlCommand cmd = new SqlCommand("SP_ELIMINAR_AUSENCIAS", Con.Abrir()))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    cmd.Parameters.Add(new SqlParameter("@Id_ausencia", cE_MAUSENCIAS.Id_ausencia));
+                }
+            }
+            catch (Exception ex)
+            {
+
+
+                MessageBox.Show($"Ups no se Elimino por el error {ex.Message}", "Elimiar Ausensia", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                Con.Cerrar();
+            }
+
+
+        }
+
+        #endregion ELIMINAR AUSENCIAS
+
     }
 }

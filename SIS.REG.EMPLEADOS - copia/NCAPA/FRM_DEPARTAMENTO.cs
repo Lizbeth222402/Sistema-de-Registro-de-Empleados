@@ -1,4 +1,5 @@
-﻿using CAPA_NEGOCIO;
+﻿using CAPA_ENTIDAD;
+using CAPA_NEGOCIO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,6 +16,8 @@ namespace NCAPA
     {
 
         CN_PROCEDIMIENTOS cn_Procedimientos = new CN_PROCEDIMIENTOS();
+        CN_DEPARTAMENTO cN_DEPARTAMENTO = new CN_DEPARTAMENTO();
+        CE_MDEPARTAMENTOS cE_MDEPARTAMENTOS = new CE_MDEPARTAMENTOS();
         public FRM_DEPARTAMENTO()
         {
             InitializeComponent();
@@ -124,6 +127,50 @@ namespace NCAPA
         {
 
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            EliminarAsistencia();
+        }
+
+        private void EliminarAsistencia()
+
+        {
+            if (DataGridDepartamento.Rows.Count == 0)
+            {
+                MessageBox.Show("Mira bien , tienes que seleccionar un Departamento", "Eliminar Departamento", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            else
+            {
+                try
+                {
+                    if (DataGridDepartamento.SelectedRows == null)
+                    {
+                        return;
+                    }
+                    else
+                    {
+                        DialogResult resultado = MessageBox.Show("Deseas Eliminar", "Eliminar Departamento", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                        if (resultado == DialogResult.Yes)
+                        {
+                            cE_MDEPARTAMENTOS.Id_departamento = Convert.ToInt32(DataGridDepartamento.SelectedRows[0].Cells[0].Value.ToString());
+                            cN_DEPARTAMENTO.ELIMINARDEPARTAMENTO(cE_MDEPARTAMENTOS);
+                            MessageBox.Show("Muy bien!! Se elimino corretamente", "Eliminar Departamento", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+
+                    }
+                }
+                catch
+                (Exception ex)
+                {
+                    MessageBox.Show("No se pudo Eliminar", "Eliminar Departamento", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+            }
+        }
+
 
     }
 }
