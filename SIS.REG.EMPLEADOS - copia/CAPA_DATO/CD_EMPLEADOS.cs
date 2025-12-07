@@ -34,7 +34,8 @@ namespace CAPA_DATO
                     {
                         oList.Add(new CE_MEMPLEADOS()
                         {
-
+                            Id_departamento = Convert.ToInt32(dr["Id_departamento"]),
+                            Id_puesto = Convert.ToInt32(dr["Id_puesto"]),
                             Id_empleado = Convert.ToInt32(dr["Id_empleado"]),
                             Nombres = dr["Nombres"].ToString(),
                             Apellidos = dr["Apellidos"].ToString(),
@@ -43,8 +44,7 @@ namespace CAPA_DATO
                             Telefono = dr["Telefono"].ToString(),
                             Email = dr["Email"].ToString(),
                             Fecha_ingreso = Convert.ToDateTime(dr["Fecha_ingreso"]),
-                            Id_departamento = Convert.ToInt32(dr["Id_departamento"]),
-                            Id_puesto = Convert.ToInt32(dr["Id_puesto"])
+                            
 
 
                         });
@@ -72,6 +72,9 @@ namespace CAPA_DATO
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
 
+
+                    cmd.Parameters.Add(new SqlParameter("@Id_departamento", cE_MEMPLEADOS.Id_departamento));
+                    cmd.Parameters.Add(new SqlParameter("@Id_puesto", cE_MEMPLEADOS.Id_puesto));
                     cmd.Parameters.Add(new SqlParameter("@Nombres", cE_MEMPLEADOS.Nombres));
                     cmd.Parameters.Add(new SqlParameter("@Apellidos", cE_MEMPLEADOS.Apellidos));
                     cmd.Parameters.Add(new SqlParameter("@Fecha_nacimiento", cE_MEMPLEADOS.Fecha_nacimiento));
@@ -79,8 +82,7 @@ namespace CAPA_DATO
                     cmd.Parameters.Add(new SqlParameter("@Telefono", cE_MEMPLEADOS.Telefono));
                     cmd.Parameters.Add(new SqlParameter("@Email", cE_MEMPLEADOS.Email));
                     cmd.Parameters.Add(new SqlParameter("@Fecha_ingreso", cE_MEMPLEADOS.Fecha_ingreso));
-                    cmd.Parameters.Add(new SqlParameter("@Id_departamento", cE_MEMPLEADOS.Id_departamento));
-                    cmd.Parameters.Add(new SqlParameter("@Id_puesto", cE_MEMPLEADOS.Id_puesto));
+                   
 
                     cmd.ExecuteNonQuery();
                     
@@ -113,6 +115,9 @@ namespace CAPA_DATO
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
 
+
+                    cmd.Parameters.Add(new SqlParameter("@Id_departamento", cE_MEMPLEADOS.Id_departamento));
+                    cmd.Parameters.Add(new SqlParameter("@Id_puesto", cE_MEMPLEADOS.Id_puesto));
                     cmd.Parameters.Add(new SqlParameter("@Id_empleado", cE_MEMPLEADOS.Id_empleado));
                     cmd.Parameters.Add(new SqlParameter("@Nombres", cE_MEMPLEADOS.Nombres));
                     cmd.Parameters.Add(new SqlParameter("@Apellidos", cE_MEMPLEADOS.Apellidos));
@@ -121,8 +126,8 @@ namespace CAPA_DATO
                     cmd.Parameters.Add(new SqlParameter("@Telefono", cE_MEMPLEADOS.Telefono));
                     cmd.Parameters.Add(new SqlParameter("@Email", cE_MEMPLEADOS.Email));
                     cmd.Parameters.Add(new SqlParameter("@Fecha_ingreso", cE_MEMPLEADOS.Fecha_ingreso));
-                    cmd.Parameters.Add(new SqlParameter("@Id_departamento", cE_MEMPLEADOS.Id_departamento));
-                    cmd.Parameters.Add(new SqlParameter("@Id_puesto", cE_MEMPLEADOS.Id_puesto));
+                    //cmd.Parameters.Add(new SqlParameter("@Id_departamento", cE_MEMPLEADOS.Id_departamento));
+                    //cmd.Parameters.Add(new SqlParameter("@Id_puesto", cE_MEMPLEADOS.Id_puesto));
 
                     cmd.ExecuteNonQuery();
 

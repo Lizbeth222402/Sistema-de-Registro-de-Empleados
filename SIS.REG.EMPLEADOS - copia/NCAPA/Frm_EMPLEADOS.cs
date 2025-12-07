@@ -27,7 +27,7 @@ namespace NCAPA
             //Evita que no esta seleccionado por defecto//
             DataGriEmpleados.ClearSelection();
             //PARA QUE NO APAREZCA EL ID//
-            DataGriEmpleados.Columns[0].Visible = false;
+            //DataGriEmpleados.Columns[0].Visible = false;
             //PARA EL TAMAÑO DE LAS FILAS DEL DATA GRID//
             DataGriEmpleados.Columns[1].Width = 130;
             DataGriEmpleados.Columns[2].Width = 130;
@@ -99,52 +99,56 @@ namespace NCAPA
 
         private void Editar()
         {
-
-
-            if (DataGriEmpleados.SelectedRows.Count == 0)
+            if (DataGriEmpleados.CurrentRow == null)
             {
-                MessageBox.Show("Tienes que seleccionar una Asistencia");
-
-            }
-            else
-            {
-                try
-                {
-                    FRM_EDITAR_EMPLEADOS eDITAR_EMPLEADOS = new FRM_EDITAR_EMPLEADOS();
-
-                    eDITAR_EMPLEADOS.txtid.Text = DataGriEmpleados.SelectedRows[0].                             Cells[0].Value.ToString();
-                    eDITAR_EMPLEADOS.txtNombre_emple.Text = DataGriEmpleados.SelectedRows[0].                   Cells[1].Value.ToString();
-                    eDITAR_EMPLEADOS.txtapellido_Emple.Text = DataGriEmpleados.SelectedRows[0].                 Cells[2].Value.ToString();
-                    eDITAR_EMPLEADOS.dtp_FechaN.Text = DataGriEmpleados.SelectedRows[0].                        Cells[3].Value.ToString();
-                    eDITAR_EMPLEADOS.txtdireccion_Emple.Text = DataGriEmpleados.SelectedRows[0].                Cells[4].Value.ToString();
-                    eDITAR_EMPLEADOS.txttelefono_Emple.Text = DataGriEmpleados.SelectedRows[0].                 Cells[5].Value.ToString();
-                   
-                    eDITAR_EMPLEADOS.txtgmail_Emple.Text = DataGriEmpleados.SelectedRows[0].                    Cells[6].Value.ToString();
-                    eDITAR_EMPLEADOS.dtp_FechaIng.Text = DataGriEmpleados.SelectedRows[0].                      Cells[7].Value.ToString();
-                    eDITAR_EMPLEADOS.txt_iddepa.Text = DataGriEmpleados.SelectedRows[0].                        Cells[8].Value.ToString();
-                    eDITAR_EMPLEADOS.txt_Puesto.Text = DataGriEmpleados.SelectedRows[0].                        Cells[9].Value.ToString();
-                   
-                    
-
-
-
-                    eDITAR_EMPLEADOS.ShowDialog();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"No se selecciono por el error : {ex.Message}", "Editar Cliente", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                }
-
-
-
+                MessageBox.Show("Tienes que seleccionar un empleado");
+                return;
             }
 
+            try
+            {
+                FRM_EDITAR_EMPLEADOS eDITAR_EMPLEADOS = new FRM_EDITAR_EMPLEADOS();
 
+                // ID empleado (pk)
+                eDITAR_EMPLEADOS.txtid.Text =
+                    DataGriEmpleados.CurrentRow.Cells["Id_empleado"].Value.ToString();
 
+                eDITAR_EMPLEADOS.txtNombre_emple.Text =
+                    DataGriEmpleados.CurrentRow.Cells["Nombres"].Value.ToString();
 
+                eDITAR_EMPLEADOS.txtapellido_Emple.Text =
+                    DataGriEmpleados.CurrentRow.Cells["Apellidos"].Value.ToString();
 
+                eDITAR_EMPLEADOS.dtp_FechaN.Value =
+                    Convert.ToDateTime(DataGriEmpleados.CurrentRow.Cells["Fecha_nacimiento"].Value);
+
+                eDITAR_EMPLEADOS.txtdireccion_Emple.Text =
+                    DataGriEmpleados.CurrentRow.Cells["Direccion"].Value.ToString();
+
+                eDITAR_EMPLEADOS.txttelefono_Emple.Text =
+                    DataGriEmpleados.CurrentRow.Cells["Telefono"].Value.ToString();
+
+                eDITAR_EMPLEADOS.txtgmail_Emple.Text =
+                    DataGriEmpleados.CurrentRow.Cells["Email"].Value.ToString();
+
+                eDITAR_EMPLEADOS.dtp_FechaIng.Value =
+                    Convert.ToDateTime(DataGriEmpleados.CurrentRow.Cells["Fecha_ingreso"].Value);
+
+                // !!! Aquí están los IDs reales, deben existir en el DataSource
+                eDITAR_EMPLEADOS.txt_iddepa.Text =
+                    DataGriEmpleados.CurrentRow.Cells["Id_departamento"].Value.ToString();
+
+                eDITAR_EMPLEADOS.txt_Puesto.Text =
+                    DataGriEmpleados.CurrentRow.Cells["Id_puesto"].Value.ToString();
+
+                eDITAR_EMPLEADOS.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"No se seleccionó por el error : {ex.Message}", "Editar Cliente", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
+
 
 
     }

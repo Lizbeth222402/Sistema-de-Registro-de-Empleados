@@ -64,7 +64,7 @@ namespace NCAPA
                     return;
                 }
 
-                // ✅ VALIDACIÓN CORRECTA DE IDS
+                //  VALIDACIÓN CORRECTA DE IDS
                 if (!int.TryParse(txt_iddepa.Text, out int idDepartamento))
                 {
                     MessageBox.Show("El Id del Departamento debe ser numérico",
@@ -83,7 +83,7 @@ namespace NCAPA
                     return;
                 }
 
-                // ✅ CARGA DE DATOS SEGURA
+                //  
                 mEMPLEADOS.Id_empleado = Convert.ToInt32(txtid.Text);
                 mEMPLEADOS.Nombres = txtNombre_emple.Text;
                 mEMPLEADOS.Apellidos = txtapellido_Emple.Text;
@@ -95,10 +95,10 @@ namespace NCAPA
                 mEMPLEADOS.Id_departamento = idDepartamento;
                 mEMPLEADOS.Id_puesto = idPuesto;
 
-                // ✅ ENVÍO A CAPA NEGOCIO
+                //  ENVÍO A CAPA NEGOCIO
                 XEmpleados.EditarEmpleados(mEMPLEADOS);
 
-                MessageBox.Show("✅ Empleado actualizado correctamente",
+                MessageBox.Show("Empleado actualizado correctamente",
                     "Editar Empleados",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
