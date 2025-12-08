@@ -90,6 +90,11 @@ namespace NCAPA
 
             // Ocultar formulario de login
             this.Hide();
+
+
+            ////a ver si funciona
+
+
         }
 
     }
