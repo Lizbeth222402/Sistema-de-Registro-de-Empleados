@@ -147,6 +147,7 @@
             this.Name = "FRM_NEW_USUARIO";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FRM_NEW_USUARIO";
+            this.Load += new System.EventHandler(this.FRM_NEW_USUARIO_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

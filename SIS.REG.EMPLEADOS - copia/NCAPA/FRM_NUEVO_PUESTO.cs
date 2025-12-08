@@ -78,5 +78,9 @@ namespace NCAPA
             cE_MPUESTOS.InsertarPuesto(MPUESTOS);
         }
 
+        private void FRM_NUEVO_PUESTO_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

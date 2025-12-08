@@ -155,6 +155,7 @@
             this.Name = "FRM_NUEVO_PUESTO";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FRM_NUEVO_PUESTO";
+            this.Load += new System.EventHandler(this.FRM_NUEVO_PUESTO_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

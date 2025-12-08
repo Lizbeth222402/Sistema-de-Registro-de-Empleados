@@ -60,6 +60,9 @@ namespace NCAPA
             }
         }
 
-       
+        private void FRM_NEW_USUARIO_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
