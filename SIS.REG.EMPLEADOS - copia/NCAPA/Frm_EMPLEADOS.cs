@@ -15,7 +15,7 @@ namespace NCAPA
     public partial class Frm_EMPLEADOS : Frm_Base
     {
 
-        CN_PROCEDIMIENTOS cn_Procedimientos = new CN_PROCEDIMIENTOS();
+        CN_PROCEDIMIENTOS cn_Procedimientos = new CN_PROCEDIMIENTOS(); 
         CN_EMPLEADOS cN_Empleados = new CN_EMPLEADOS();
         CE_MEMPLEADOS cE_MEMPLEADOS = new CE_MEMPLEADOS();
 
