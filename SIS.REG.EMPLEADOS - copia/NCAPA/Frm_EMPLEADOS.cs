@@ -16,6 +16,8 @@ namespace NCAPA
     {
 
         CN_PROCEDIMIENTOS cn_Procedimientos = new CN_PROCEDIMIENTOS();
+        CN_EMPLEADOS cN_Empleados = new CN_EMPLEADOS();
+        CE_MEMPLEADOS cE_MEMPLEADOS = new CE_MEMPLEADOS();
 
         public Frm_EMPLEADOS()
         {
@@ -152,34 +154,34 @@ namespace NCAPA
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-
+            EliminarEmpleados();
         }
 
 
         private void EliminarEmpleados()
 
         {
-            if (DataGrid.Rows.Count == 0)
+            if (DataGriEmpleados.Rows.Count == 0)
             {
-                MessageBox.Show("Mira bien , tienes que seleccionar un Cliente", "Eliminar Cliente", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Mira bien , tienes que seleccionar un Empleado", "Eliminar Empleado", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
             else
             {
                 try
                 {
-                    if (DataGridAsistencia.SelectedRows == null)
+                    if (DataGriEmpleados.SelectedRows == null)
                     {
                         return;
                     }
                     else
                     {
-                        DialogResult resultado = MessageBox.Show("Deseas Eliminar", "Eliminar Cliente", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        DialogResult resultado = MessageBox.Show("Deseas Empleado", "Eliminar Empleado", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                         if (resultado == DialogResult.Yes)
                         {
-                            cE_MASISTENCIAS.Id_asistencia = Convert.ToInt32(DataGridAsistencia.SelectedRows[0].Cells[0].Value.ToString());
-                            cN_ASISTENCIAS.ELIMINARASISTENCIA(cE_MASISTENCIAS);
+                            cE_MEMPLEADOS.Id_empleado = Convert.ToInt32(DataGriEmpleados.SelectedRows[0].Cells[0].Value.ToString());
+                            cN_Empleados.ELIMINAREmpleados(cE_MEMPLEADOS);
                             MessageBox.Show("Muy bien!! Se elimino corretamente", "Eliminar Cliente", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
 
