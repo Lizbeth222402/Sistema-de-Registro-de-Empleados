@@ -15,7 +15,6 @@ namespace NCAPA
     public partial class FRM_NUEVO_ASISTENCIA : Form
     {
 
-
         CN_ASISTENCIAS cN_ASISTENCIAS = new CN_ASISTENCIAS();
         CE_MASISTENCIAS Masistencias = new CE_MASISTENCIAS();
 
@@ -55,26 +54,25 @@ namespace NCAPA
 
         private void btnGuardarAsistencia_Click(object sender, EventArgs e)
         {
-            GUARDARAISTENCIAS();
+            GUARDARAUSENCIAS();
         }
 
        
-        public void GUARDARAISTENCIAS()
+        public void GUARDARAUSENCIAS()
         {
-            // Fecha correcta (solo la fecha sin hora)
+            // (solo la fecha sin hora)
+            Masistencias.Id_empleado = Convert.ToInt32(txt_idempleado_Asistencia.Text);
             Masistencias.Fecha = dtp_FechaAsis.Value.Date;
-
-            
             Masistencias.Hora_entrada = dtp_HoraEntrada.Value.TimeOfDay;
-
-            
             Masistencias.Hora_salida = dtp_HoraSalida.Value.TimeOfDay;
-
             // Estado (texto)
             Masistencias.Estado = txtEstado.Text.Trim();
-
             // Guardar
             cN_ASISTENCIAS.InsertarAsistencia(Masistencias);
+
+
+            // Cerrar formulario después de guardar
+            this.Close();
         }
 
         private void txtEstado_TextChanged(object sender, EventArgs e)

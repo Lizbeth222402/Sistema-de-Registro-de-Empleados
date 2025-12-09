@@ -26,5 +26,10 @@ namespace NCAPA
         {
             this.Close();
         }
+
+        private void btnGuardarNew_Contrato_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

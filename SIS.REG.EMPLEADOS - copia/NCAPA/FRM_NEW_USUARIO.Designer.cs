@@ -70,7 +70,7 @@
             this.txtpasswork.Name = "txtpasswork";
             this.txtpasswork.Size = new System.Drawing.Size(301, 26);
             this.txtpasswork.TabIndex = 2;
-            this.txtpasswork.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumbers);
+            //this.txtpasswork.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumbers);
             // 
             // label3
             // 

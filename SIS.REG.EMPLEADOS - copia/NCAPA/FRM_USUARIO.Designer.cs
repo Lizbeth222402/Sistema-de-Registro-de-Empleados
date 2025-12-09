@@ -80,7 +80,7 @@
             this.dataGridUsuaios.RowHeadersWidth = 62;
             this.dataGridUsuaios.RowTemplate.Height = 28;
             this.dataGridUsuaios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridUsuaios.Size = new System.Drawing.Size(665, 383);
+            this.dataGridUsuaios.Size = new System.Drawing.Size(729, 383);
             this.dataGridUsuaios.TabIndex = 10;
             this.dataGridUsuaios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridUsuaios_CellContentClick_1);
             // 

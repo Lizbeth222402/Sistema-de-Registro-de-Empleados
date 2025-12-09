@@ -30,9 +30,9 @@ namespace NCAPA
             //PARA QUE NO APAREZCA EL ID//
             DataGridPuesto.Columns[0].Visible = false;
             //PARA EL TAMAÑO DE LAS FILAS DEL DATA GRID//
-            DataGridPuesto.Columns[1].Width = 130;
-            DataGridPuesto.Columns[2].Width = 130;
-            DataGridPuesto.Columns[3].Width = 130;
+            DataGridPuesto.Columns[1].Width = 180;
+            DataGridPuesto.Columns[2].Width = 400;
+            DataGridPuesto.Columns[3].Width = 180;
 
 
 

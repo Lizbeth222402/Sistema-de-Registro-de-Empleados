@@ -39,6 +39,7 @@
             this.txtEstado = new System.Windows.Forms.TextBox();
             this.txx_cerrar = new System.Windows.Forms.Button();
             this.btnGuardarAsis = new System.Windows.Forms.Button();
+            this.txt_idempleado_Asistencia = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // dtp_FechaAsis
@@ -150,12 +151,20 @@
             this.btnGuardarAsis.UseVisualStyleBackColor = false;
             this.btnGuardarAsis.Click += new System.EventHandler(this.btnGuardarAsistencia_Click);
             // 
+            // txt_idempleado_Asistencia
+            // 
+            this.txt_idempleado_Asistencia.Location = new System.Drawing.Point(231, 12);
+            this.txt_idempleado_Asistencia.Name = "txt_idempleado_Asistencia";
+            this.txt_idempleado_Asistencia.Size = new System.Drawing.Size(49, 26);
+            this.txt_idempleado_Asistencia.TabIndex = 34;
+            // 
             // FRM_NUEVO_ASISTENCIA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.OliveDrab;
             this.ClientSize = new System.Drawing.Size(638, 458);
+            this.Controls.Add(this.txt_idempleado_Asistencia);
             this.Controls.Add(this.txx_cerrar);
             this.Controls.Add(this.btnGuardarAsis);
             this.Controls.Add(this.txtEstado);
@@ -187,5 +196,6 @@
         public System.Windows.Forms.DateTimePicker dtp_FechaAsis;
         public System.Windows.Forms.DateTimePicker dtp_HoraEntrada;
         public System.Windows.Forms.DateTimePicker dtp_HoraSalida;
+        public System.Windows.Forms.TextBox txt_idempleado_Asistencia;
     }
 }
