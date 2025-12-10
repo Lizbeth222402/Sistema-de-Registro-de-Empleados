@@ -42,10 +42,8 @@ namespace NCAPA
 
         private void ActualizarNomina()
         {
-
             try
             {
-
                 if (string.IsNullOrWhiteSpace(txt_IdemplNominas.Text) || string.IsNullOrWhiteSpace(dtp_FechaPago.Text) || string.IsNullOrWhiteSpace(txt_Salario_Bru.Text)
                     || string.IsNullOrWhiteSpace(txt_Deducc.Text) || string.IsNullOrWhiteSpace(txt_Salari_Neto.Text))
                 {
