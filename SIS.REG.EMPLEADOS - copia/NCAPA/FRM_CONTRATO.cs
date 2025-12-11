@@ -102,7 +102,7 @@ namespace NCAPA
                     FRM_EDITAR_CONTRATO eDITAR_CONTRATO = new FRM_EDITAR_CONTRATO();
 
                     eDITAR_CONTRATO.txtid_CONTRATO.Text = DataGriContratos.SelectedRows[0].             Cells[0].Value.ToString();
-                    eDITAR_CONTRATO.txt_IdeMPLEADO.Text = DataGriContratos.SelectedRows[0].             Cells[0].Value.ToString();
+                    eDITAR_CONTRATO.txt_IdeMPLEADO.Text = DataGriContratos.SelectedRows[0].             Cells[1].Value.ToString();
                     eDITAR_CONTRATO.txtNombreCon.Text = DataGriContratos.SelectedRows[0].               Cells[2].Value.ToString();
                     eDITAR_CONTRATO.dtp_fechaInicio.Text = DataGriContratos.SelectedRows[0].            Cells[3].Value.ToString();
                     eDITAR_CONTRATO.dtp_FechaFin.Text = DataGriContratos.SelectedRows[0].               Cells[4].Value.ToString();
