@@ -35,6 +35,7 @@ begin
     begin try
         select 
             c.Id_contrato,
+            c.Id_empleado,
             e.Nombres + ' ' + e.Apellidos as Empleado,
             c.Tipo_contrato,
             c.Fecha_inicio,
@@ -72,7 +73,7 @@ begin
                 Salario = @Salario
             where Id_contrato = @Id_contrato
         commit
-        print 'El contrato se editó correctamente'
+        print 'El contrato se editÃ³ correctamente'
     end try
     begin catch
         rollback
@@ -93,7 +94,7 @@ begin
         begin tran
             delete Contratos where Id_contrato = @Id_contrato
         commit
-        print 'El contrato se eliminó correctamente'
+        print 'El contrato se eliminÃ³ correctamente'
     end try
     begin catch
         rollback
@@ -101,3 +102,4 @@ begin
     end catch
 end
 go
+
