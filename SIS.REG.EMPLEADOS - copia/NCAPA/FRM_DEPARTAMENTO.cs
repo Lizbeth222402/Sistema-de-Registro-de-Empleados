@@ -130,10 +130,10 @@ namespace NCAPA
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            EliminarAsistencia();
+            ELIMINARDEPARTAMENTO();
         }
 
-        private void EliminarAsistencia()
+        private void ELIMINARDEPARTAMENTO()
 
         {
             if (DataGridDepartamento.Rows.Count == 0)

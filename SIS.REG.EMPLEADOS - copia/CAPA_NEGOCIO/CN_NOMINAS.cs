@@ -33,6 +33,7 @@ namespace CAPA_NEGOCIO
 
         }
 
+        //editar
 
         public void EditarNominas(CE_MNOMINAS cE_MNOMINAS)
         {
@@ -40,7 +41,12 @@ namespace CAPA_NEGOCIO
             
         }
 
-        
+        //eliminar
+        public void ELIMINARNominas(CE_MNOMINAS cE_MNOMINAS)
+        {
+            CD_nominas.ELIMINARNominas(cE_MNOMINAS);
+
+        }
 
     }
 }
