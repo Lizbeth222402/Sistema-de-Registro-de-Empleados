@@ -70,7 +70,7 @@
             this.txtpasswork.Name = "txtpasswork";
             this.txtpasswork.Size = new System.Drawing.Size(301, 26);
             this.txtpasswork.TabIndex = 2;
-            this.txtpasswork.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumbers);
+            //this.txtpasswork.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.OnlyNumbers);
             // 
             // label3
             // 
@@ -147,6 +147,7 @@
             this.Name = "FRM_NEW_USUARIO";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FRM_NEW_USUARIO";
+            this.Load += new System.EventHandler(this.FRM_NEW_USUARIO_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

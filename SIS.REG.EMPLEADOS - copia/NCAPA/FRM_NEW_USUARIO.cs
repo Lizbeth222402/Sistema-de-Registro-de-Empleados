@@ -44,10 +44,13 @@ namespace NCAPA
 
 
             cN_USUARIOS.InsertarUsuario(Musuarios);
+
+            // Cerrar formulario después de guardar
+            this.Close();
         }
 
-
-        private void OnlyNumbers(object sender, KeyPressEventArgs e)
+        //Permite que textbox contrase;a nada mas acepte numeros //
+        /*private void OnlyNumbers(object sender, KeyPressEventArgs e)
         {
             // Permite solo números y teclas de control (como Backspace)
 
@@ -58,8 +61,11 @@ namespace NCAPA
                 e.Handled = true; // Bloquea la tecla
 
             }
-        }
+        }*/
 
-       
+        private void FRM_NEW_USUARIO_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

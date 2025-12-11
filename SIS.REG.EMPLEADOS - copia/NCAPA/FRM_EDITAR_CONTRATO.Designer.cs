@@ -36,12 +36,12 @@
             this.dtp_FechaFin = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.dtp_fechaInicio = new System.Windows.Forms.DateTimePicker();
-            this.btnGuardarNew_Contrato = new System.Windows.Forms.Button();
+            this.btnactualizar_Contrato = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.txtNombreCon = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtid = new System.Windows.Forms.TextBox();
+            this.txtid_CONTRATO = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btncerrar
@@ -108,23 +108,24 @@
             this.dtp_fechaInicio.Size = new System.Drawing.Size(288, 26);
             this.dtp_fechaInicio.TabIndex = 44;
             // 
-            // btnGuardarNew_Contrato
+            // btnactualizar_Contrato
             // 
-            this.btnGuardarNew_Contrato.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnGuardarNew_Contrato.BackColor = System.Drawing.Color.LightBlue;
-            this.btnGuardarNew_Contrato.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnGuardarNew_Contrato.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnGuardarNew_Contrato.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardarNew_Contrato.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardarNew_Contrato.Image")));
-            this.btnGuardarNew_Contrato.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardarNew_Contrato.Location = new System.Drawing.Point(654, 293);
-            this.btnGuardarNew_Contrato.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnGuardarNew_Contrato.Name = "btnGuardarNew_Contrato";
-            this.btnGuardarNew_Contrato.Size = new System.Drawing.Size(141, 43);
-            this.btnGuardarNew_Contrato.TabIndex = 43;
-            this.btnGuardarNew_Contrato.Text = "GUARDAR";
-            this.btnGuardarNew_Contrato.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnGuardarNew_Contrato.UseVisualStyleBackColor = false;
+            this.btnactualizar_Contrato.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnactualizar_Contrato.BackColor = System.Drawing.Color.LightBlue;
+            this.btnactualizar_Contrato.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnactualizar_Contrato.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnactualizar_Contrato.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnactualizar_Contrato.Image = ((System.Drawing.Image)(resources.GetObject("btnactualizar_Contrato.Image")));
+            this.btnactualizar_Contrato.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnactualizar_Contrato.Location = new System.Drawing.Point(654, 293);
+            this.btnactualizar_Contrato.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnactualizar_Contrato.Name = "btnactualizar_Contrato";
+            this.btnactualizar_Contrato.Size = new System.Drawing.Size(141, 43);
+            this.btnactualizar_Contrato.TabIndex = 43;
+            this.btnactualizar_Contrato.Text = "Actualizar";
+            this.btnactualizar_Contrato.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnactualizar_Contrato.UseVisualStyleBackColor = false;
+            this.btnactualizar_Contrato.Click += new System.EventHandler(this.btnGuardarNew_Contrato_Click);
             // 
             // button1
             // 
@@ -174,14 +175,13 @@
             this.label1.TabIndex = 39;
             this.label1.Text = "TIPO";
             // 
-            // txtid
+            // txtid_CONTRATO
             // 
-            this.txtid.BackColor = System.Drawing.Color.Silver;
-            this.txtid.Location = new System.Drawing.Point(255, 107);
-            this.txtid.Name = "txtid";
-            this.txtid.Size = new System.Drawing.Size(47, 26);
-            this.txtid.TabIndex = 51;
-            this.txtid.Visible = false;
+            this.txtid_CONTRATO.BackColor = System.Drawing.Color.Silver;
+            this.txtid_CONTRATO.Location = new System.Drawing.Point(255, 107);
+            this.txtid_CONTRATO.Name = "txtid_CONTRATO";
+            this.txtid_CONTRATO.Size = new System.Drawing.Size(47, 26);
+            this.txtid_CONTRATO.TabIndex = 51;
             // 
             // FRM_EDITAR_CONTRATO
             // 
@@ -189,7 +189,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(838, 581);
-            this.Controls.Add(this.txtid);
+            this.Controls.Add(this.txtid_CONTRATO);
             this.Controls.Add(this.txt_IdeMPLEADO);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txt_sALARIO);
@@ -197,7 +197,7 @@
             this.Controls.Add(this.dtp_FechaFin);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dtp_fechaInicio);
-            this.Controls.Add(this.btnGuardarNew_Contrato);
+            this.Controls.Add(this.btnactualizar_Contrato);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtNombreCon);
@@ -211,7 +211,7 @@
             this.Controls.SetChildIndex(this.txtNombreCon, 0);
             this.Controls.SetChildIndex(this.label2, 0);
             this.Controls.SetChildIndex(this.button1, 0);
-            this.Controls.SetChildIndex(this.btnGuardarNew_Contrato, 0);
+            this.Controls.SetChildIndex(this.btnactualizar_Contrato, 0);
             this.Controls.SetChildIndex(this.dtp_fechaInicio, 0);
             this.Controls.SetChildIndex(this.label3, 0);
             this.Controls.SetChildIndex(this.dtp_FechaFin, 0);
@@ -219,7 +219,7 @@
             this.Controls.SetChildIndex(this.txt_sALARIO, 0);
             this.Controls.SetChildIndex(this.label5, 0);
             this.Controls.SetChildIndex(this.txt_IdeMPLEADO, 0);
-            this.Controls.SetChildIndex(this.txtid, 0);
+            this.Controls.SetChildIndex(this.txtid_CONTRATO, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -234,11 +234,11 @@
         public System.Windows.Forms.DateTimePicker dtp_FechaFin;
         private System.Windows.Forms.Label label3;
         public System.Windows.Forms.DateTimePicker dtp_fechaInicio;
-        public System.Windows.Forms.Button btnGuardarNew_Contrato;
+        public System.Windows.Forms.Button btnactualizar_Contrato;
         public System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label2;
         public System.Windows.Forms.TextBox txtNombreCon;
         private System.Windows.Forms.Label label1;
-        public System.Windows.Forms.TextBox txtid;
+        public System.Windows.Forms.TextBox txtid_CONTRATO;
     }
 }

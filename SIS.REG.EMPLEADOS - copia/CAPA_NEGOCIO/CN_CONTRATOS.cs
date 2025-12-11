@@ -42,6 +42,7 @@ namespace CAPA_NEGOCIO
             
         }
 
+        //eliminar
         public void ELIMINARCONTRATO(CE_MCONTRATOS cE_MCONTRATOS)
         {
 

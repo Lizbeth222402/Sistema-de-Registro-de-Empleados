@@ -40,8 +40,6 @@ namespace NCAPA
             cN_AUSENCIAS.InsertarAusencias(MAusencias);
 
 
-
-
         }
 
         private void FRM_NUEVO_AUSENCIAS_Load(object sender, EventArgs e)

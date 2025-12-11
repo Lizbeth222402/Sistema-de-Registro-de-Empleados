@@ -134,8 +134,8 @@ namespace CAPA_DATO
                 using (SqlCommand cmd = new SqlCommand("SP_ELIMINAR_AUSENCIAS", Con.Abrir()))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
-
                     cmd.Parameters.Add(new SqlParameter("@Id_ausencia", cE_MAUSENCIAS.Id_ausencia));
+                    cmd.ExecuteNonQuery();
                 }
             }
             catch (Exception ex)

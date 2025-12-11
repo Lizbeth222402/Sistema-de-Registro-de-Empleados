@@ -16,7 +16,7 @@ namespace NCAPA
     {
         CN_PROCEDIMIENTOS cn_Procedimientos = new CN_PROCEDIMIENTOS();
         CN_CONTRATOS cN_CONTRATOS = new CN_CONTRATOS();
-        CE_MCONTRATOS cE_MASISTENCIAS = new CE_MCONTRATOS();
+        CE_MCONTRATOS cE_MCONTRATOS = new CE_MCONTRATOS();
 
 
         public FRM_CONTRATO()
@@ -93,8 +93,7 @@ namespace NCAPA
 
             if (DataGriContratos.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Tienes que seleccionar una Asistencia");
-
+                MessageBox.Show("Tienes que seleccionar una Contrato");
             }
             else
             {
@@ -102,18 +101,21 @@ namespace NCAPA
                 {
                     FRM_EDITAR_CONTRATO eDITAR_CONTRATO = new FRM_EDITAR_CONTRATO();
 
-                    eDITAR_CONTRATO.txtid.Text = DataGriContratos.SelectedRows[0].          Cells[0].Value.ToString();
-                    eDITAR_CONTRATO.txt_IdeMPLEADO.Text = DataGriContratos.SelectedRows[0]. Cells[1].Value.ToString();
-                    eDITAR_CONTRATO.txtNombreCon.Text = DataGriContratos.SelectedRows[0].   Cells[2].Value.ToString();
-                    eDITAR_CONTRATO.dtp_fechaInicio.Text = DataGriContratos.SelectedRows[0].Cells[3].Value.ToString();
-                    eDITAR_CONTRATO.dtp_FechaFin.Text = DataGriContratos.SelectedRows[0].   Cells[4].Value.ToString();
-                    eDITAR_CONTRATO.txt_sALARIO.Text = DataGriContratos.SelectedRows[0].    Cells[5].Value.ToString();
+                    eDITAR_CONTRATO.txtid_CONTRATO.Text = DataGriContratos.SelectedRows[0].             Cells[0].Value.ToString();
+                    eDITAR_CONTRATO.txt_IdeMPLEADO.Text = DataGriContratos.SelectedRows[0].             Cells[1].Value.ToString();
+                    eDITAR_CONTRATO.txtNombreCon.Text = DataGriContratos.SelectedRows[0].               Cells[2].Value.ToString();
+                    eDITAR_CONTRATO.dtp_fechaInicio.Text = DataGriContratos.SelectedRows[0].            Cells[3].Value.ToString();
+                    eDITAR_CONTRATO.dtp_FechaFin.Text = DataGriContratos.SelectedRows[0].               Cells[4].Value.ToString();
+                    eDITAR_CONTRATO.txt_sALARIO.Text = DataGriContratos.SelectedRows[0].                Cells[5].Value.ToString();
 
                     eDITAR_CONTRATO.ShowDialog();
+
+                    //eDITAR_CONTRATO.ShowDialog();
+                    //LISTAR_CONTRATOS(); // ✅ RECARGA AUTOMÁTICA
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"No se selecciono por el error : {ex.Message}", "Editar Cliente", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show($"No se selecciono por el error : {ex.Message}", "Editar Contrato", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 }
 
@@ -137,7 +139,7 @@ namespace NCAPA
         {
             if (DataGriContratos.Rows.Count == 0)
             {
-                MessageBox.Show("Mira bien , tienes que seleccionar un Contrato", "Eliminar Contrato", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Tienes que seleccionar un Contrato", "Eliminar Contrato", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
             else
@@ -154,8 +156,9 @@ namespace NCAPA
 
                         if (resultado == DialogResult.Yes)
                         {
-                            cE_MASISTENCIAS.Id_contrato = Convert.ToInt32(DataGriContratos.SelectedRows[0].Cells[0].Value.ToString());
-                            cN_CONTRATOS.ELIMINARCONTRATO(cE_MASISTENCIAS);
+                            cE_MCONTRATOS.Id_contrato = Convert.ToInt32(DataGriContratos.SelectedRows[0].Cells[0].Value.ToString());
+                            cN_CONTRATOS.ELIMINARCONTRATO(cE_MCONTRATOS);
+                            
                             MessageBox.Show("Muy bien!! Se elimino corretamente", "Eliminar Contrato", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
 
@@ -164,7 +167,7 @@ namespace NCAPA
                 catch
                 (Exception ex)
                 {
-                    MessageBox.Show("No se pudo Eliminar", "Eliminar Cliente", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("No se pudo Eliminar", "Eliminar contrato", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 }
             }

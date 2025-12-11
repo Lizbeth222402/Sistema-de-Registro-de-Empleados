@@ -167,7 +167,7 @@ namespace NCAPA
         {
             if (DataGridAsistencia.Rows.Count == 0)
             {
-                MessageBox.Show("Mira bien , tienes que seleccionar un Cliente", "Eliminar Cliente", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Mira bien , tienes que seleccionar un Asistencia", "Eliminar Asistencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
             else
@@ -180,7 +180,7 @@ namespace NCAPA
                     }
                     else
                     {
-                        DialogResult resultado = MessageBox.Show("Deseas Eliminar", "Eliminar Cliente", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        DialogResult resultado = MessageBox.Show("Deseas Asistencia", "Eliminar Asistencia", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
                         if (resultado == DialogResult.Yes)
                         {
@@ -194,7 +194,7 @@ namespace NCAPA
                 catch
                 (Exception ex)
                 {
-                    MessageBox.Show("No se pudo Eliminar", "Eliminar Cliente", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("No se Elimino", "Eliminar Asistencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 }
             }

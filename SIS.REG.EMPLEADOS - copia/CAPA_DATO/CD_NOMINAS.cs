@@ -127,6 +127,34 @@ namespace CAPA_DATO
 
         #endregion EDITAR NOMINAS
 
+        #region ELIMINAR NOMINAS
+        public void ELIMINARNominas(CE_MNOMINAS cE_MNOMINAS)
+        {
+
+            try
+            {
+                using (SqlCommand cmd = new SqlCommand("SP_ELIMINAR_NOMINAS", Con.Abrir()))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@Id_nomina", cE_MNOMINAS.Id_nomina));
+                    cmd.ExecuteNonQuery();
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ups no se Elimino por el error {ex.Message}", "Elimiar Nominas", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                Con.Cerrar();
+            }
+
+
+        }
+
+        #endregion ELIMINAR NOMINAS
+
     }
 }
 

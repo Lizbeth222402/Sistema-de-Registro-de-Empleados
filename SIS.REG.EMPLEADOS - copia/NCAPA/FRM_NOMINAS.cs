@@ -1,4 +1,5 @@
-﻿using CAPA_NEGOCIO;
+﻿using CAPA_ENTIDAD;
+using CAPA_NEGOCIO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -94,8 +95,6 @@ namespace NCAPA
         }
 
 
-
-
         private void Editar()
         {
 
@@ -103,7 +102,6 @@ namespace NCAPA
             if (DataGridNomina.SelectedRows.Count == 0)
             {
                 MessageBox.Show("Tienes que seleccionar una Nomina");
-
             }
             else
             {

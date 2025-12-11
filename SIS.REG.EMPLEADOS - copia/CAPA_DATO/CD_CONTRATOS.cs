@@ -1,4 +1,4 @@
-﻿using CAPA_ENTIDAD;
+﻿    using CAPA_ENTIDAD;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -53,7 +53,6 @@ namespace CAPA_DATO
 
         #endregion LISTAR CONTRATOS
 
-
         #region INSERTAR CONTRATOS
 
         public void InsertarContrato(CE_MCONTRATOS cE_Mcontratos)
@@ -89,7 +88,6 @@ namespace CAPA_DATO
         }
 
         #endregion INSERTAR CONTRATOS
-
 
         #region EDITAR CONTRATOS
 
@@ -137,9 +135,11 @@ namespace CAPA_DATO
                 using (SqlCommand cmd = new SqlCommand("Sp_EliminarContrato", Con.Abrir()))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
-
                     cmd.Parameters.Add(new SqlParameter("@Id_contrato", cE_MCONTRATOS.Id_contrato));
+                    cmd.ExecuteNonQuery();
+
                 }
+
             }
             catch (Exception ex)
             {

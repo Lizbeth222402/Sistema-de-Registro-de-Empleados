@@ -128,8 +128,8 @@ namespace CAPA_DATO
                 using(SqlCommand cmd = new SqlCommand("SP_ELIMINAR_ASISTENCIAS", Con.Abrir()))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
-
                     cmd.Parameters.Add(new SqlParameter("@Id_asistencias", cE_MASISTENCIAS.Id_asistencia));
+                    cmd.ExecuteNonQuery();
                 }
             }
             catch (Exception ex)

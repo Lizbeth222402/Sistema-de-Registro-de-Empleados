@@ -153,7 +153,7 @@ namespace NCAPA
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"No se seleccionó por el error : {ex.Message}", "Editar Cliente", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"No se seleccionó por el error : {ex.Message}", "Editar Empleados", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -187,15 +187,14 @@ namespace NCAPA
                         {
                             cE_MEMPLEADOS.Id_empleado = Convert.ToInt32(DataGriEmpleados.SelectedRows[0].Cells[0].Value.ToString());
                             cN_Empleados.ELIMINAREmpleados(cE_MEMPLEADOS);
-                            MessageBox.Show("Muy bien!! Se elimino corretamente", "Eliminar Cliente", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Muy bien!! Se elimino corretamente", "Eliminar Empleado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
-
                     }
                 }
                 catch
                 (Exception ex)
                 {
-                    MessageBox.Show("No se pudo Eliminar", "Eliminar Cliente", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("No se pudo Eliminar", "Eliminar Empleado", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 }
             }
