@@ -1,4 +1,4 @@
-﻿using CAPA_ENTIDAD;
+﻿    using CAPA_ENTIDAD;
 using System;
 using System.Collections.Generic;
 using System.Data;

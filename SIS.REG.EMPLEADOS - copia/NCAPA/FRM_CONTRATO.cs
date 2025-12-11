@@ -94,7 +94,6 @@ namespace NCAPA
             if (DataGriContratos.SelectedRows.Count == 0)
             {
                 MessageBox.Show("Tienes que seleccionar una Contrato");
-
             }
             else
             {
@@ -102,12 +101,12 @@ namespace NCAPA
                 {
                     FRM_EDITAR_CONTRATO eDITAR_CONTRATO = new FRM_EDITAR_CONTRATO();
 
-                    eDITAR_CONTRATO.txtid.Text = DataGriContratos.SelectedRows[0].          Cells[0].Value.ToString();
-                    eDITAR_CONTRATO.txt_IdeMPLEADO.Text = DataGriContratos.SelectedRows[0]. Cells[1].Value.ToString();
-                    eDITAR_CONTRATO.txtNombreCon.Text = DataGriContratos.SelectedRows[0].   Cells[2].Value.ToString();
-                    eDITAR_CONTRATO.dtp_fechaInicio.Text = DataGriContratos.SelectedRows[0].Cells[3].Value.ToString();
-                    eDITAR_CONTRATO.dtp_FechaFin.Text = DataGriContratos.SelectedRows[0].   Cells[4].Value.ToString();
-                    eDITAR_CONTRATO.txt_sALARIO.Text = DataGriContratos.SelectedRows[0].    Cells[5].Value.ToString();
+                    eDITAR_CONTRATO.txtid_CONTRATO.Text = DataGriContratos.SelectedRows[0].             Cells[0].Value.ToString();
+                    eDITAR_CONTRATO.txt_IdeMPLEADO.Text = DataGriContratos.SelectedRows[0].             Cells[0].Value.ToString();
+                    eDITAR_CONTRATO.txtNombreCon.Text = DataGriContratos.SelectedRows[0].               Cells[2].Value.ToString();
+                    eDITAR_CONTRATO.dtp_fechaInicio.Text = DataGriContratos.SelectedRows[0].            Cells[3].Value.ToString();
+                    eDITAR_CONTRATO.dtp_FechaFin.Text = DataGriContratos.SelectedRows[0].               Cells[4].Value.ToString();
+                    eDITAR_CONTRATO.txt_sALARIO.Text = DataGriContratos.SelectedRows[0].                Cells[5].Value.ToString();
 
                     eDITAR_CONTRATO.ShowDialog();
 
@@ -116,7 +115,7 @@ namespace NCAPA
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"No se selecciono por el error : {ex.Message}", "Editar Cliente", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show($"No se selecciono por el error : {ex.Message}", "Editar Contrato", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 }
 

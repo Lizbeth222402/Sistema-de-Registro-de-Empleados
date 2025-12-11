@@ -90,8 +90,6 @@ namespace NCAPA
         }
 
 
-
-
         private void Editar()
         {
 
@@ -99,7 +97,6 @@ namespace NCAPA
             if (DataGridAusencias.SelectedRows.Count == 0)
             {
                 MessageBox.Show("Tienes que seleccionar una Nomina");
-
             }
             else
             {

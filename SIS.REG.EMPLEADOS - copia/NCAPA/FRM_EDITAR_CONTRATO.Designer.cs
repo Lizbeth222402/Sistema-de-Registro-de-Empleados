@@ -41,7 +41,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtNombreCon = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtid = new System.Windows.Forms.TextBox();
+            this.txtid_CONTRATO = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btncerrar
@@ -175,14 +175,13 @@
             this.label1.TabIndex = 39;
             this.label1.Text = "TIPO";
             // 
-            // txtid
+            // txtid_CONTRATO
             // 
-            this.txtid.BackColor = System.Drawing.Color.Silver;
-            this.txtid.Location = new System.Drawing.Point(255, 107);
-            this.txtid.Name = "txtid";
-            this.txtid.Size = new System.Drawing.Size(47, 26);
-            this.txtid.TabIndex = 51;
-            this.txtid.Visible = false;
+            this.txtid_CONTRATO.BackColor = System.Drawing.Color.Silver;
+            this.txtid_CONTRATO.Location = new System.Drawing.Point(255, 107);
+            this.txtid_CONTRATO.Name = "txtid_CONTRATO";
+            this.txtid_CONTRATO.Size = new System.Drawing.Size(47, 26);
+            this.txtid_CONTRATO.TabIndex = 51;
             // 
             // FRM_EDITAR_CONTRATO
             // 
@@ -190,7 +189,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(838, 581);
-            this.Controls.Add(this.txtid);
+            this.Controls.Add(this.txtid_CONTRATO);
             this.Controls.Add(this.txt_IdeMPLEADO);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txt_sALARIO);
@@ -220,7 +219,7 @@
             this.Controls.SetChildIndex(this.txt_sALARIO, 0);
             this.Controls.SetChildIndex(this.label5, 0);
             this.Controls.SetChildIndex(this.txt_IdeMPLEADO, 0);
-            this.Controls.SetChildIndex(this.txtid, 0);
+            this.Controls.SetChildIndex(this.txtid_CONTRATO, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -240,6 +239,6 @@
         private System.Windows.Forms.Label label2;
         public System.Windows.Forms.TextBox txtNombreCon;
         private System.Windows.Forms.Label label1;
-        public System.Windows.Forms.TextBox txtid;
+        public System.Windows.Forms.TextBox txtid_CONTRATO;
     }
 }
