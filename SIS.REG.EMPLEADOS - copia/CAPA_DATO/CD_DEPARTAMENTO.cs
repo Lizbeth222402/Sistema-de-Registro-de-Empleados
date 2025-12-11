@@ -144,5 +144,12 @@ namespace CAPA_DATO
 
         #endregion ELIMINAR DEPARTAMENTO
 
+
+        #region FILTRAR DEPARTAMENTO
+
+
+
+        #endregion  FILTRAR DEPARTAMENTO
+
     }
 }

@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CAPA_ENTIDAD;
 
 namespace NCAPA
 {
@@ -16,6 +17,7 @@ namespace NCAPA
 
 
         CN_PROCEDIMIENTOS cn_Procedimientos = new CN_PROCEDIMIENTOS();
+        CN_NOMINAS cN_Nomina = new CN_NOMINAS();
         public FRM_NOMINAS()
         {
             InitializeComponent();
@@ -25,37 +27,39 @@ namespace NCAPA
         {
             LISTAR_NOMINAS();
             //Evita que no esta seleccionado por defecto//
-            DataGridAusencias.ClearSelection();
+            DataGridNomina.ClearSelection();
            
             //PARA EL TAMAÑO DE LAS FILAS DEL DATA GRID//
-            DataGridAusencias.Columns[1].Width = 130;
-            DataGridAusencias.Columns[2].Width = 130;
-            DataGridAusencias.Columns[3].Width = 130;
-            DataGridAusencias.Columns[4].Width = 130;
+            DataGridNomina.Columns[1].Width = 130;
+            DataGridNomina.Columns[2].Width = 130;
+            DataGridNomina.Columns[3].Width = 130;
+            DataGridNomina.Columns[4].Width = 130;
 
 
             // Cabecera
-            DataGridAusencias.EnableHeadersVisualStyles = false;
-            DataGridAusencias.ColumnHeadersDefaultCellStyle.BackColor = Color.SteelBlue;
-            DataGridAusencias.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
-            DataGridAusencias.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+            DataGridNomina.EnableHeadersVisualStyles = false;
+            DataGridNomina.ColumnHeadersDefaultCellStyle.BackColor = Color.SteelBlue;
+            DataGridNomina.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            DataGridNomina.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 10, FontStyle.Bold);
 
             // Color de fondo de la tabla
-            DataGridAusencias.BackgroundColor = Color.White;
+            DataGridNomina.BackgroundColor = Color.White;
 
             // Filas alternadas
-            DataGridAusencias.AlternatingRowsDefaultCellStyle.BackColor = Color.LightBlue;
+            DataGridNomina.AlternatingRowsDefaultCellStyle.BackColor = Color.LightBlue;
 
             // Color selección de fila
-            DataGridAusencias.DefaultCellStyle.SelectionBackColor = Color.DodgerBlue;
-            DataGridAusencias.DefaultCellStyle.SelectionForeColor = Color.White;
+            DataGridNomina.DefaultCellStyle.SelectionBackColor = Color.DodgerBlue;
+            DataGridNomina.DefaultCellStyle.SelectionForeColor = Color.White;
 
             // Fuente general
-            DataGridAusencias.DefaultCellStyle.Font = new Font("Segoe UI", 10);
+            DataGridNomina.DefaultCellStyle.Font = new Font("Segoe UI", 10);
 
             // Borde
-            DataGridAusencias.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            DataGridAusencias.GridColor = Color.LightGray;
+            DataGridNomina.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            DataGridNomina.GridColor = Color.LightGray;
+
+            cboBuscar.SelectedIndex = 0; // Para que arranque en "Empleado"
 
 
         }
@@ -65,7 +69,7 @@ namespace NCAPA
         //metodo para alistar AUSENCIAS//
         private void LISTAR_NOMINAS()
         {
-            DataGridAusencias.DataSource = cn_Procedimientos.ListarDepartamento("SP_LISTAR_NOMINAS");
+            DataGridNomina.DataSource = cn_Procedimientos.ListarDepartamento("SP_LISTAR_NOMINAS");
 
 
         }
@@ -96,7 +100,7 @@ namespace NCAPA
         {
 
 
-            if (DataGridAusencias.SelectedRows.Count == 0)
+            if (DataGridNomina.SelectedRows.Count == 0)
             {
                 MessageBox.Show("Tienes que seleccionar una Nomina");
 
@@ -107,12 +111,12 @@ namespace NCAPA
                 {
                     FRM_EDITAR_NOMINAS eDITAR_NOMINAS = new FRM_EDITAR_NOMINAS();
 
-                    eDITAR_NOMINAS.txtid_Nmina.Text = DataGridAusencias.SelectedRows[0].                  Cells[0].Value.ToString();
-                    eDITAR_NOMINAS.txt_IdemplNominas.Text = DataGridAusencias.SelectedRows[0].      Cells[0].Value.ToString();
-                    eDITAR_NOMINAS.dtp_FechaPago.Text = DataGridAusencias.SelectedRows[0].          Cells[1].Value.ToString();
-                    eDITAR_NOMINAS.txt_Salario_Bru.Text = DataGridAusencias.SelectedRows[0].        Cells[2].Value.ToString();
-                    eDITAR_NOMINAS.txt_Deducc.Text = DataGridAusencias.SelectedRows[0].             Cells[3].Value.ToString();
-                    eDITAR_NOMINAS.txt_Salari_Neto.Text = DataGridAusencias.SelectedRows[0].        Cells[4].Value.ToString();
+                    eDITAR_NOMINAS.txtid_Nmina.Text = DataGridNomina.SelectedRows[0].                  Cells[0].Value.ToString();
+                    eDITAR_NOMINAS.txt_IdemplNominas.Text = DataGridNomina.SelectedRows[0].      Cells[0].Value.ToString();
+                    eDITAR_NOMINAS.dtp_FechaPago.Text = DataGridNomina.SelectedRows[0].          Cells[1].Value.ToString();
+                    eDITAR_NOMINAS.txt_Salario_Bru.Text = DataGridNomina.SelectedRows[0].        Cells[2].Value.ToString();
+                    eDITAR_NOMINAS.txt_Deducc.Text = DataGridNomina.SelectedRows[0].             Cells[3].Value.ToString();
+                    eDITAR_NOMINAS.txt_Salari_Neto.Text = DataGridNomina.SelectedRows[0].        Cells[4].Value.ToString();
 
 
                     eDITAR_NOMINAS.ShowDialog();
@@ -139,6 +143,17 @@ namespace NCAPA
         private void DataGridAusencias_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void txtBusqueda_TextChanged(object sender, EventArgs e)
+        {
+            string criterio = cboBuscar.Text; // ComboBox con opción "Empleado"
+            string valor = txtBusqueda.Text.Trim();
+
+            if (criterio == "Empleado")
+            {
+                DataGridNomina.DataSource = cN_Nomina.FiltrarNominaPorEmpleado(valor);
+            }
         }
     }
 }

@@ -42,7 +42,8 @@
             // 
             // btncerrar
             // 
-            this.btncerrar.Location = new System.Drawing.Point(1477, 719);
+            this.btncerrar.Location = new System.Drawing.Point(985, 467);
+            this.btncerrar.Margin = new System.Windows.Forms.Padding(2);
             // 
             // button1
             // 
@@ -52,10 +53,9 @@
             this.button1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(1064, 546);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button1.Location = new System.Drawing.Point(709, 355);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(141, 51);
+            this.button1.Size = new System.Drawing.Size(94, 33);
             this.button1.TabIndex = 6;
             this.button1.Text = "CERRAR";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -67,25 +67,21 @@
             this.txtBusqueda.BackColor = System.Drawing.Color.White;
             this.txtBusqueda.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBusqueda.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.txtBusqueda.Location = new System.Drawing.Point(822, 87);
-            this.txtBusqueda.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtBusqueda.Location = new System.Drawing.Point(548, 57);
             this.txtBusqueda.Multiline = true;
             this.txtBusqueda.Name = "txtBusqueda";
-            this.txtBusqueda.Size = new System.Drawing.Size(355, 29);
+            this.txtBusqueda.Size = new System.Drawing.Size(238, 28);
             this.txtBusqueda.TabIndex = 20;
+            this.txtBusqueda.TextChanged += new System.EventHandler(this.txtBusqueda_TextChanged);
             // 
             // cboBuscar
             // 
             this.cboBuscar.BackColor = System.Drawing.Color.White;
             this.cboBuscar.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboBuscar.FormattingEnabled = true;
-            this.cboBuscar.Items.AddRange(new object[] {
-            "Nombre",
-            "Departamento"});
-            this.cboBuscar.Location = new System.Drawing.Point(603, 87);
-            this.cboBuscar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cboBuscar.Location = new System.Drawing.Point(402, 57);
             this.cboBuscar.Name = "cboBuscar";
-            this.cboBuscar.Size = new System.Drawing.Size(200, 39);
+            this.cboBuscar.Size = new System.Drawing.Size(135, 28);
             this.cboBuscar.TabIndex = 19;
             // 
             // btnEditar
@@ -96,10 +92,9 @@
             this.btnEditar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
             this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditar.Location = new System.Drawing.Point(194, 552);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnEditar.Location = new System.Drawing.Point(129, 359);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(124, 40);
+            this.btnEditar.Size = new System.Drawing.Size(83, 26);
             this.btnEditar.TabIndex = 18;
             this.btnEditar.Text = "Editar";
             this.btnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -114,10 +109,9 @@
             this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(357, 552);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnEliminar.Location = new System.Drawing.Point(238, 359);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(134, 40);
+            this.btnEliminar.Size = new System.Drawing.Size(89, 26);
             this.btnEliminar.TabIndex = 17;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -132,10 +126,9 @@
             this.btnNuevoEmpleado.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevoEmpleado.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevoEmpleado.Image")));
             this.btnNuevoEmpleado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuevoEmpleado.Location = new System.Drawing.Point(39, 552);
-            this.btnNuevoEmpleado.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnNuevoEmpleado.Location = new System.Drawing.Point(26, 359);
             this.btnNuevoEmpleado.Name = "btnNuevoEmpleado";
-            this.btnNuevoEmpleado.Size = new System.Drawing.Size(124, 40);
+            this.btnNuevoEmpleado.Size = new System.Drawing.Size(83, 26);
             this.btnNuevoEmpleado.TabIndex = 16;
             this.btnNuevoEmpleado.Text = "Nuevo";
             this.btnNuevoEmpleado.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -148,14 +141,13 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DataGriEmpleados.BackgroundColor = System.Drawing.Color.DarkOrange;
             this.DataGriEmpleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataGriEmpleados.Location = new System.Drawing.Point(39, 153);
-            this.DataGriEmpleados.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.DataGriEmpleados.Location = new System.Drawing.Point(26, 99);
             this.DataGriEmpleados.Name = "DataGriEmpleados";
             this.DataGriEmpleados.ReadOnly = true;
             this.DataGriEmpleados.RowHeadersVisible = false;
             this.DataGriEmpleados.RowHeadersWidth = 62;
             this.DataGriEmpleados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DataGriEmpleados.Size = new System.Drawing.Size(1138, 361);
+            this.DataGriEmpleados.Size = new System.Drawing.Size(759, 235);
             this.DataGriEmpleados.TabIndex = 15;
             this.DataGriEmpleados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGriEmpleados_CellContentClick);
             // 
@@ -164,17 +156,18 @@
             this.textboxEMPLEADOS.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.textboxEMPLEADOS.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textboxEMPLEADOS.ForeColor = System.Drawing.SystemColors.Window;
-            this.textboxEMPLEADOS.Location = new System.Drawing.Point(39, 86);
+            this.textboxEMPLEADOS.Location = new System.Drawing.Point(26, 56);
+            this.textboxEMPLEADOS.Margin = new System.Windows.Forms.Padding(2);
             this.textboxEMPLEADOS.Name = "textboxEMPLEADOS";
-            this.textboxEMPLEADOS.Size = new System.Drawing.Size(368, 39);
+            this.textboxEMPLEADOS.Size = new System.Drawing.Size(247, 29);
             this.textboxEMPLEADOS.TabIndex = 34;
             this.textboxEMPLEADOS.Text = "GESTION DE EMPLEADOS";
             // 
             // Frm_EMPLEADOS
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1218, 674);
+            this.ClientSize = new System.Drawing.Size(812, 438);
             this.Controls.Add(this.textboxEMPLEADOS);
             this.Controls.Add(this.txtBusqueda);
             this.Controls.Add(this.cboBuscar);
@@ -183,6 +176,7 @@
             this.Controls.Add(this.btnNuevoEmpleado);
             this.Controls.Add(this.DataGriEmpleados);
             this.Controls.Add(this.button1);
+            this.Margin = new System.Windows.Forms.Padding(1);
             this.Name = "Frm_EMPLEADOS";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Frm_EMPLEADOS";
