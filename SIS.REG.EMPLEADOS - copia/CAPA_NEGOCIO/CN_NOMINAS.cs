@@ -41,6 +41,25 @@ namespace CAPA_NEGOCIO
             
         }
 
+
+        public DataTable FiltrarNominaPorEmpleado(string empleado)
+        {
+            SqlDataAdapter da = new SqlDataAdapter(
+                "SELECT n.Id_nomina, e.Nombres, e.Apellidos, n.Fecha_pago, n.Salario_bruto, n.Deducciones, n.Salario_neto " +
+                "FROM Nominas n " +
+                "INNER JOIN Empleados e ON n.Id_empleado = e.Id_empleado " +
+                "WHERE e.Nombres LIKE @empleado + '%'",
+                new CD_CONEXION().Abrir());
+
+            da.SelectCommand.Parameters.AddWithValue("@empleado", empleado);
+
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
+
+
+
         //eliminar
         public void ELIMINARNominas(CE_MNOMINAS cE_MNOMINAS)
         {
