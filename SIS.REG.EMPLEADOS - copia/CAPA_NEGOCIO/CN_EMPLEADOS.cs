@@ -51,43 +51,5 @@ namespace CAPA_NEGOCIO
 
         }
 
-
-        public DataTable FiltrarPorNombre(string nombre)
-        {
-            SqlDataAdapter da = new SqlDataAdapter(
-        "SELECT e.Id_empleado, e.Nombres, e.Apellidos, e.Fecha_nacimiento, e.Direccion, e.Telefono, e.Email, e.Fecha_ingreso, " +
-        "d.Nombre AS Departamento, p.Nombre_puesto AS Puesto " +
-        "FROM Empleados e " +
-        "INNER JOIN Departamentos d ON e.Id_departamento = d.Id_departamento " +
-        "INNER JOIN Puestos p ON e.Id_puesto = p.Id_puesto " +
-        "WHERE e.Nombres LIKE @nombre + '%'",
-        new CD_CONEXION().Abrir());
-
-            da.SelectCommand.Parameters.AddWithValue("@nombre", nombre);
-
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            return dt;
-        }
-
-        public DataTable FiltrarPorDepartamento(string departamento)
-        {
-            SqlDataAdapter da = new SqlDataAdapter(
-         "SELECT e.Id_empleado, e.Nombres, e.Apellidos, e.Fecha_nacimiento, e.Direccion, e.Telefono, e.Email, e.Fecha_ingreso, " +
-         "d.Nombre AS Departamento, p.Nombre_puesto AS Puesto " +
-         "FROM Empleados e " +
-         "INNER JOIN Departamentos d ON e.Id_departamento = d.Id_departamento " +
-         "INNER JOIN Puestos p ON e.Id_puesto = p.Id_puesto " +
-         "WHERE d.Nombre LIKE @departamento + '%'",
-         new CD_CONEXION().Abrir());
-
-            da.SelectCommand.Parameters.AddWithValue("@departamento", departamento);
-
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            return dt;
-        }
-
-
     }
 }

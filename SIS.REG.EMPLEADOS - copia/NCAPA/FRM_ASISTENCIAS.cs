@@ -63,7 +63,7 @@ namespace NCAPA
             DataGridAsistencia.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             DataGridAsistencia.GridColor = Color.LightGray;
 
-            cboBuscar.SelectedIndex = 0;
+
 
         }
 
@@ -198,14 +198,6 @@ namespace NCAPA
 
                 }
             }
-        }
-
-        private void txtBusqueda_TextChanged(object sender, EventArgs e)
-        {
-            string criterio = cboBuscar.Text; // ComboBox con opciones "Fecha" o "Empleado"
-            string valor = txtBusqueda.Text.Trim();
-
-            DataGridAsistencia.DataSource = cN_ASISTENCIAS.FiltrarAsistencias(criterio, valor);
         }
     }
 }

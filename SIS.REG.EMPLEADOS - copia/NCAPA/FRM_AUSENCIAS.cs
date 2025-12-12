@@ -62,8 +62,6 @@ namespace NCAPA
             DataGridAUSENCIAS.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             DataGridAUSENCIAS.GridColor = Color.LightGray;
 
-            cboBuscar.SelectedIndex = 0; // Para que arranque en "Tipo"
-
         }
 
 
@@ -194,13 +192,6 @@ namespace NCAPA
             }
         }
 
-        private void txtBusqueda_TextChanged(object sender, EventArgs e)
-        {
-            string criterio = cboBuscar.Text; // ComboBox con opciones "Tipo" o "Motivo"
-            string valor = txtBusqueda.Text.Trim();
-
-            DataGridAUSENCIAS.DataSource = cN_AUSENCIAS.FiltrarAusencias(criterio, valor);
-        }
     }
 }
 

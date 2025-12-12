@@ -48,37 +48,5 @@ namespace CAPA_NEGOCIO
 
 
         }
-
-        public DataTable FiltrarAsistencias(string criterio, string valor)
-        {
-            SqlDataAdapter da;
-
-            if (criterio == "Fecha")
-            {
-                da = new SqlDataAdapter(
-                    "SELECT a.Id_asistencia, e.Nombres, e.Apellidos, a.Fecha, a.Estado " +
-                    "FROM Asistencias a " +
-                    "INNER JOIN Empleados e ON a.Id_empleado = e.Id_empleado " +
-                    "WHERE CONVERT(VARCHAR, a.Fecha, 103) LIKE @valor + '%'",
-                    new CD_CONEXION().Abrir());
-            }
-            else
-            {
-                da = new SqlDataAdapter(
-                    "SELECT a.Id_asistencia, e.Nombres, e.Apellidos, a.Fecha, a.Estado " +
-                    "FROM Asistencias a " +
-                    "INNER JOIN Empleados e ON a.Id_empleado = e.Id_empleado",
-                    new CD_CONEXION().Abrir());
-            }
-
-            da.SelectCommand.Parameters.AddWithValue("@valor", valor);
-
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            return dt;
-        }
-
-
-
     }
 }

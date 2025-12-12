@@ -9,7 +9,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using CAPA_ENTIDAD;
 
 namespace NCAPA
 {
@@ -18,7 +17,9 @@ namespace NCAPA
 
 
         CN_PROCEDIMIENTOS cn_Procedimientos = new CN_PROCEDIMIENTOS();
-        CN_NOMINAS cN_Nomina = new CN_NOMINAS();
+        CN_NOMINAS cN_nominas = new CN_NOMINAS();
+        CE_MNOMINAS cE_MNOMINAS = new CE_MNOMINAS();
+
         public FRM_NOMINAS()
         {
             InitializeComponent();
@@ -28,39 +29,37 @@ namespace NCAPA
         {
             LISTAR_NOMINAS();
             //Evita que no esta seleccionado por defecto//
-            DataGridNomina.ClearSelection();
+            DataGridNominas.ClearSelection();
            
             //PARA EL TAMAÑO DE LAS FILAS DEL DATA GRID//
-            DataGridNomina.Columns[1].Width = 130;
-            DataGridNomina.Columns[2].Width = 130;
-            DataGridNomina.Columns[3].Width = 130;
-            DataGridNomina.Columns[4].Width = 130;
+            DataGridNominas.Columns[1].Width = 130;
+            DataGridNominas.Columns[2].Width = 130;
+            DataGridNominas.Columns[3].Width = 130;
+            DataGridNominas.Columns[4].Width = 130;
 
 
             // Cabecera
-            DataGridNomina.EnableHeadersVisualStyles = false;
-            DataGridNomina.ColumnHeadersDefaultCellStyle.BackColor = Color.SteelBlue;
-            DataGridNomina.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
-            DataGridNomina.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+            DataGridNominas.EnableHeadersVisualStyles = false;
+            DataGridNominas.ColumnHeadersDefaultCellStyle.BackColor = Color.SteelBlue;
+            DataGridNominas.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            DataGridNominas.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 10, FontStyle.Bold);
 
             // Color de fondo de la tabla
-            DataGridNomina.BackgroundColor = Color.White;
+            DataGridNominas.BackgroundColor = Color.White;
 
             // Filas alternadas
-            DataGridNomina.AlternatingRowsDefaultCellStyle.BackColor = Color.LightBlue;
+            DataGridNominas.AlternatingRowsDefaultCellStyle.BackColor = Color.LightBlue;
 
             // Color selección de fila
-            DataGridNomina.DefaultCellStyle.SelectionBackColor = Color.DodgerBlue;
-            DataGridNomina.DefaultCellStyle.SelectionForeColor = Color.White;
+            DataGridNominas.DefaultCellStyle.SelectionBackColor = Color.DodgerBlue;
+            DataGridNominas.DefaultCellStyle.SelectionForeColor = Color.White;
 
             // Fuente general
-            DataGridNomina.DefaultCellStyle.Font = new Font("Segoe UI", 10);
+            DataGridNominas.DefaultCellStyle.Font = new Font("Segoe UI", 10);
 
             // Borde
-            DataGridNomina.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
-            DataGridNomina.GridColor = Color.LightGray;
-
-            cboBuscar.SelectedIndex = 0; // Para que arranque en "Empleado"
+            DataGridNominas.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
+            DataGridNominas.GridColor = Color.LightGray;
 
 
         }
@@ -70,7 +69,7 @@ namespace NCAPA
         //metodo para alistar AUSENCIAS//
         private void LISTAR_NOMINAS()
         {
-            DataGridNomina.DataSource = cn_Procedimientos.ListarDepartamento("SP_LISTAR_NOMINAS");
+            DataGridNominas.DataSource = cn_Procedimientos.ListarDepartamento("SP_LISTAR_NOMINAS");
 
 
         }
@@ -99,7 +98,7 @@ namespace NCAPA
         {
 
 
-            if (DataGridNomina.SelectedRows.Count == 0)
+            if (DataGridNominas.SelectedRows.Count == 0)
             {
                 MessageBox.Show("Tienes que seleccionar una Nomina");
             }
@@ -109,12 +108,12 @@ namespace NCAPA
                 {
                     FRM_EDITAR_NOMINAS eDITAR_NOMINAS = new FRM_EDITAR_NOMINAS();
 
-                    eDITAR_NOMINAS.txtid_Nmina.Text = DataGridNomina.SelectedRows[0].                  Cells[0].Value.ToString();
-                    eDITAR_NOMINAS.txt_IdemplNominas.Text = DataGridNomina.SelectedRows[0].      Cells[0].Value.ToString();
-                    eDITAR_NOMINAS.dtp_FechaPago.Text = DataGridNomina.SelectedRows[0].          Cells[1].Value.ToString();
-                    eDITAR_NOMINAS.txt_Salario_Bru.Text = DataGridNomina.SelectedRows[0].        Cells[2].Value.ToString();
-                    eDITAR_NOMINAS.txt_Deducc.Text = DataGridNomina.SelectedRows[0].             Cells[3].Value.ToString();
-                    eDITAR_NOMINAS.txt_Salari_Neto.Text = DataGridNomina.SelectedRows[0].        Cells[4].Value.ToString();
+                    eDITAR_NOMINAS.txtid_Nmina.Text = DataGridNominas.SelectedRows[0].                  Cells[0].Value.ToString();
+                    eDITAR_NOMINAS.txt_IdemplNominas.Text = DataGridNominas.SelectedRows[0].      Cells[0].Value.ToString();
+                    eDITAR_NOMINAS.dtp_FechaPago.Text = DataGridNominas.SelectedRows[0].          Cells[1].Value.ToString();
+                    eDITAR_NOMINAS.txt_Salario_Bru.Text = DataGridNominas.SelectedRows[0].        Cells[2].Value.ToString();
+                    eDITAR_NOMINAS.txt_Deducc.Text = DataGridNominas.SelectedRows[0].             Cells[3].Value.ToString();
+                    eDITAR_NOMINAS.txt_Salari_Neto.Text = DataGridNominas.SelectedRows[0].        Cells[4].Value.ToString();
 
 
                     eDITAR_NOMINAS.ShowDialog();
@@ -143,14 +142,47 @@ namespace NCAPA
 
         }
 
-        private void txtBusqueda_TextChanged(object sender, EventArgs e)
+        private void btnEliminar_Click(object sender, EventArgs e)
         {
-            string criterio = cboBuscar.Text; // ComboBox con opción "Empleado"
-            string valor = txtBusqueda.Text.Trim();
+            ELIMINARNominas();
 
-            if (criterio == "Empleado")
+        }
+
+        private void ELIMINARNominas()
+
+        {
+            if (DataGridNominas.Rows.Count == 0)
             {
-                DataGridNomina.DataSource = cN_Nomina.FiltrarNominaPorEmpleado(valor);
+                MessageBox.Show("Mira bien , tienes que seleccionar un Nomianas", "Eliminar Nomianas", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            else
+            {
+                try
+                {
+                    if (DataGridNominas.SelectedRows == null)
+                    {
+                        return;
+                    }
+                    else
+                    {
+                        DialogResult resultado = MessageBox.Show("Deseas eliminar Nomianas", "Eliminar Nominas", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                        if (resultado == DialogResult.Yes)
+                        {
+                            cE_MNOMINAS.Id_nomina = Convert.ToInt32(DataGridNominas.SelectedRows[0].Cells[0].Value.ToString());
+                            cN_nominas.ELIMINARNominas(cE_MNOMINAS);
+                            MessageBox.Show("Muy bien!! Se elimino corretamente", "Eliminar Nominas", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+
+                    }
+                }
+                catch
+                (Exception ex)
+                {
+                    MessageBox.Show("No se Elimino", "Eliminar Nominas", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
             }
         }
     }

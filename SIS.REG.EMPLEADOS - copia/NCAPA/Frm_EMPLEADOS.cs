@@ -68,11 +68,6 @@ namespace NCAPA
             DataGriEmpleados.GridColor = Color.LightGray;
 
 
-            cboBuscar.Items.Add("Nombre");
-            cboBuscar.Items.Add("Departamento");
-            cboBuscar.SelectedIndex = 0;
-
-
         }
 
         //metodo para alistar//
@@ -200,21 +195,6 @@ namespace NCAPA
             }
 
 
-        }
-
-        private void txtBusqueda_TextChanged(object sender, EventArgs e)
-        {
-            string filtro = txtBusqueda.Text.Trim();
-            string criterio = cboBuscar.Text; // Tu ComboBox con opciones "Nombre", "Departamento"
-
-            if (criterio == "Nombre")
-            {
-                DataGriEmpleados.DataSource = cN_Empleados.FiltrarPorNombre(filtro);
-            }
-            else if (criterio == "Departamento")
-            {
-                DataGriEmpleados.DataSource = cN_Empleados.FiltrarPorDepartamento(filtro);
-            }
         }
     }
 }

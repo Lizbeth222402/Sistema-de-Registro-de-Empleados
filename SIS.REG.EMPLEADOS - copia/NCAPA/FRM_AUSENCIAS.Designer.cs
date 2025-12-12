@@ -42,8 +42,7 @@
             // 
             // btncerrar
             // 
-            this.btncerrar.Location = new System.Drawing.Point(953, 440);
-            this.btncerrar.Margin = new System.Windows.Forms.Padding(2);
+            this.btncerrar.Location = new System.Drawing.Point(1430, 677);
             // 
             // btnEditar
             // 
@@ -53,9 +52,10 @@
             this.btnEditar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
             this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditar.Location = new System.Drawing.Point(121, 337);
+            this.btnEditar.Location = new System.Drawing.Point(182, 518);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(83, 26);
+            this.btnEditar.Size = new System.Drawing.Size(124, 40);
             this.btnEditar.TabIndex = 31;
             this.btnEditar.Text = "Editar";
             this.btnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -70,9 +70,10 @@
             this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(230, 337);
+            this.btnEliminar.Location = new System.Drawing.Point(345, 518);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(89, 26);
+            this.btnEliminar.Size = new System.Drawing.Size(134, 40);
             this.btnEliminar.TabIndex = 30;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -87,9 +88,10 @@
             this.btnNuveo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuveo.Image = ((System.Drawing.Image)(resources.GetObject("btnNuveo.Image")));
             this.btnNuveo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuveo.Location = new System.Drawing.Point(21, 337);
+            this.btnNuveo.Location = new System.Drawing.Point(32, 518);
+            this.btnNuveo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnNuveo.Name = "btnNuveo";
-            this.btnNuveo.Size = new System.Drawing.Size(83, 26);
+            this.btnNuveo.Size = new System.Drawing.Size(124, 40);
             this.btnNuveo.TabIndex = 29;
             this.btnNuveo.Text = "Nuevo";
             this.btnNuveo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -102,13 +104,14 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DataGridAUSENCIAS.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
             this.DataGridAUSENCIAS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataGridAUSENCIAS.Location = new System.Drawing.Point(21, 84);
+            this.DataGridAUSENCIAS.Location = new System.Drawing.Point(32, 130);
+            this.DataGridAUSENCIAS.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.DataGridAUSENCIAS.Name = "DataGridAUSENCIAS";
             this.DataGridAUSENCIAS.ReadOnly = true;
             this.DataGridAUSENCIAS.RowHeadersVisible = false;
             this.DataGridAUSENCIAS.RowHeadersWidth = 62;
             this.DataGridAUSENCIAS.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DataGridAUSENCIAS.Size = new System.Drawing.Size(729, 232);
+            this.DataGridAUSENCIAS.Size = new System.Drawing.Size(1093, 357);
             this.DataGridAUSENCIAS.TabIndex = 28;
             this.DataGridAUSENCIAS.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridAUSENCIAS_CellContentClick);
             // 
@@ -120,9 +123,10 @@
             this.BtncerrarD.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtncerrarD.Image = ((System.Drawing.Image)(resources.GetObject("BtncerrarD.Image")));
             this.BtncerrarD.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtncerrarD.Location = new System.Drawing.Point(643, 337);
+            this.BtncerrarD.Location = new System.Drawing.Point(964, 518);
+            this.BtncerrarD.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.BtncerrarD.Name = "BtncerrarD";
-            this.BtncerrarD.Size = new System.Drawing.Size(94, 26);
+            this.BtncerrarD.Size = new System.Drawing.Size(141, 40);
             this.BtncerrarD.TabIndex = 27;
             this.BtncerrarD.Text = "CERRAR";
             this.BtncerrarD.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -134,10 +138,9 @@
             this.textboxAUSENCIAS.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.textboxAUSENCIAS.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textboxAUSENCIAS.ForeColor = System.Drawing.SystemColors.Window;
-            this.textboxAUSENCIAS.Location = new System.Drawing.Point(21, 41);
-            this.textboxAUSENCIAS.Margin = new System.Windows.Forms.Padding(2);
+            this.textboxAUSENCIAS.Location = new System.Drawing.Point(32, 63);
             this.textboxAUSENCIAS.Name = "textboxAUSENCIAS";
-            this.textboxAUSENCIAS.Size = new System.Drawing.Size(247, 29);
+            this.textboxAUSENCIAS.Size = new System.Drawing.Size(369, 39);
             this.textboxAUSENCIAS.TabIndex = 32;
             this.textboxAUSENCIAS.Text = "GESTION DE AUSENCIAS";
             // 
@@ -146,12 +149,12 @@
             this.txtBusqueda.BackColor = System.Drawing.Color.White;
             this.txtBusqueda.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBusqueda.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.txtBusqueda.Location = new System.Drawing.Point(513, 42);
+            this.txtBusqueda.Location = new System.Drawing.Point(770, 65);
+            this.txtBusqueda.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtBusqueda.Multiline = true;
             this.txtBusqueda.Name = "txtBusqueda";
-            this.txtBusqueda.Size = new System.Drawing.Size(238, 28);
+            this.txtBusqueda.Size = new System.Drawing.Size(355, 29);
             this.txtBusqueda.TabIndex = 34;
-            this.txtBusqueda.TextChanged += new System.EventHandler(this.txtBusqueda_TextChanged);
             // 
             // cboBuscar
             // 
@@ -159,17 +162,18 @@
             this.cboBuscar.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboBuscar.FormattingEnabled = true;
             this.cboBuscar.Items.AddRange(new object[] {
-            "Tipo"});
-            this.cboBuscar.Location = new System.Drawing.Point(367, 42);
+            "Departamento"});
+            this.cboBuscar.Location = new System.Drawing.Point(551, 65);
+            this.cboBuscar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cboBuscar.Name = "cboBuscar";
-            this.cboBuscar.Size = new System.Drawing.Size(135, 28);
+            this.cboBuscar.Size = new System.Drawing.Size(200, 39);
             this.cboBuscar.TabIndex = 33;
             // 
             // FRM_AUSENCIAS
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(781, 411);
+            this.ClientSize = new System.Drawing.Size(1171, 632);
             this.Controls.Add(this.txtBusqueda);
             this.Controls.Add(this.cboBuscar);
             this.Controls.Add(this.textboxAUSENCIAS);
@@ -178,7 +182,6 @@
             this.Controls.Add(this.btnNuveo);
             this.Controls.Add(this.DataGridAUSENCIAS);
             this.Controls.Add(this.BtncerrarD);
-            this.Margin = new System.Windows.Forms.Padding(1);
             this.Name = "FRM_AUSENCIAS";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FRM_AUSENCIAS";
