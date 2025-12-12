@@ -41,11 +41,28 @@ namespace NCAPA
 
         private void GUARDARempleado()
         {
+
+            if (!int.TryParse(txt_iddepa.Text, out int idDep))
+            {
+                MessageBox.Show("El Id_departamento no es válido");
+                return;
+            }
+
+            if (!int.TryParse(txt_Puesto.Text, out int idPuesto))
+            {
+                MessageBox.Show("El Id_puesto no es válido");
+                return;
+            }
+
+            mEMPLEADOS.Id_departamento = idDep;
+            mEMPLEADOS.Id_puesto = idPuesto;
+
+
             mEMPLEADOS.Nombres = txtNombre_emple.Text.Trim();
             mEMPLEADOS.Apellidos = txtapellido_Emple.Text.Trim();
-            mEMPLEADOS.Telefono = txttelefono_Emple.Text.Trim();
             mEMPLEADOS.Fecha_nacimiento = Convert.ToDateTime(dtp_FechaN.Value);
-            mEMPLEADOS.Direccion = txtdireccion_Emple.Text.Trim(); 
+            mEMPLEADOS.Direccion = txtdireccion_Emple.Text.Trim();
+            mEMPLEADOS.Telefono = txttelefono_Emple.Text.Trim();
             mEMPLEADOS.Email = txtgmail_Emple.Text.Trim();
             mEMPLEADOS.Fecha_ingreso = Convert.ToDateTime(dtp_FechaIng.Value);
             mEMPLEADOS.Id_departamento = Convert.ToInt32(txt_iddepa.Text);

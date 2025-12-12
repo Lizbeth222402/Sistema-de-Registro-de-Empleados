@@ -15,7 +15,7 @@ namespace CAPA_DATO
         public SqlConnection Abrir()
         {
             if (Conexion.State == ConnectionState.Closed)
-                Conexion.Open();
+                Conexion.Open();    
             return Conexion;
 
         }

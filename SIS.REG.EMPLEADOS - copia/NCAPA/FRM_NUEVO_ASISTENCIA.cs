@@ -70,6 +70,9 @@ namespace NCAPA
             // Guardar
             cN_ASISTENCIAS.InsertarAsistencia(Masistencias);
 
+            // Mostrar mensaje de éxito
+            MessageBox.Show("La Asistencia se ingresó correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
 
             // Cerrar formulario después de guardar
             this.Close();

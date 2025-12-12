@@ -37,7 +37,6 @@
             this.dtp_FechaIng = new System.Windows.Forms.DateTimePicker();
             this.dtp_FechaN = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
-            this.txttelefono_Emple = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtgmail_Emple = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -51,6 +50,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.txtid = new System.Windows.Forms.TextBox();
+            this.txttelefono_Emple = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // btncerrar
@@ -135,14 +135,6 @@
             this.label7.Size = new System.Drawing.Size(143, 20);
             this.label7.TabIndex = 42;
             this.label7.Text = "FECHA INGRESO";
-            // 
-            // txttelefono_Emple
-            // 
-            this.txttelefono_Emple.BackColor = System.Drawing.Color.Silver;
-            this.txttelefono_Emple.Location = new System.Drawing.Point(204, 327);
-            this.txttelefono_Emple.Name = "txttelefono_Emple";
-            this.txttelefono_Emple.Size = new System.Drawing.Size(173, 26);
-            this.txttelefono_Emple.TabIndex = 41;
             // 
             // label5
             // 
@@ -274,12 +266,26 @@
             this.txtid.TabIndex = 50;
             this.txtid.Visible = false;
             // 
+            // txttelefono_Emple
+            // 
+            this.txttelefono_Emple.BackColor = System.Drawing.Color.Silver;
+            this.txttelefono_Emple.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.txttelefono_Emple.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txttelefono_Emple.Location = new System.Drawing.Point(204, 320);
+            this.txttelefono_Emple.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txttelefono_Emple.Mask = "0000-0000";
+            this.txttelefono_Emple.Name = "txttelefono_Emple";
+            this.txttelefono_Emple.Size = new System.Drawing.Size(253, 31);
+            this.txttelefono_Emple.TabIndex = 84;
+            this.txttelefono_Emple.UseWaitCursor = true;
+            // 
             // FRM_EDITAR_EMPLEADOS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(975, 590);
+            this.Controls.Add(this.txttelefono_Emple);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.txtid);
             this.Controls.Add(this.txt_Puesto);
@@ -290,7 +296,6 @@
             this.Controls.Add(this.dtp_FechaIng);
             this.Controls.Add(this.dtp_FechaN);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.txttelefono_Emple);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtgmail_Emple);
             this.Controls.Add(this.label6);
@@ -318,7 +323,6 @@
             this.Controls.SetChildIndex(this.label6, 0);
             this.Controls.SetChildIndex(this.txtgmail_Emple, 0);
             this.Controls.SetChildIndex(this.label5, 0);
-            this.Controls.SetChildIndex(this.txttelefono_Emple, 0);
             this.Controls.SetChildIndex(this.label7, 0);
             this.Controls.SetChildIndex(this.dtp_FechaN, 0);
             this.Controls.SetChildIndex(this.dtp_FechaIng, 0);
@@ -329,6 +333,7 @@
             this.Controls.SetChildIndex(this.txt_Puesto, 0);
             this.Controls.SetChildIndex(this.txtid, 0);
             this.Controls.SetChildIndex(this.label10, 0);
+            this.Controls.SetChildIndex(this.txttelefono_Emple, 0);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -344,7 +349,6 @@
         public System.Windows.Forms.DateTimePicker dtp_FechaIng;
         public System.Windows.Forms.DateTimePicker dtp_FechaN;
         private System.Windows.Forms.Label label7;
-        public System.Windows.Forms.TextBox txttelefono_Emple;
         private System.Windows.Forms.Label label5;
         public System.Windows.Forms.TextBox txtgmail_Emple;
         private System.Windows.Forms.Label label6;
@@ -358,5 +362,6 @@
         public System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label10;
         public System.Windows.Forms.TextBox txtid;
+        public System.Windows.Forms.MaskedTextBox txttelefono_Emple;
     }
 }
