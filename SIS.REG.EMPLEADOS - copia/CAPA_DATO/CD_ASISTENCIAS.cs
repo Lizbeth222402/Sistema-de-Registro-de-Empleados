@@ -34,10 +34,13 @@ namespace CAPA_DATO
 
                             Id_asistencia = Convert.ToInt32(dr["Id_asistencia"]),
                             Id_empleado = Convert.ToInt32(dr["Id_empleado"]),
+                            Nombres = dr["Nombres"].ToString(),
+                            Apellidos = dr["Apellidos"].ToString(),
                             Fecha = Convert.ToDateTime(dr["Fecha"]),
                             Hora_entrada = (TimeSpan)dr["Hora_entrada"],
                             Hora_salida = (TimeSpan)dr["Hora_salida"],
                             Estado = dr["Estado"].ToString(),
+
 
                         });
 
