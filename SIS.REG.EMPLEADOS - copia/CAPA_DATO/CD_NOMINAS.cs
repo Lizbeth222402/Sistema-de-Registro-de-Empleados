@@ -36,7 +36,8 @@ namespace CAPA_DATO
                         {
 
                             Id_nomina = Convert.ToInt32(dr["Id_nomina"]),
-                            Id_empleado = Convert.ToInt32(dr["Id_empleado"]),
+                            Nombres = dr["Nombres"].ToString(),
+                            Apellidos = dr["Apellidos"].ToString(),
                             Fecha_pago = Convert.ToDateTime(dr["Fecha_pago"]),
                             Salario_bruto = Convert.ToDecimal(dr["Salario_bruto"]),
                             Deducciones = Convert.ToDecimal(dr["Deducciones"]),

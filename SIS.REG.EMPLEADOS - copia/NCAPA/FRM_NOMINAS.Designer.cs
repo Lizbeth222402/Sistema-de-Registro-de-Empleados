@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FRM_NOMINAS));
-            this.DataGridNominas = new System.Windows.Forms.DataGridView();
+            this.DataGridNomina = new System.Windows.Forms.DataGridView();
             this.btnEditar = new System.Windows.Forms.Button();
-            this.btnEliminar = new System.Windows.Forms.Button();
             this.btnNuveo = new System.Windows.Forms.Button();
             this.BtncerrarD = new System.Windows.Forms.Button();
             this.textboxNOMINAS = new System.Windows.Forms.TextBox();
             this.txtBusqueda = new System.Windows.Forms.TextBox();
             this.cboBuscar = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.DataGridNominas)).BeginInit();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridNomina)).BeginInit();
             this.SuspendLayout();
             // 
             // btncerrar
@@ -45,21 +45,21 @@
             this.btncerrar.Location = new System.Drawing.Point(956, 463);
             this.btncerrar.Margin = new System.Windows.Forms.Padding(2);
             // 
-            // DataGridNominas
+            // DataGridNomina
             // 
-            this.DataGridNominas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.DataGridNomina.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.DataGridNominas.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
-            this.DataGridNominas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataGridNominas.Location = new System.Drawing.Point(24, 97);
-            this.DataGridNominas.Name = "DataGridNominas";
-            this.DataGridNominas.ReadOnly = true;
-            this.DataGridNominas.RowHeadersVisible = false;
-            this.DataGridNominas.RowHeadersWidth = 62;
-            this.DataGridNominas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DataGridNominas.Size = new System.Drawing.Size(724, 235);
-            this.DataGridNominas.TabIndex = 17;
-            this.DataGridNominas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridAusencias_CellContentClick);
+            this.DataGridNomina.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
+            this.DataGridNomina.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DataGridNomina.Location = new System.Drawing.Point(24, 97);
+            this.DataGridNomina.Name = "DataGridNomina";
+            this.DataGridNomina.ReadOnly = true;
+            this.DataGridNomina.RowHeadersVisible = false;
+            this.DataGridNomina.RowHeadersWidth = 62;
+            this.DataGridNomina.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DataGridNomina.Size = new System.Drawing.Size(724, 235);
+            this.DataGridNomina.TabIndex = 17;
+            this.DataGridNomina.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridAusencias_CellContentClick);
             // 
             // btnEditar
             // 
@@ -77,23 +77,6 @@
             this.btnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEditar.UseVisualStyleBackColor = false;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnEliminar.BackColor = System.Drawing.Color.LightBlue;
-            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
-            this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(268, 356);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(89, 26);
-            this.btnEliminar.TabIndex = 26;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnEliminar.UseVisualStyleBackColor = false;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnNuveo
             // 
@@ -149,8 +132,9 @@
             this.txtBusqueda.Location = new System.Drawing.Point(511, 48);
             this.txtBusqueda.Multiline = true;
             this.txtBusqueda.Name = "txtBusqueda";
-            this.txtBusqueda.Size = new System.Drawing.Size(238, 20);
+            this.txtBusqueda.Size = new System.Drawing.Size(238, 29);
             this.txtBusqueda.TabIndex = 36;
+            this.txtBusqueda.TextChanged += new System.EventHandler(this.txtBusqueda_TextChanged);
             // 
             // cboBuscar
             // 
@@ -158,40 +142,56 @@
             this.cboBuscar.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboBuscar.FormattingEnabled = true;
             this.cboBuscar.Items.AddRange(new object[] {
-            "Departamento"});
+            "Empleado"});
             this.cboBuscar.Location = new System.Drawing.Point(365, 48);
             this.cboBuscar.Name = "cboBuscar";
             this.cboBuscar.Size = new System.Drawing.Size(135, 28);
             this.cboBuscar.TabIndex = 35;
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnEliminar.BackColor = System.Drawing.Color.LightBlue;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
+            this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnEliminar.Location = new System.Drawing.Point(258, 353);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(89, 32);
+            this.btnEliminar.TabIndex = 37;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEliminar.UseVisualStyleBackColor = false;
             // 
             // FRM_NOMINAS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(783, 434);
+            this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.txtBusqueda);
             this.Controls.Add(this.cboBuscar);
             this.Controls.Add(this.textboxNOMINAS);
             this.Controls.Add(this.btnEditar);
-            this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnNuveo);
             this.Controls.Add(this.BtncerrarD);
-            this.Controls.Add(this.DataGridNominas);
+            this.Controls.Add(this.DataGridNomina);
             this.Margin = new System.Windows.Forms.Padding(1);
             this.Name = "FRM_NOMINAS";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FRM_NOMINAS";
             this.Load += new System.EventHandler(this.FRM_NOMINAS_Load);
             this.Controls.SetChildIndex(this.btncerrar, 0);
-            this.Controls.SetChildIndex(this.DataGridNominas, 0);
+            this.Controls.SetChildIndex(this.DataGridNomina, 0);
             this.Controls.SetChildIndex(this.BtncerrarD, 0);
             this.Controls.SetChildIndex(this.btnNuveo, 0);
-            this.Controls.SetChildIndex(this.btnEliminar, 0);
             this.Controls.SetChildIndex(this.btnEditar, 0);
             this.Controls.SetChildIndex(this.textboxNOMINAS, 0);
             this.Controls.SetChildIndex(this.cboBuscar, 0);
             this.Controls.SetChildIndex(this.txtBusqueda, 0);
-            ((System.ComponentModel.ISupportInitialize)(this.DataGridNominas)).EndInit();
+            this.Controls.SetChildIndex(this.btnEliminar, 0);
+            ((System.ComponentModel.ISupportInitialize)(this.DataGridNomina)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -199,12 +199,12 @@
 
         #endregion
         public System.Windows.Forms.Button btnEditar;
-        public System.Windows.Forms.Button btnEliminar;
         public System.Windows.Forms.Button btnNuveo;
         public System.Windows.Forms.Button BtncerrarD;
         private System.Windows.Forms.TextBox textboxNOMINAS;
         public System.Windows.Forms.TextBox txtBusqueda;
         private System.Windows.Forms.ComboBox cboBuscar;
-        public System.Windows.Forms.DataGridView DataGridNominas;
+        public System.Windows.Forms.DataGridView DataGridNomina;
+        public System.Windows.Forms.Button btnEliminar;
     }
 }
