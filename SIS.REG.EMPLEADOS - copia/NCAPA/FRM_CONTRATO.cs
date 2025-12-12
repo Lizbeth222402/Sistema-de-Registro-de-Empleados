@@ -101,12 +101,30 @@ namespace NCAPA
                 {
                     FRM_EDITAR_CONTRATO eDITAR_CONTRATO = new FRM_EDITAR_CONTRATO();
 
-                    eDITAR_CONTRATO.txtid_CONTRATO.Text = DataGriContratos.SelectedRows[0].             Cells[0].Value.ToString();
-                    eDITAR_CONTRATO.txt_IdeMPLEADO.Text = DataGriContratos.SelectedRows[0].             Cells[1].Value.ToString();
-                    eDITAR_CONTRATO.txtNombreCon.Text = DataGriContratos.SelectedRows[0].               Cells[2].Value.ToString();
-                    eDITAR_CONTRATO.dtp_fechaInicio.Text = DataGriContratos.SelectedRows[0].            Cells[3].Value.ToString();
-                    eDITAR_CONTRATO.dtp_FechaFin.Text = DataGriContratos.SelectedRows[0].               Cells[4].Value.ToString();
-                    eDITAR_CONTRATO.txt_sALARIO.Text = DataGriContratos.SelectedRows[0].                Cells[5].Value.ToString();
+                    //idcontrato
+                    eDITAR_CONTRATO.txtid_CONTRATO.Text = DataGriContratos.SelectedRows[0]. 
+                    Cells[0].Value.ToString();
+                    
+                    //idempleado
+                    eDITAR_CONTRATO.txt_IdeMPLEADO.Text = DataGriContratos.SelectedRows[0].
+                    Cells[1].Value.ToString();
+
+                    //tipo
+                    eDITAR_CONTRATO.txtNombreCon.Text = DataGriContratos.SelectedRows[0].
+                        Cells[2].Value.ToString();
+
+                    //fecha inicio
+                    eDITAR_CONTRATO.dtp_fechaInicio.Value =
+                        Convert.ToDateTime(DataGriContratos.CurrentRow.Cells[3].Value);
+
+                    //fecha fin
+                    eDITAR_CONTRATO.dtp_FechaFin.Value =
+                        Convert.ToDateTime(DataGriContratos.CurrentRow.Cells[4].Value);
+
+                    //salario
+                    eDITAR_CONTRATO.txt_sALARIO.Text = DataGriContratos.SelectedRows[0].              
+                        Cells[5].Value.ToString();
+
 
                     eDITAR_CONTRATO.ShowDialog();
 

@@ -67,8 +67,10 @@ namespace CAPA_DATO
 
                     cmd.Parameters.Add(new SqlParameter("@Id_empleado", cE_Mcontratos.Id_empleado));
                     cmd.Parameters.Add(new SqlParameter("@Tipo_contrato", cE_Mcontratos.Tipo_contrato));
+
                     cmd.Parameters.Add(new SqlParameter("@Fecha_inicio", cE_Mcontratos.Fecha_inicio));
                     cmd.Parameters.Add(new SqlParameter("@Fecha_fin", cE_Mcontratos.Fecha_fin));
+
                     cmd.Parameters.Add(new SqlParameter("@Salario", cE_Mcontratos.Salario));
 
                     cmd.ExecuteNonQuery();
