@@ -165,7 +165,7 @@
             this.btnNuevoUsuario.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevoUsuario.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevoUsuario.Image")));
             this.btnNuevoUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuevoUsuario.Location = new System.Drawing.Point(805, 205);
+            this.btnNuevoUsuario.Location = new System.Drawing.Point(805, 218);
             this.btnNuevoUsuario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnNuevoUsuario.Name = "btnNuevoUsuario";
             this.btnNuevoUsuario.Size = new System.Drawing.Size(133, 40);
