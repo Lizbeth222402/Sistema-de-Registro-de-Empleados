@@ -40,28 +40,7 @@ Objetivo Especifico
 
 
 
-20 caso USO
 
-•	Registrar empleado: El administrador añade un nuevo empleado al sistema.
-•	Ver empleados: El administrador ve la lista de todos los empleados.
-•	Buscar empleado: El administrador busca un empleado por su nombre.
-•	Buscar por departamento: El administrador busca empleados de un departamento específico.
-•	Modificar empleado: El administrador actualiza la información de un empleado.
-•	Eliminar empleado: El administrador elimina a un empleado del sistema.
-•	Iniciar sesión: El administrador accede al sistema con su usuario y contraseña.
-•	Cerrar sesión: El administrador sale de la sesión de forma segura.
-•	Funcionalidades administrativas adicionales
-•	Añadir departamento: El administrador crea un nuevo departamento.
-•	Editar departamento: El administrador cambia el nombre de un departamento.
-•	Eliminar departamento: El administrador borra un departamento.
-•	Asignar empleado a departamento: El administrador asigna un empleado a un departamento.
-•	Ver detalles del empleado: El administrador ve toda la información de un empleado en particular.
-•	Gestionar usuarios: El administrador gestiona las cuentas de acceso de otros administradores.
-•	Cambiar contraseña: El administrador cambia su propia contraseña.
-•	Generar reporte simple: El administrador genera un informe básico de empleados.
-•	Interacción del sistema
-•	Validar usuario: El sistema verifica que las credenciales de inicio de sesión sean correctas.
-•	Validar datos: El sistema comprueba que los datos ingresados sean válidos (evitar duplicados).
 
 Diagrama Entidad Relacion
 <img width="834" height="556" alt="imagen" src="https://github.com/user-attachments/assets/064a2da9-df53-497c-8d96-97d7a33ae0b8" />
@@ -69,6 +48,3 @@ Diagrama de Clase
 <img width="976" height="651" alt="imagen" src="https://github.com/user-attachments/assets/6eab24ef-8eb9-45b9-b809-f2e20a7d9692" />
 Diagrama de Gantt 
 <img width="976" height="508" alt="imagen" src="https://github.com/user-attachments/assets/db43029e-c380-45ac-bbf6-1831c2d55cc7" />
-
- 
-
