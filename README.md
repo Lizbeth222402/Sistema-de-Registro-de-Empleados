@@ -5,41 +5,27 @@
  TBL + DATOS + SP 
 
 
-SISTEMA DE REGISTRO DE EMPLEADOS
+📘 INTRODUCCIÓN
 
-DATAEMPLEO S.A
-01/10/2025
-AUTORES
-Rosmery Herrera
-Josué Mayrena
-Josseling Gutiérrez	
+En la actualidad, la gestión de la información es un factor fundamental para el buen funcionamiento de cualquier organización. Las empresas requieren manejar de forma eficiente los datos de sus empleados, tales como información personal, cargos, departamentos, estado laboral y otros datos relevantes.
 
-INTRODUCCION
+Sin embargo, cuando este proceso se realiza de manera manual (por ejemplo, mediante hojas de papel), surgen diversos problemas como 📄❌: pérdida de información, duplicidad de datos, lentitud en las consultas y dificultad para actualizar reportes, lo que afecta la eficiencia administrativa.
 
-En la actualidad, la gestión eficiente es un factor fundamental para el buen funcionamiento de cualquier organización. Las empresas requieren mantener un control preciso sobre la información de sus empleados, tales como datos personales, cargos, departamentos, asistencia y estado laboral. Sin embargo, cuando este proceso se realiza de forma manual (Hoja de papel), suelen presentarse problemas como pérdida de información, duplicidad de datos, lentitud en las consultas y dificultad para generar reportes actualizados.
+Ante esta situación, surge la implementación de un Sistema de Registro de Empleados 💻📊, cuyo objetivo es automatizar y centralizar toda la información del personal de una empresa. Este sistema permite gestionar los datos mediante una base de datos estructurada y una interfaz interactiva, facilitando el registro, modificación, consulta y eliminación de información de forma rápida y segura.
 
-Ante esta necesidad, surge la implementación de un Sistema de Registro de Empleados, el cual permite automatizar y centralizar toda la información relacionada con el personal de una empresa. Este sistema tiene como propósito facilitar la administración de los datos de los empleados mediante el uso de una base de datos estructurada y una interfaz interactiva que permita registrar, modificar, eliminar y consultar la información de manera rápida y segura.
+El desarrollo de este sistema contribuye significativamente a ⚙️ optimizar los procesos administrativos, 📈 mejorar la toma de decisiones y 🔐 garantizar la seguridad e integridad de los datos. Además, permite un seguimiento eficiente del personal y fortalece la organización y el control interno dentro de la institución.
 
-El desarrollo de este sistema contribuye significativamente a optimizar los procesos administrativos, mejorar la toma de decisiones y garantizar la integridad de los datos. Además, proporciona herramientas que permiten un seguimiento más eficiente del desempeño y asistencia de los empleados, fortaleciendo así la organización y el control interno dentro de la institución.
+🎯 Objetivo General
 
+Desarrollar un Sistema de Registro de Empleados que permita administrar de manera eficiente la información personal del personal de una empresa.
 
+📌 Objetivos Específicos
 
+✅ Diseñar y estructurar una base de datos que almacene de forma ordenada y segura la información de los empleados, incluyendo sus datos personales.
 
+✅ Implementar una interfaz de usuario funcional e intuitiva que permita el registro, modificación y eliminación de empleados de manera segura y accesible para los administradores.
 
-Objetivo General
-
-Desarrollar un Sistema de Registro de Empleados que permita administrar de manera eficiente la información del personal .
-
-Objetivo Especifico 
-
-•	Diseñar y estructurar una base de datos que almacene de forma organizada la información de los empleados, incluyendo datos personales.
-
-•	Implementar una interfaz de usuario funcional que permita realizar operaciones de registro, modificación, eliminación y búsqueda de empleados de manera sencilla, segura y accesible para los administradores.
-
-•	Optimizar el proceso de gestión del personal, reduciendo el tiempo y los errores en la manipulación de la información
-
-
-
+✅ Optimizar el proceso de gestión del personal, reduciendo el tiempo de operación y minimizando errores en la información.
 
 
 Diagrama Entidad Relacion
@@ -48,3 +34,15 @@ Diagrama de Clase
 <img width="976" height="651" alt="imagen" src="https://github.com/user-attachments/assets/6eab24ef-8eb9-45b9-b809-f2e20a7d9692" />
 Diagrama de Gantt 
 <img width="976" height="508" alt="imagen" src="https://github.com/user-attachments/assets/db43029e-c380-45ac-bbf6-1831c2d55cc7" />
+
+
+
+El uso del presente material es exclusivamente con fines académicos
+
+© 2025. Todos los derechos reservados.
+👩‍💻 Autores:
+Josseling Gutiérrez
+Josué Mayrena
+Rosmery Herrera
+
+
