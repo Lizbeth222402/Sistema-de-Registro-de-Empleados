@@ -63,7 +63,7 @@ namespace NCAPA
             DataGridAsistencia.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             DataGridAsistencia.GridColor = Color.LightGray;
 
-            cboBuscar.SelectedIndex = 0;
+
 
         }
 

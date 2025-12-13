@@ -62,7 +62,7 @@ namespace NCAPA
             DataGridAUSENCIAS.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             DataGridAUSENCIAS.GridColor = Color.LightGray;
 
-            cboBuscar.SelectedIndex = 0; // Para que arranque en "Tipo"
+
 
         }
 

@@ -59,7 +59,7 @@ namespace NCAPA
             DataGridNomina.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             DataGridNomina.GridColor = Color.LightGray;
 
-            cboBuscar.SelectedIndex = 0; // Para que arranque en "Empleado"
+
 
 
         }

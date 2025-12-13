@@ -79,6 +79,9 @@
             this.cboBuscar.BackColor = System.Drawing.Color.White;
             this.cboBuscar.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboBuscar.FormattingEnabled = true;
+            this.cboBuscar.Items.AddRange(new object[] {
+            "Nombre",
+            "Departamento"});
             this.cboBuscar.Location = new System.Drawing.Point(402, 57);
             this.cboBuscar.Name = "cboBuscar";
             this.cboBuscar.Size = new System.Drawing.Size(135, 28);

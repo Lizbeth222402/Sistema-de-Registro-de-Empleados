@@ -40,6 +40,25 @@ namespace CAPA_NEGOCIO
             CD_puesto.EditarPuesto(cE_MPUESTOS);
         }
 
-       
+        public DataTable FiltrarPorNombre(string valor)
+        {
+            if (string.IsNullOrEmpty(valor)) return new DataTable();
+
+            SqlDataAdapter da = new SqlDataAdapter(
+                "SELECT Id_puesto, Nombre_puesto, Descripcion, Salario_base " +
+                "FROM Puestos " +
+                "WHERE Nombre_puesto LIKE @valor + '%'",
+                new CD_CONEXION().Abrir());
+
+            da.SelectCommand.Parameters.AddWithValue("@valor", valor);
+
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
+
+
+
+
     }
 }

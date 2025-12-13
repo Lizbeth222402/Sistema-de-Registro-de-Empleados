@@ -8,12 +8,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CAPA_ENTIDAD;
 
 namespace NCAPA
 {
     public partial class FRM_PUESTO : Frm_Base
     {
-
+        CN_PUESTO cN_Puestos = new CN_PUESTO();
         CN_PROCEDIMIENTOS cn_Procedimientos = new CN_PROCEDIMIENTOS();
 
         public FRM_PUESTO()
@@ -128,8 +129,22 @@ namespace NCAPA
 
         }
 
+        private void txtBusqueda_TextChanged(object sender, EventArgs e)
+        {
+            string filtro = txtBusqueda.Text.Trim();
+            string criterio = cboBuscar.Text; // "Nombre" o "Descripcion"
 
+            if (string.IsNullOrEmpty(filtro))
+            {
+                // Si está vacío, recargar todos los registros
+                DataGridPuesto.DataSource = cN_Puestos.ListarPuesto();
+                return;
+            }
 
-
+            if (criterio == "Nombre")
+            {
+                DataGridPuesto.DataSource = cN_Puestos.FiltrarPorNombre(filtro);
+            }
+        }
     }
 }

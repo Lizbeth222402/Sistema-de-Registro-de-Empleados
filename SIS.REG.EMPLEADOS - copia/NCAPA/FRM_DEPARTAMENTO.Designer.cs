@@ -42,7 +42,8 @@
             // 
             // btncerrar
             // 
-            this.btncerrar.Location = new System.Drawing.Point(1473, 716);
+            this.btncerrar.Location = new System.Drawing.Point(982, 465);
+            this.btncerrar.Margin = new System.Windows.Forms.Padding(2);
             // 
             // BtncerrarD
             // 
@@ -52,10 +53,9 @@
             this.BtncerrarD.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtncerrarD.Image = ((System.Drawing.Image)(resources.GetObject("BtncerrarD.Image")));
             this.BtncerrarD.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtncerrarD.Location = new System.Drawing.Point(1036, 537);
-            this.BtncerrarD.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.BtncerrarD.Location = new System.Drawing.Point(691, 349);
             this.BtncerrarD.Name = "BtncerrarD";
-            this.BtncerrarD.Size = new System.Drawing.Size(141, 51);
+            this.BtncerrarD.Size = new System.Drawing.Size(94, 33);
             this.BtncerrarD.TabIndex = 6;
             this.BtncerrarD.Text = "CERRAR";
             this.BtncerrarD.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -68,14 +68,13 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.DataGridDepartamento.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
             this.DataGridDepartamento.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataGridDepartamento.Location = new System.Drawing.Point(38, 155);
-            this.DataGridDepartamento.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.DataGridDepartamento.Location = new System.Drawing.Point(25, 101);
             this.DataGridDepartamento.Name = "DataGridDepartamento";
             this.DataGridDepartamento.ReadOnly = true;
             this.DataGridDepartamento.RowHeadersVisible = false;
             this.DataGridDepartamento.RowHeadersWidth = 62;
             this.DataGridDepartamento.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DataGridDepartamento.Size = new System.Drawing.Size(1138, 361);
+            this.DataGridDepartamento.Size = new System.Drawing.Size(759, 235);
             this.DataGridDepartamento.TabIndex = 16;
             this.DataGridDepartamento.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridDepartamento_CellContentClick);
             // 
@@ -84,12 +83,12 @@
             this.txtBusqueda.BackColor = System.Drawing.Color.White;
             this.txtBusqueda.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBusqueda.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.txtBusqueda.Location = new System.Drawing.Point(821, 83);
-            this.txtBusqueda.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtBusqueda.Location = new System.Drawing.Point(547, 54);
             this.txtBusqueda.Multiline = true;
             this.txtBusqueda.Name = "txtBusqueda";
-            this.txtBusqueda.Size = new System.Drawing.Size(355, 29);
+            this.txtBusqueda.Size = new System.Drawing.Size(238, 28);
             this.txtBusqueda.TabIndex = 25;
+            this.txtBusqueda.TextChanged += new System.EventHandler(this.txtBusqueda_TextChanged);
             // 
             // cboBuscar
             // 
@@ -97,11 +96,10 @@
             this.cboBuscar.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboBuscar.FormattingEnabled = true;
             this.cboBuscar.Items.AddRange(new object[] {
-            "Departamento"});
-            this.cboBuscar.Location = new System.Drawing.Point(602, 83);
-            this.cboBuscar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            "Nombre"});
+            this.cboBuscar.Location = new System.Drawing.Point(401, 54);
             this.cboBuscar.Name = "cboBuscar";
-            this.cboBuscar.Size = new System.Drawing.Size(200, 39);
+            this.cboBuscar.Size = new System.Drawing.Size(135, 28);
             this.cboBuscar.TabIndex = 24;
             // 
             // btnEditar
@@ -112,10 +110,9 @@
             this.btnEditar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
             this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditar.Location = new System.Drawing.Point(193, 548);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnEditar.Location = new System.Drawing.Point(129, 356);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(124, 40);
+            this.btnEditar.Size = new System.Drawing.Size(83, 26);
             this.btnEditar.TabIndex = 23;
             this.btnEditar.Text = "Editar";
             this.btnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -130,10 +127,9 @@
             this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(356, 548);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnEliminar.Location = new System.Drawing.Point(237, 356);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(134, 40);
+            this.btnEliminar.Size = new System.Drawing.Size(89, 26);
             this.btnEliminar.TabIndex = 22;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -148,10 +144,9 @@
             this.btnNuveo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuveo.Image = ((System.Drawing.Image)(resources.GetObject("btnNuveo.Image")));
             this.btnNuveo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuveo.Location = new System.Drawing.Point(38, 548);
-            this.btnNuveo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnNuveo.Location = new System.Drawing.Point(25, 356);
             this.btnNuveo.Name = "btnNuveo";
-            this.btnNuveo.Size = new System.Drawing.Size(124, 40);
+            this.btnNuveo.Size = new System.Drawing.Size(83, 26);
             this.btnNuveo.TabIndex = 21;
             this.btnNuveo.Text = "Nuevo";
             this.btnNuveo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -163,17 +158,18 @@
             this.textboxDEPARTAMENTO.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.textboxDEPARTAMENTO.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textboxDEPARTAMENTO.ForeColor = System.Drawing.SystemColors.Window;
-            this.textboxDEPARTAMENTO.Location = new System.Drawing.Point(38, 73);
+            this.textboxDEPARTAMENTO.Location = new System.Drawing.Point(25, 47);
+            this.textboxDEPARTAMENTO.Margin = new System.Windows.Forms.Padding(2);
             this.textboxDEPARTAMENTO.Name = "textboxDEPARTAMENTO";
-            this.textboxDEPARTAMENTO.Size = new System.Drawing.Size(422, 39);
+            this.textboxDEPARTAMENTO.Size = new System.Drawing.Size(283, 29);
             this.textboxDEPARTAMENTO.TabIndex = 33;
             this.textboxDEPARTAMENTO.Text = "GESTION DE DEPARTAMENTO";
             // 
             // FRM_DEPARTAMENTO
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1214, 671);
+            this.ClientSize = new System.Drawing.Size(809, 436);
             this.Controls.Add(this.textboxDEPARTAMENTO);
             this.Controls.Add(this.txtBusqueda);
             this.Controls.Add(this.cboBuscar);
@@ -182,6 +178,7 @@
             this.Controls.Add(this.btnNuveo);
             this.Controls.Add(this.DataGridDepartamento);
             this.Controls.Add(this.BtncerrarD);
+            this.Margin = new System.Windows.Forms.Padding(1);
             this.Name = "FRM_DEPARTAMENTO";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FRM_DEPARTAMENTO";
