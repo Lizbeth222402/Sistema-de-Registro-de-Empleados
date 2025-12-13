@@ -31,7 +31,7 @@ namespace NCAPA
             //PARA EL TAMAÑO DE LAS FILAS DEL DATA GRID//
             dataGridUsuaios.Columns[1].Width = 150;
             dataGridUsuaios.Columns[2].Width = 150;
-            dataGridUsuaios.Columns[3].Width = 150;
+            //dataGridUsuaios.Columns[3].Width = 150;
 
 
 
