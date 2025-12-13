@@ -76,6 +76,8 @@ namespace NCAPA
 
 
             cE_MPUESTOS.InsertarPuesto(MPUESTOS);
+            // Mostrar mensaje de éxito
+            MessageBox.Show("El Puesto se ingresó correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void FRM_NUEVO_PUESTO_Load(object sender, EventArgs e)

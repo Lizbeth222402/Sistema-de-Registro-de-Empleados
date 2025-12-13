@@ -89,7 +89,7 @@ namespace NCAPA
                 }
 
                 // ✅ Carga de datos al objeto
-                MAusenicas.Id_ausencia = idAusencia;          // 🔥 CLAVE DEL PROBLEMA
+                MAusenicas.Id_ausencia = idAusencia;          
                 MAusenicas.Id_empleado = idEmpleado;
                 MAusenicas.Tipo_ausencia = txtNombre_AUSENCIAS.Text.Trim();
                 MAusenicas.Fecha_inicio = fechaInicio;

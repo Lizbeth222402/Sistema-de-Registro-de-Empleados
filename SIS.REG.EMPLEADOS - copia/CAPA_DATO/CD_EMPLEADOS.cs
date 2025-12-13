@@ -62,43 +62,45 @@ namespace CAPA_DATO
 
         #region INSERTAR EMPLEADOS
 
-        public void InsertarEmpleados(CE_MEMPLEADOS cE_MEMPLEADOS)
+        public void InsertarEmpleados(CE_MEMPLEADOS cE)
         {
-
             try
             {
-
                 using (SqlCommand cmd = new SqlCommand("Sp_InsertarEmpleados", Con.Abrir()))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
 
+                    cmd.Parameters.Add("@Nombres", SqlDbType.VarChar).Value = cE.Nombres;
+                    cmd.Parameters.Add("@Apellidos", SqlDbType.VarChar).Value = cE.Apellidos;
+                    cmd.Parameters.Add("@Fecha_nacimiento", SqlDbType.Date).Value = cE.Fecha_nacimiento;
+                    cmd.Parameters.Add("@Direccion", SqlDbType.VarChar).Value = cE.Direccion;
+                    cmd.Parameters.Add("@Telefono", SqlDbType.VarChar).Value = cE.Telefono;
+                    cmd.Parameters.Add("@Email", SqlDbType.VarChar).Value = cE.Email;
+                    cmd.Parameters.Add("@Fecha_ingreso", SqlDbType.Date).Value = cE.Fecha_ingreso;
 
-                    cmd.Parameters.Add(new SqlParameter("@Id_departamento", cE_MEMPLEADOS.Id_departamento));
-                    cmd.Parameters.Add(new SqlParameter("@Id_puesto", cE_MEMPLEADOS.Id_puesto));
-                    cmd.Parameters.Add(new SqlParameter("@Nombres", cE_MEMPLEADOS.Nombres));
-                    cmd.Parameters.Add(new SqlParameter("@Apellidos", cE_MEMPLEADOS.Apellidos));
-                    cmd.Parameters.Add(new SqlParameter("@Fecha_nacimiento", cE_MEMPLEADOS.Fecha_nacimiento));
-                    cmd.Parameters.Add(new SqlParameter("@Direccion", cE_MEMPLEADOS.Direccion));
-                    cmd.Parameters.Add(new SqlParameter("@Telefono", cE_MEMPLEADOS.Telefono));
-                    cmd.Parameters.Add(new SqlParameter("@Email", cE_MEMPLEADOS.Email));
-                    cmd.Parameters.Add(new SqlParameter("@Fecha_ingreso", cE_MEMPLEADOS.Fecha_ingreso));
-                   
+                    // VALIDAR FK
+                    cmd.Parameters.Add("@Id_departamento", SqlDbType.Int).Value =
+                        cE.Id_departamento == 0 ? (object)DBNull.Value : cE.Id_departamento;
+
+                    cmd.Parameters.Add("@Id_puesto", SqlDbType.Int).Value =
+                        cE.Id_puesto == 0 ? (object)DBNull.Value : cE.Id_puesto;
 
                     cmd.ExecuteNonQuery();
-                    
+                    MessageBox.Show("Empleado ingresado correctamente");
 
                 }
-
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Ups no se Ingreso por el error: {ex.Message}", "Error al Ingresar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Ups no se Ingreso por el error: {ex.Message}",
+                    "Error al Ingresar", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
                 Con.Cerrar();
             }
         }
+
 
         #endregion INSERTAR EMPLEADOS
 

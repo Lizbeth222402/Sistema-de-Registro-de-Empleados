@@ -39,7 +39,10 @@ namespace NCAPA
 
             cN_AUSENCIAS.InsertarAusencias(MAusencias);
 
+            // Mostrar mensaje de éxito
+            MessageBox.Show("La Ausencia se ingresó correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+            this.Close();
         }
 
         private void FRM_NUEVO_AUSENCIAS_Load(object sender, EventArgs e)

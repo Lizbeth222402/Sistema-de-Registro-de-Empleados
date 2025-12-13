@@ -55,7 +55,9 @@ namespace NCAPA
 
 
             cN_NOMINAS.InsertarNominas(Mnominas);
-
+            // Mostrar mensaje de éxito
+            MessageBox.Show("La nomina se ingresó correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Close();
         }
 
         private void OnlyNumbers(object sender, KeyPressEventArgs e)

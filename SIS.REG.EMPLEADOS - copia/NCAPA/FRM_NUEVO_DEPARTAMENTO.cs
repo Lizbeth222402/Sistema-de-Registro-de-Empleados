@@ -65,7 +65,14 @@ namespace NCAPA
 
 
             cN_DEPARTAMENTO.InsertarDepartamento(Mdepartamentos);
+
+            // Mostrar mensaje de éxito
+            MessageBox.Show("El departamento se ingresó correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
         }
 
+
     }
+
+
 }
