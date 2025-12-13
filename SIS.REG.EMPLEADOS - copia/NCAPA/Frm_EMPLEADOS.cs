@@ -67,12 +67,6 @@ namespace NCAPA
             DataGriEmpleados.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             DataGriEmpleados.GridColor = Color.LightGray;
 
-
-            cboBuscar.Items.Add("Nombre");
-            cboBuscar.Items.Add("Departamento");
-            cboBuscar.SelectedIndex = 0;
-
-
         }
 
         //metodo para alistar//

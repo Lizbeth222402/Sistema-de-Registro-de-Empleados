@@ -171,6 +171,27 @@ namespace NCAPA
             }
         }
 
+        private void txtBusqueda_TextChanged(object sender, EventArgs e)
+        {
+
+            string filtro = txtBusqueda.Text.Trim();
+            string criterio = cboBuscar.Text; // "Nombre" o "Descripcion"
+
+            if (string.IsNullOrEmpty(filtro))
+            {
+                // Si está vacío, recargar todos los registros
+                DataGridDepartamento.DataSource = cN_DEPARTAMENTO.ListarDepartamento();
+                return;
+            }
+
+            if (criterio == "Nombre")
+            {
+                DataGridDepartamento.DataSource = cN_DEPARTAMENTO.FiltrarPorNombre(filtro);
+            }
+
+        }
+
+
 
     }
 }

@@ -50,6 +50,30 @@ namespace CAPA_NEGOCIO
 
         }
 
-       
+
+        public DataTable FiltrarPorNombre(string valor)
+        {
+            if (string.IsNullOrEmpty(valor)) return new DataTable();
+
+            SqlDataAdapter da = new SqlDataAdapter(
+                "SELECT Id_departamento, Nombre, Descripcion " +
+                "FROM Departamentos " +
+                "WHERE Nombre LIKE @valor + '%'",
+                new CD_CONEXION().Abrir());
+
+            da.SelectCommand.Parameters.AddWithValue("@valor", valor);
+
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
+
+
+
+
+
+
+
+
     }
 }
