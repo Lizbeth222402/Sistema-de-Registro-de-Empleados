@@ -35,6 +35,8 @@
             this.btnNuveo = new System.Windows.Forms.Button();
             this.DataGriContratos = new System.Windows.Forms.DataGridView();
             this.textboxCONTRATO = new System.Windows.Forms.TextBox();
+            this.txtBusqueda = new System.Windows.Forms.TextBox();
+            this.cboBuscar = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.DataGriContratos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -142,11 +144,38 @@
             this.textboxCONTRATO.TabIndex = 35;
             this.textboxCONTRATO.Text = "GESTION DE CONTRATO";
             // 
+            // txtBusqueda
+            // 
+            this.txtBusqueda.BackColor = System.Drawing.Color.White;
+            this.txtBusqueda.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBusqueda.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txtBusqueda.Location = new System.Drawing.Point(808, 74);
+            this.txtBusqueda.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtBusqueda.Multiline = true;
+            this.txtBusqueda.Name = "txtBusqueda";
+            this.txtBusqueda.Size = new System.Drawing.Size(355, 41);
+            this.txtBusqueda.TabIndex = 37;
+            // 
+            // cboBuscar
+            // 
+            this.cboBuscar.BackColor = System.Drawing.Color.White;
+            this.cboBuscar.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboBuscar.FormattingEnabled = true;
+            this.cboBuscar.Items.AddRange(new object[] {
+            "Tipo"});
+            this.cboBuscar.Location = new System.Drawing.Point(588, 74);
+            this.cboBuscar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cboBuscar.Name = "cboBuscar";
+            this.cboBuscar.Size = new System.Drawing.Size(200, 39);
+            this.cboBuscar.TabIndex = 36;
+            // 
             // FRM_CONTRATO
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1204, 644);
+            this.Controls.Add(this.txtBusqueda);
+            this.Controls.Add(this.cboBuscar);
             this.Controls.Add(this.textboxCONTRATO);
             this.Controls.Add(this.DataGriContratos);
             this.Controls.Add(this.btnEditar);
@@ -164,6 +193,8 @@
             this.Controls.SetChildIndex(this.btnEditar, 0);
             this.Controls.SetChildIndex(this.DataGriContratos, 0);
             this.Controls.SetChildIndex(this.textboxCONTRATO, 0);
+            this.Controls.SetChildIndex(this.cboBuscar, 0);
+            this.Controls.SetChildIndex(this.txtBusqueda, 0);
             ((System.ComponentModel.ISupportInitialize)(this.DataGriContratos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -178,5 +209,7 @@
         public System.Windows.Forms.Button btnNuveo;
         private System.Windows.Forms.DataGridView DataGriContratos;
         private System.Windows.Forms.TextBox textboxCONTRATO;
+        public System.Windows.Forms.TextBox txtBusqueda;
+        private System.Windows.Forms.ComboBox cboBuscar;
     }
 }
