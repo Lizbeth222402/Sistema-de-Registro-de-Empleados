@@ -50,6 +50,36 @@ namespace CAPA_NEGOCIO
 
         }
 
-        
+        public DataTable ListarContrato()
+        {
+            SqlDataAdapter da = new SqlDataAdapter(
+                "Sp_ListarContratos",
+                new CD_CONEXION().Abrir());
+
+            da.SelectCommand.CommandType = CommandType.StoredProcedure;
+
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
+
+        // Método para filtrar SOLO por tipo de contrato
+        public DataTable FiltrarPorTipo(string valor)
+        {
+            if (string.IsNullOrEmpty(valor)) return new DataTable();
+
+            SqlDataAdapter da = new SqlDataAdapter(
+                "SP_FILTRAR_CONTRATOS",
+                new CD_CONEXION().Abrir());
+
+            da.SelectCommand.CommandType = CommandType.StoredProcedure;
+            da.SelectCommand.Parameters.AddWithValue("@Tipo", valor);
+
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
+
+
     }
 }

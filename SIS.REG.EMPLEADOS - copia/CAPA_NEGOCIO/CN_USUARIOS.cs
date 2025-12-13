@@ -38,7 +38,38 @@ namespace CAPA_NEGOCIO
             CD_usuario.EditarUsuario(cE_MUSUARIOS);
         }
 
-       
+
+        public DataTable ListarUsuario()
+        {
+            SqlDataAdapter da = new SqlDataAdapter(
+                "SP_LISTAR_USUARIO",
+                new CD_CONEXION().Abrir());
+
+            da.SelectCommand.CommandType = CommandType.StoredProcedure;
+
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
+
+        // Método para filtrar SOLO por nombre de usuario
+        public DataTable FiltrarPorNombre(string valor)
+        {
+            if (string.IsNullOrEmpty(valor)) return new DataTable();
+
+            SqlDataAdapter da = new SqlDataAdapter(
+                "SP_FILTRAR_USUARIOS",
+                new CD_CONEXION().Abrir());
+
+            da.SelectCommand.CommandType = CommandType.StoredProcedure;
+            da.SelectCommand.Parameters.AddWithValue("@Nombre", valor);
+
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            return dt;
+        }
+
+
 
     }
 }

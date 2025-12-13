@@ -91,52 +91,29 @@ namespace NCAPA
         private void Editar()
         {
 
-            if (DataGriContratos.SelectedRows.Count == 0)
+            // Validación completa: sin filas o sin selección
+            if (DataGriContratos.Rows.Count == 0 || DataGriContratos.SelectedRows.Count == 0)
             {
-                MessageBox.Show("Tienes que seleccionar una Contrato");
+                MessageBox.Show("No hay contratos seleccionados o visibles.", "Editar Contrato", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
-            else
+
+            try
             {
-                try
-                {
-                    FRM_EDITAR_CONTRATO eDITAR_CONTRATO = new FRM_EDITAR_CONTRATO();
+                FRM_EDITAR_CONTRATO editar = new FRM_EDITAR_CONTRATO();
 
-                    //idcontrato
-                    eDITAR_CONTRATO.txtid_CONTRATO.Text = DataGriContratos.SelectedRows[0]. 
-                    Cells[0].Value.ToString();
-                    
-                    //idempleado
-                    eDITAR_CONTRATO.txt_IdeMPLEADO.Text = DataGriContratos.SelectedRows[0].
-                    Cells[1].Value.ToString();
+                editar.txtid_CONTRATO.Text = DataGriContratos.SelectedRows[0].Cells[0].Value?.ToString();
+                editar.txt_IdeMPLEADO.Text = DataGriContratos.SelectedRows[0].Cells[1].Value?.ToString();
+                editar.txtNombreCon.Text = DataGriContratos.SelectedRows[0].Cells[2].Value?.ToString();
+                editar.dtp_fechaInicio.Value = Convert.ToDateTime(DataGriContratos.SelectedRows[0].Cells[3].Value);
+                editar.dtp_FechaFin.Value = Convert.ToDateTime(DataGriContratos.SelectedRows[0].Cells[4].Value);
+                editar.txt_sALARIO.Text = DataGriContratos.SelectedRows[0].Cells[5].Value?.ToString();
 
-                    //tipo
-                    eDITAR_CONTRATO.txtNombreCon.Text = DataGriContratos.SelectedRows[0].
-                        Cells[2].Value.ToString();
-
-                    //fecha inicio
-                    eDITAR_CONTRATO.dtp_fechaInicio.Value =
-                        Convert.ToDateTime(DataGriContratos.CurrentRow.Cells[3].Value);
-
-                    //fecha fin
-                    eDITAR_CONTRATO.dtp_FechaFin.Value =
-                        Convert.ToDateTime(DataGriContratos.CurrentRow.Cells[4].Value);
-
-                    //salario
-                    eDITAR_CONTRATO.txt_sALARIO.Text = DataGriContratos.SelectedRows[0].              
-                        Cells[5].Value.ToString();
-
-
-                    eDITAR_CONTRATO.ShowDialog();
-
-                    //eDITAR_CONTRATO.ShowDialog();
-                    //LISTAR_CONTRATOS(); // ✅ RECARGA AUTOMÁTICA
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"No se selecciono por el error : {ex.Message}", "Editar Contrato", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                }
-
+                editar.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al editar: {ex.Message}", "Editar Contrato", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
 
@@ -187,6 +164,39 @@ namespace NCAPA
                 {
                     MessageBox.Show("No se pudo Eliminar", "Eliminar contrato", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
+                }
+            }
+        }
+
+        private void txtBusqueda_TextChanged(object sender, EventArgs e)
+        {
+            string filtro = txtBusqueda.Text.Trim();
+            string criterio = cboBuscar.Text;
+
+            if (string.IsNullOrEmpty(filtro))
+            {
+                DataTable dt = cN_CONTRATOS.ListarContrato();
+                if (dt.Rows.Count > 0)
+                {
+                    DataGriContratos.DataSource = dt;
+                }
+                else
+                {
+                    DataGriContratos.DataSource = null;
+                }
+                return;
+            }
+
+            if (criterio == "Tipo")
+            {
+                DataTable dt = cN_CONTRATOS.FiltrarPorTipo(filtro);
+                if (dt.Rows.Count > 0)
+                {
+                    DataGriContratos.DataSource = dt;
+                }
+                else
+                {
+                    DataGriContratos.DataSource = null;
                 }
             }
         }

@@ -13,7 +13,7 @@ namespace NCAPA
 {
     public partial class FRM_USUARIO : Form
     {
-
+        CN_USUARIOS cN_Usuarios = new CN_USUARIOS();
         CN_PROCEDIMIENTOS cn_Procedimientos = new CN_PROCEDIMIENTOS();
         
         public FRM_USUARIO()
@@ -57,6 +57,7 @@ namespace NCAPA
             // Borde
             dataGridUsuaios.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             dataGridUsuaios.GridColor = Color.LightGray;
+
 
         }
 
@@ -135,6 +136,24 @@ namespace NCAPA
         private void dataGridUsuaios_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void txtBusqueda_TextChanged(object sender, EventArgs e)
+        {
+            string filtro = txtBusqueda.Text.Trim();
+            string criterio = cboBuscar.Text; // "Nombre"
+
+            if (string.IsNullOrEmpty(filtro))
+            {
+                // Si está vacío, recargar todos los usuarios
+                dataGridUsuaios.DataSource = cN_Usuarios.ListarUsuarios();
+                return;
+            }
+
+            if (criterio == "Nombre usuario")
+            {
+                dataGridUsuaios.DataSource = cN_Usuarios.FiltrarPorNombre(filtro);
+            }
         }
     }
 }
