@@ -117,7 +117,7 @@
             this.btnactualizar_Contrato.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnactualizar_Contrato.Image = ((System.Drawing.Image)(resources.GetObject("btnactualizar_Contrato.Image")));
             this.btnactualizar_Contrato.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnactualizar_Contrato.Location = new System.Drawing.Point(654, 293);
+            this.btnactualizar_Contrato.Location = new System.Drawing.Point(654, 299);
             this.btnactualizar_Contrato.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnactualizar_Contrato.Name = "btnactualizar_Contrato";
             this.btnactualizar_Contrato.Size = new System.Drawing.Size(141, 43);
