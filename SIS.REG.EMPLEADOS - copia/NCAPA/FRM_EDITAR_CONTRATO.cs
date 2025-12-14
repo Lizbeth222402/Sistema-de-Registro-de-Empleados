@@ -59,7 +59,7 @@ namespace NCAPA
                 }
 
 
-                // ✅ Validación fechas
+                //Validación fechas
                 DateTime fechainicio = dtp_fechaInicio.Value.Date;
                 DateTime fechafin = dtp_FechaFin.Value.Date;
 
@@ -72,7 +72,7 @@ namespace NCAPA
                     return;
                 }
 
-                // ✅ Validación ID contrato (PK)
+                //Validación ID contrato
                 if (!int.TryParse(txtid_CONTRATO.Text, out int idcontrato))
                 {
                     MessageBox.Show("Id de contrato inválido",
@@ -82,7 +82,7 @@ namespace NCAPA
                     return;
                 }
 
-                // ✅ Validación ID EMPLEADO contrato
+                //Validación ID EMPLEADO contrato
                 if (!int.TryParse(txt_IdeMPLEADO.Text, out int idempleado))
                 {
                     MessageBox.Show("Id de empleado inválido",
@@ -93,7 +93,7 @@ namespace NCAPA
                 }
 
 
-                // ✅ Carga de datos al objeto
+                //Carga de datos al objeto
                 MContrato.Id_contrato = idcontrato;
                 MContrato.Id_empleado = idempleado;
                 MContrato.Tipo_contrato = txtNombreCon.Text.Trim();
@@ -102,7 +102,7 @@ namespace NCAPA
                 MContrato.Salario = Convert.ToDecimal(txt_sALARIO.Text.Trim());
 
 
-                // ✅ Envío a capa negocio
+                //Envío a capa negocio
                 XContrato.EditarContrato(MContrato);
 
                 MessageBox.Show(" ✅ Se actualizo correctamente", "Editar Contrato", MessageBoxButtons.OK, MessageBoxIcon.Information);

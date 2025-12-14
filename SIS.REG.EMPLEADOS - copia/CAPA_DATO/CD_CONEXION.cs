@@ -10,7 +10,7 @@ namespace CAPA_DATO
 {
     public class CD_CONEXION
     {
-        private SqlConnection Conexion = new SqlConnection("Data Source=DESKTOP-10Q530A;Initial Catalog=Sistema_Empleados;Integrated Security=True");
+        private SqlConnection Conexion = new SqlConnection("Data Source=LIZ;Initial Catalog=Sistema_Empleados;Integrated Security=True");
 
         public SqlConnection Abrir()
         {

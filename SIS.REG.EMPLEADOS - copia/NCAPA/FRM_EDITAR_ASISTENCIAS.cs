@@ -72,7 +72,7 @@ namespace NCAPA
                     return;
                 }
 
-                // parsear IDs — Id_asistencia (PK) y Id_empleado
+                //IDs — Id_asistencia y Id_empleado
                 if (!int.TryParse(txtIdAsistencia.Text, out int idAsistencia))
                 {
                     MessageBox.Show("Id de asistencia inválido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -91,16 +91,16 @@ namespace NCAPA
                 MasistenciA.Hora_salida = dtp_HoraSalidadAsistencia.Value.TimeOfDay;
                 MasistenciA.Estado = txtEstado.Text.Trim();
 
-                // ✅ Enviar a la capa negocio
+                //Enviar a la capa negocio
                 xAsistencia.EditarAsistencia(MasistenciA);
 
-                // ✅ Confirmación
+                //Confirmación
                 MessageBox.Show("✅ Asistencia actualizada correctamente",
                     "Editar Asistencia",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
 
-                // ✅ Cerrar formulario
+                //Cerrar formulario
                 Close();
             }
             catch (Exception ex)

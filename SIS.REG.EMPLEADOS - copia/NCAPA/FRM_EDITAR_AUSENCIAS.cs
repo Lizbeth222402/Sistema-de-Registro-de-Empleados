@@ -42,7 +42,7 @@ namespace NCAPA
         {
             try
             {
-                // ✅ Validaciones de campos texto
+                //Validaciones de campos texto
                 if (string.IsNullOrWhiteSpace(txtid_Ausencia.Text) ||
                     string.IsNullOrWhiteSpace(txt_IdEmP.Text) ||
                     string.IsNullOrWhiteSpace(txtNombre_AUSENCIAS.Text) ||
@@ -55,7 +55,7 @@ namespace NCAPA
                     return;
                 }
 
-                // ✅ Validación fechas
+                //Validación fechas
                 DateTime fechaInicio = dtp_FechaInic.Value.Date;
                 DateTime fechaFin = dtp_FechaFinal.Value.Date;
 
@@ -68,7 +68,7 @@ namespace NCAPA
                     return;
                 }
 
-                // ✅ Validación ID AUSENCIA (PK)
+                // Validación ID AUSENCIA
                 if (!int.TryParse(txtid_Ausencia.Text, out int idAusencia))
                 {
                     MessageBox.Show("Id de ausencia inválido",
@@ -78,7 +78,7 @@ namespace NCAPA
                     return;
                 }
 
-                // ✅ Validación ID EMPLEADO
+                //Validación ID EMPLEADO
                 if (!int.TryParse(txt_IdEmP.Text, out int idEmpleado))
                 {
                     MessageBox.Show("Id de empleado inválido",
@@ -88,7 +88,7 @@ namespace NCAPA
                     return;
                 }
 
-                // ✅ Carga de datos al objeto
+                //Carga de datos al objeto
                 MAusenicas.Id_ausencia = idAusencia;          
                 MAusenicas.Id_empleado = idEmpleado;
                 MAusenicas.Tipo_ausencia = txtNombre_AUSENCIAS.Text.Trim();
@@ -96,7 +96,7 @@ namespace NCAPA
                 MAusenicas.Fecha_fin = fechaFin;
                 MAusenicas.Motivo = txt_motivoAusencias.Text.Trim();
 
-                // ✅ Envío a capa negocio
+                //Envío a capa negocio
                 int resultado = XAusencias.EditarAusencias(MAusenicas);
 
                 if (resultado > 0)
